@@ -3,17 +3,21 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.16.5",
+    "@reduxjs/toolkit": "^1.9.3",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
-    "@types/jest": "^27.5.2",
     "@types/node": "^16.18.23",
     "@types/react": "^18.0.33",
     "@types/react-dom": "^18.0.11",
+    "classnames": "^2.3.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-redux": "^8.0.5",
+    "react-router-dom": "^6.10.0",
     "react-scripts": "5.0.1",
+    "redux": "^4.2.1",
     "sass": "^1.61.0",
+    "store": "^2.0.12",
     "typescript": "^4.9.5",
     "web-vitals": "^2.1.4"
   },
@@ -27,8 +31,7 @@
   },
   "eslintConfig": {
     "extends": [
-      "react-app",
-      "react-app/jest"
+      "react-app"
     ]
   },
   "browserslist": {
@@ -44,12 +47,15 @@
     ]
   },
   "devDependencies": {
+    "@types/react-redux": "^7.1.25",
+    "@types/store": "^2.0.2",
     "@typescript-eslint/eslint-plugin": "^5.57.1",
     "@typescript-eslint/parser": "^5.57.1",
     "eslint": "^8.37.0",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.2",
+    "gh-pages": "^5.0.0",
     "prettier": "^2.8.7"
   }
 }

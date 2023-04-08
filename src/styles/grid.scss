@@ -1,0 +1,61 @@
+@use "./mixins.scss" as mixins;
+
+// $gap-mobile: 0 10px;
+// $gap-tablet: 0 16px;
+// $gap-desktop: 3%;
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0 16px;
+
+  @include mixins.onTablet {
+    grid-template-columns: repeat(12, 1fr);
+    // gap: calc(100% * $gap-tablet / 12);
+    // gap: $gap-tablet;
+  }
+
+  @include mixins.onDesktop {
+    grid-template-columns: repeat(24, 1fr);
+    // gap: calc(100% * $gap-desktop / 24);
+  }
+}
+
+  // @include mixins.onMobile {
+  //   grid-template-columns: repeat(4, 1fr);
+  //   gap: $gap-mobile;
+  // }
+
+.S {
+  @for $start from 1 through 4 {
+    @for $end from $start through 4 {
+      &--#{$start}-#{$end} {
+        grid-column: #{$start} / #{$end + 1};
+      }
+    }
+  }
+}
+
+.T {
+  @include mixins.onTablet {
+    @for $start from 1 through 12 {
+      @for $end from $start through 12 {
+        &--#{$start}-#{$end} {
+          grid-column: #{$start} / #{$end + 1};
+        }
+      }
+    }
+  }
+}
+
+.D {
+  @include mixins.onDesktop {
+    @for $start from 1 through 24 {
+      @for $end from $start through 24 {
+        &--#{$start}-#{$end} {
+          grid-column: #{$start} / #{$end + 1};
+        }
+      }
+    }
+  }
+}
