@@ -1,0 +1,40 @@
+.buttonSwitcher {
+  cursor: pointer;
+  width: 65px;
+  top: 5px;
+  right: 5px;
+  border-radius: 26px;
+  height: 36px;
+  border: 1px solid var(--decor-line);
+  fill: var(--main-text);
+
+  margin-right: 20px;
+
+  &:before,
+  &:after {
+    content: "";
+    background: url('./pictures/moon.svg') no-repeat center;
+    transition: 0.4s;
+
+    position: absolute;
+    left: 0;
+    right: 36px;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+  }
+}
+
+.active {
+  &:before,
+  &:after {
+    background: url('./pictures/sun.svg') no-repeat center;
+    transform: translateX(29px);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .buttonSwitcher {
+    margin-right: 33px;
+  }
+}

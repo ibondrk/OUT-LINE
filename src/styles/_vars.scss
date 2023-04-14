@@ -1,9 +1,27 @@
-:root[data-theme="light"] {
-  --main-text: #4B4343;
-  --link-color: #687AB4;
+:root {
+  --menu-divider: linear-gradient(58.61deg, #6fa0d8 -1.52%, #9184e8 113.48%);
 }
 
-:root[data-theme="dark"] {
-  --main-text: #FDFCFC;
-  --link-color: #8EA7F8;
+:root[data-theme='light'] {
+  --main-text: #4b4343;
+  --link-color: #687ab4;
+
+  --theme-background: #fff;
+  --theme-background_2: #f6f6f9;
+  --decor-line: #dfe3ec;
+
+  --logo: #202020;
+  --burger: #4d4d4d;
+}
+
+:root[data-theme='dark'] {
+  --main-text: #fdfcfc;
+  --link-color: #8ea7f8;
+
+  --theme-background: #000;
+  --theme-background_2: #373a4e;
+  --decor-line: #5b657b;
+
+  --logo: #fff;
+  --burger: #fdfcfc;
 }

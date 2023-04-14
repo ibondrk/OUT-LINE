@@ -1,22 +1,56 @@
 @import url(./_reset.scss);
 @import url(./fonts.scss);
 @import url(./_vars.scss);
+@import url(./mixins.scss);
+@import url(./grid.scss);
 
 .App {
-  text-align: center;
-}
-
-body {
-  font-family: 'BLMelody-Bold', 'BLMelody-Light', -apple-system,
+  height: 100vh;
+  background-color: var(--theme-background);
+  font-family: 'BLMelody-Light', 'BLMelody-Bold', -apple-system,
     BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell',
     'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  height: 100vh;
+  padding: 25px 30px 61px;
+
+  @media (min-width: 768px) {
+    padding: 25px 50px 52px;
+  }
+  @media (min-width: 1024px) {
+    padding: 40px 60px 67px;
+  }
+  @media (min-width: 1550px) {
+    padding: 27px 80px 85px;
+  }
+  @media (min-width: 1920px) {
+    padding: 27px 100px 107px;
+  }
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(54, 70, 99, 0.31);
+  z-index: 8;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0s linear 0.3s;
+}
+
+.overlay.opened {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease-in-out;
+}
+
+body {
   scroll-behavior: smooth;
 }
 
-// code {
-//   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-//     monospace;
-// }
+body.locked {
+  overflow: hidden;
+}

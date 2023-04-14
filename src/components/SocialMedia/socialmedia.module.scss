@@ -1,0 +1,18 @@
+@use '../../styles/mixins.scss' as mixins;
+
+.icon {
+  width: 32px;
+  height: 31px;
+
+  fill: #858ee2;
+}
+
+.icons_wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+
+  @include mixins.onTablet {
+    gap: 23px;
+  }
+}

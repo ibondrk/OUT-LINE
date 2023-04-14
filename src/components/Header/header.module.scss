@@ -1,0 +1,32 @@
+@use '../../styles/mixins.scss' as mixins;
+
+.wrapper {
+  display: flex;
+  justify-content: space-between;
+
+  background-color: transparent;
+  align-items: center;
+}
+
+.btns_wrapper {
+  display: flex;
+  position: relative;
+
+  @include mixins.onDesktop {
+    display: none;
+  }
+}
+
+.logo {
+  width: 44px;
+  height: 44px;
+  fill: var(--logo);
+}
+
+.navigation_wrapper {
+  display: none;
+
+  @include mixins.onDesktop {
+    display: flex;
+  }
+}
