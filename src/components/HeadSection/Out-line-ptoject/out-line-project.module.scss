@@ -1,0 +1,29 @@
+@use 'sass:math';
+
+$circle-size: 50px;
+$letter-size: 16px;
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.letter {
+  position: absolute;
+  font-size: $letter-size;
+  transform-origin: 0 100%;
+}
+
+.letter_container {
+  position: relative;
+  height: calc($circle-size + 3rem);
+  transform: scale(1);
+  display: inline-block;
+  animation: rotate 10s linear infinite;
+  font-size: $letter-size;
+  transform-origin: center center;
+}

@@ -1,8 +1,5 @@
 import React from 'react';
 import s from './navigation.module.scss';
-import cn from 'classnames';
-
-// import { motion } from 'framer-motion';
 
 import * as menuActions from '../../../app/featcher/menu';
 
@@ -36,7 +33,7 @@ export const Navigation: React.FC = () => {
             WHAT WE DO
           </a>
         </li>
-        <li className={cn(s.nav_item, s.mobile)}>
+        {/* <li className={cn(s.nav_item, s.mobile)}>
           <a
             href=""
             className={s.nav_link}
@@ -57,7 +54,7 @@ export const Navigation: React.FC = () => {
           >
             PROVIDERS
           </a>
-        </li>
+        </li> */}
         <li className={s.nav_item}>
           <a
             href=""

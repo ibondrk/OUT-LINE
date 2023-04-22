@@ -1,0 +1,95 @@
+@use '../../../styles/mixins.scss' as mixins;
+
+.wrapper {
+  display: none;
+
+  @include mixins.onTablet {
+    display: block;
+    grid-row: 2/3;
+    transform: translate(0, 45%);
+    margin-left: 36px;
+  }
+
+  @include mixins.onDesktop {
+    grid-row: 1/2;
+    margin-bottom: 172px;
+  }
+
+  @include mixins.on1920 {
+    margin-bottom: 295px;
+  }
+}
+
+.here_wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.here {
+  font-family: 'BLMelody-Bold';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 37px;
+
+  margin-right: 20px;
+
+  @include mixins.on1024 {
+    margin-right: 51px;
+  }
+
+  @include mixins.onDesktop {
+    margin-right: 36px;
+    font-size: 35px;
+    line-height: 43px;
+  }
+}
+
+.dot {
+  margin-right: 11px;
+
+  @include mixins.on1024 {
+    margin-right: 22px;
+  }
+
+  @include mixins.onDesktop {
+    margin-right: 15px;
+  }
+}
+
+.dot,
+.roundedBlock {
+  height: 15px;
+  border-radius: 21px;
+
+  @include mixins.onDesktop {
+    height: 22px;
+  }
+}
+
+.roundedBlock {
+  width: 61px;
+
+  @include mixins.onDesktop {
+    width: 114px;
+  }
+}
+
+.description {
+  margin-top: 30px;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 21px;
+
+  @include mixins.on1024 {
+    max-width: 265px;
+  }
+
+  @include mixins.onDesktop {
+    margin-top: 32px;
+  }
+
+  @include mixins.on1920 {
+    margin-top: 45px;
+  }
+}

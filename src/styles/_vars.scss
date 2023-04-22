@@ -1,9 +1,10 @@
 :root {
-  --menu-divider: linear-gradient(58.61deg, #6fa0d8 -1.52%, #9184e8 113.48%);
+  --main-gradient: linear-gradient(58.61deg, #6fa0d8 -1.52%, #9184e8 113.48%);
 }
 
 :root[data-theme='light'] {
   --main-text: #4b4343;
+  --inverted-main-text: #fdfcfc;
   --link-color: #687ab4;
 
   --theme-background: #fff;
@@ -16,8 +17,8 @@
 
 :root[data-theme='dark'] {
   --main-text: #fdfcfc;
+  --inverted-main-text: #4b4343;
   --link-color: #8ea7f8;
-
   --theme-background: #000;
   --theme-background_2: #373a4e;
   --decor-line: #5b657b;

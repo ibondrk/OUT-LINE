@@ -6,6 +6,21 @@
 
   background-color: transparent;
   align-items: center;
+
+  padding: 25px 30px 0;
+
+  @media (min-width: 768px) {
+    padding: 25px 50px 0;
+  }
+  @media (min-width: 1024px) {
+    padding: 40px 60px 0;
+  }
+  @media (min-width: 1550px) {
+    padding: 27px 80px 0;
+  }
+  @media (min-width: 1920px) {
+    padding: 27px 100px 0;
+  }
 }
 
 .btns_wrapper {

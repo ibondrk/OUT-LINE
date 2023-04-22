@@ -4,8 +4,6 @@ import cn from 'classnames';
 import s from './theme.module.scss';
 import * as themeActions from '../../../app/featcher/theme';
 
-import sprite from '../../../images/sprite.svg';
-
 export const Theme: React.FC = () => {
   const dispatch = useAppDispatch();
   const { themeName } = useAppSelector((state) => state.theme);
@@ -20,11 +18,9 @@ export const Theme: React.FC = () => {
   };
 
   return (
-    <>
-      <div
-        className={cn(s.buttonSwitcher, { [s.active]: themeName === 'dark' })}
-        onClick={handleThemeChange}
-      />
-    </>
+    <div
+      className={cn(s.buttonSwitcher, { [s.active]: themeName === 'dark' })}
+      onClick={handleThemeChange}
+    />
   );
 };

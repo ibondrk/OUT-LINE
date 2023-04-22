@@ -15,6 +15,10 @@
   transition: transform 0.3s ease-in-out;
   overflow-y: auto;
 
+  @media (min-width: 500px) {
+    width: 50%;
+  }
+
   @include mixins.onTablet {
     padding: 0 0 33px;
     width: 50%;
@@ -30,12 +34,15 @@
 }
 .content {
   padding: 0 0 43px;
-  height: 100%;
 
   @include mixins.onTablet {
     padding: 0 0 33px;
     display: flex;
     flex-direction: column;
+  }
+
+  @include mixins.on1024 {
+    height: 100%;
   }
 }
 
@@ -109,7 +116,7 @@
 }
 
 .main_wrapper {
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 .follow_us {
@@ -117,9 +124,8 @@
   line-height: 160%;
   color: var(--main-text);
   text-align: center;
-  margin-top: 36px;
-  margin-bottom: 25px;
-
+  margin-top: 26px;
+  margin-bottom: 15px;
 }
 
 .menu_media {
