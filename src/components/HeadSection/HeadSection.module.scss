@@ -195,7 +195,7 @@
     gap: 38px;
     align-items: center;
 
-    padding: 25px;
+    padding: 25px 0;
     position: relative;
 
     &:not(:last-child)::after {
@@ -206,10 +206,14 @@
       height: 1px;
       width: 100vw;
 
-      transform: translate(-55px, 0);
+      transform: translate(-30px, 0);
 
       @include mixins.onTablet {
         transform: unset;
+        right: 0;
+        bottom: unset;
+        width: 1px;
+        height: 100%;
       }
     }
 
@@ -220,13 +224,6 @@
       grid-row: 4/5;
 
       padding: 0 0 0 42px;
-
-      &:not(:last-child)::after {
-        right: 0;
-        bottom: unset;
-        width: 1px;
-        height: 100%;
-      }
     }
 
     @include mixins.onDesktop {
@@ -249,14 +246,20 @@
   &__name {
     font-family: 'BLMelody-Light';
     font-style: normal;
-    font-weight: 700;
+    font-weight: 300;
     font-size: 18px;
     line-height: 27px;
     overflow-wrap: break-word;
     max-width: 200px;
 
+    @include mixins.on1920 {
+      font-size: 20px;
+      line-height: 24px;
+    }
+
     & span {
       font-family: 'BLMelody-Bold';
+      font-weight: 700;
     }
   }
 }
