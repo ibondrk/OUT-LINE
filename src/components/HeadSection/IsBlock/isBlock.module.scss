@@ -18,6 +18,13 @@
   }
 }
 
+.is_wrapper {
+  @include mixins.onTablet {
+    display: flex;
+    align-items: center;
+  }
+}
+
 .is {
   font-family: 'BLMelody-Bold';
   font-style: normal;
@@ -82,8 +89,10 @@
 .description {
   margin-top: 30px;
   font-weight: 300;
-  font-size: 17px;
+  font-size: 16px;
   line-height: 21px;
+
+  max-width: 260px;
 
   @include mixins.on1024 {
     max-width: 262px;
@@ -91,6 +100,7 @@
 
   @include mixins.onDesktop {
     margin-top: 32px;
+    font-size: 17px;
   }
 
   @include mixins.on1920 {
