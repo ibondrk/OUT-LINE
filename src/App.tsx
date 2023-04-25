@@ -6,6 +6,7 @@ import { Header } from './components/Header';
 import { HamburgerMenu } from './components/Header/hamburger';
 import { HeadSection } from './components/HeadSection';
 import { AboutUs } from './components/AboutUs';
+import { WhatWeDo } from './components/WhatWeDo';
 
 import { useAppSelector, useAppDispatch } from './app/hooks';
 import * as menuActions from './app/featcher/menu';
@@ -27,6 +28,7 @@ function App() {
       <HamburgerMenu key="hamburger" />
       <HeadSection />
       <AboutUs />
+      <WhatWeDo />
     </div>
   );
 }

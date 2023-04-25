@@ -272,6 +272,14 @@
 
 .wrapper_03 {
   @include mixins.onTablet {
-    margin-top: 200px;
+    margin: 200px 0 40px;
+  }
+
+  @include mixins.on1024 {
+    margin-bottom: 50px;
+  }
+
+  @include mixins.onDesktop {
+    margin: 200px 0 0;
   }
 }

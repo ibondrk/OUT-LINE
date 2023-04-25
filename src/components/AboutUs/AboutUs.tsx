@@ -15,7 +15,7 @@ export const AboutUs: React.FC = () => {
   const [showMorePrMengm, setShowMorePrMengm] = useState(false);
 
   return (
-    <section className={s.section}>
+    <section className={s.section} id="AboutUs">
       <div className={cn(s.sectionTitle, 'T--1-5', 'D--1-11')}>
         <div className={cn(s.dots, 'T--1-2')}>
           <img src={dot1} alt="dot" className={s.dot1} />
@@ -61,7 +61,7 @@ export const AboutUs: React.FC = () => {
       <img
         src={Plug}
         alt="Plug animation"
-        className={cn(s.animation, 'T--7-12', 'D--1-11')}
+        className={cn(s.animation, 'T--7-12', 'D--3-12')}
       />
 
       <div
