@@ -98,7 +98,7 @@ export const AboutUs: React.FC = () => {
         </p>
 
         <div
-          className={s.showMoreBtn}
+          className={s.description_block_btn}
           onClick={() => setShowMoreCorpEstablish(!showMoreCorpEstablish)}
         >
           {!showMoreCorpEstablish ? 'Read more' : 'Hide'}
@@ -136,7 +136,7 @@ export const AboutUs: React.FC = () => {
           deal with HR, financial and legal issues.
         </p>
         <div
-          className={s.showMoreBtn}
+          className={s.description_block_btn}
           onClick={() => setShowMoreIntExpansion(!showMoreIntExpansion)}
         >
           {!showMoreIntExpansion ? 'Read more' : 'Hide'}
@@ -177,7 +177,7 @@ export const AboutUs: React.FC = () => {
           expectations.
         </p>
         <div
-          className={s.showMoreBtn}
+          className={s.description_block_btn}
           onClick={() => setShowMorePrMengm(!showMorePrMengm)}
         >
           {!showMorePrMengm ? 'Read more' : 'Hide'}

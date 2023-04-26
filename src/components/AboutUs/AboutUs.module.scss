@@ -51,10 +51,6 @@
   grid-column: 1 / 1;
   grid-row: 1 / 1;
 
-  // @include mixins.onTablet {
-  //   grid-row: 1/3;
-  // }
-
   @include mixins.onDesktop {
     margin-left: 30px;
   }
@@ -163,12 +159,27 @@
 .showMoreBtn {
   margin-top: 25px;
   font-weight: 300;
-  font-size: 17px;
-  line-height: 26px;
+  font-size: 16px;
+  line-height: 24px;
   text-decoration: underline;
+
+  @include mixins.onDesktop {
+    font-size: 17px;
+    line-height: 26px;
+  }
 
   @include mixins.on1920 {
     display: none;
+  }
+}
+
+.description_block_btn {
+  @extend .showMoreBtn;
+
+  display: none;
+
+  @include mixins.onTablet {
+    display: inline-block;
   }
 }
 
@@ -248,11 +259,11 @@
 
     font-family: 'BLMelody-Light';
     font-weight: 300;
-    font-size: 17px;
-    line-height: 26px;
+    font-size: 16px;
+    line-height: 24px;
     font-style: normal;
 
-    max-height: 80px;
+    max-height: 70px;
     overflow: hidden;
     transition: max-height 0.3s ease-in-out;
 
@@ -266,6 +277,8 @@
 
     @include mixins.onDesktop {
       margin-top: 150px;
+      font-size: 17px;
+      line-height: 26px;
     }
 
     @include mixins.on1920 {
@@ -306,6 +319,13 @@
 .projectManagement {
   @include mixins.onTablet {
     margin-top: 200px;
+    margin-bottom: 80px;
+  }
+  @include mixins.on1024 {
+    margin-bottom: 30px;
+  }
+  @include mixins.onDesktop {
+    margin-bottom: unset;
   }
 }
 
@@ -338,6 +358,6 @@
 
   @include mixins.onDesktop {
     grid-row: 3/4;
-    margin: 0 30px 100px 0;
+    margin: 0 30px 85px 0;
   }
 }

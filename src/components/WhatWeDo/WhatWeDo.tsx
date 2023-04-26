@@ -6,8 +6,6 @@ import dot1 from '../../images/dots/dot1.webp';
 import dot2 from '../../images/dots/dot2.webp';
 import dot3 from '../../images/dots/dot3.webp';
 
-// import cloud_1920 from '../../images/clouds_1920.webp';
-
 export const WhatWeDo: React.FC = () => {
   const [showMoreDescr, setShowMoreDescr] = useState(false);
 
@@ -55,20 +53,21 @@ export const WhatWeDo: React.FC = () => {
 
       <img
         className={cn(s.cloud_img, 'T--11-12', 'D--4-10')}
-        src="../../images/cloud/320.webp"
+        src={require('../../images/cloud/320.webp')}
         alt="clouds"
         srcSet={`
           ${require('../../images/cloud/1920.webp')} 1920w,
           ${require('../../images/cloud/1550.webp')} 1550w,
           ${require('../../images/cloud/1024.webp')} 1024w,
-          ${require('../../images/cloud/768.webp')} 720w,
-          ${require('../../images/cloud/320.webp')} 320w`}
+          ${require('../../images/cloud/768.webp')} 768w,
+          ${require('../../images/cloud/320.webp')} 320w
+        `}
         sizes="
-        (min-width: 320px) 320px,
-        (min-width: 768px) 768px,
         (min-width: 1920px) 1920px,
-        (min-width: 1024px) 1024px,
         (min-width: 1550px) 1550px,
+        (min-width: 1024px) 321px,
+        (min-width: 768px) 320px,
+        (min-width: 320px) 320px
         "
       />
       <source
@@ -76,8 +75,8 @@ export const WhatWeDo: React.FC = () => {
           ${require('../../images/cloud/1920.webp')} 1920w,
           ${require('../../images/cloud/1550.webp')} 1550w,
           ${require('../../images/cloud/1024.webp')} 1024w,
-          ${require('../../images/cloud/768.webp')} 720w,
-          ${require('../../images/cloud/320.webp')} 320w,
+          ${require('../../images/cloud/768.webp')} 768w,
+          ${require('../../images/cloud/320.webp')} 320w
           `}
         type="image/webp"
       />
