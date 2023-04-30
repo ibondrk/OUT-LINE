@@ -21,28 +21,25 @@ export const WhatWeDo: React.FC = () => {
           <img src={dot3} alt="dot" className={s.dot3} />
         </div>
         <div className={cn(s.text_wrapper, 'T--1-6')}>
-          <span className={s.sectionTitle__what}>
+          <span className={s.sectionTitle__main}>
             What <br />
           </span>
-          <span className={s.sectionTitle__weDo}>We Do</span>
+          <span className={s.sectionTitle__secoundary}>We Do</span>
         </div>
       </div>
 
       <div className={cn(s.description, 'T--1-12', 'D--1-7')}>
-        <div
+        <p
           className={cn(s.description__text_wrapper, {
             [s.opened]: showMoreDescr,
           })}
         >
-          <p>
-            We know we can make the greatest impact through collaboration with
-            our clients, and long-term strategic relationships to deliver a
-            quality outcome. We put newly established businesses, expanded
-            companies, and projects on the right track for growth and success in
-            UAE. We find a solution that answers business issues and fulfills
-            objectives.
-          </p>
-        </div>
+          We know we can make the greatest impact through collaboration with our
+          clients, and long-term strategic relationships to deliver a quality
+          outcome. We put newly established businesses, expanded companies, and
+          projects on the right track for growth and success in UAE. We find a
+          solution that answers business issues and fulfills objectives.
+        </p>
         <div
           className={s.showMoreBtn}
           onClick={() => setShowMoreDescr(!showMoreDescr)}

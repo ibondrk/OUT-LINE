@@ -17,7 +17,6 @@
     padding: 85px 60px 0;
   }
   @include mixins.onDesktop {
-    // margin-top: 100px;
     padding: 100px 80px 0;
   }
   @include mixins.on1920 {
@@ -38,10 +37,10 @@
 
   @include mixins.onDesktop {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
   }
 
-  &__about {
+  &__main {
     font-family: 'BLMelody-Bold';
     font-weight: 700;
   }

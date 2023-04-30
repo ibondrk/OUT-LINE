@@ -1,0 +1,596 @@
+@use '../../styles/mixins.scss' as mixins;
+
+.section {
+  display: grid;
+  background-color: var(--theme-background_2);
+
+  padding: 40px 30px;
+
+  @include mixins.onTablet {
+    padding: 60px 50px;
+  }
+
+  @include mixins.on1024 {
+    padding: 85px 60px;
+  }
+  @include mixins.onDesktop {
+    padding: 100px 80px;
+  }
+  @include mixins.on1920 {
+    padding: 145px 100px;
+  }
+}
+
+// <-- section name with dots START-->
+
+.sectionTitle {
+  display: grid;
+  grid-row: 1/1;
+
+  font-size: 40px;
+  line-height: 133%;
+  font-style: normal;
+  font-weight: 300;
+  text-transform: uppercase;
+
+  @include mixins.on1024 {
+    grid-column: 1/7;
+  }
+
+  @include mixins.onDesktop {
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  &__main {
+    font-family: 'BLMelody-Bold';
+    font-weight: 700;
+  }
+}
+
+.text_wrapper {
+  grid-column: 1 / 1;
+  grid-row: 1 / 1;
+
+  @include mixins.onDesktop {
+    margin-left: 30px;
+  }
+}
+
+.dots {
+  display: block;
+  align-self: flex-end;
+
+  grid-row: 1/1;
+  grid-column: 1/3;
+  margin-left: 141px;
+
+  @include mixins.on1024 {
+    margin-top: 50px;
+  }
+
+  @include mixins.onDesktop {
+    margin: unset;
+    align-self: flex-start;
+  }
+}
+
+.dot1 {
+  width: 15px;
+  height: 15px;
+
+  align-self: center;
+
+  @include mixins.onDesktop {
+    width: initial;
+    height: initial;
+    grid-row: 1/1;
+    grid-column: 1/1;
+  }
+}
+
+.dot2 {
+  @extend .dot1;
+
+  margin-left: 46px;
+
+  @include mixins.onDesktop {
+    margin-left: 53px;
+  }
+
+  @include mixins.on1920 {
+    margin-left: 72px;
+  }
+}
+
+.dot3 {
+  @extend .dot1;
+  margin-left: 15px;
+
+  @include mixins.onDesktop {
+    margin-left: 13px;
+  }
+
+  @include mixins.on1920 {
+    margin-left: 23px;
+  }
+}
+// <-- section name with dots END -->
+
+.description {
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 26px;
+
+  @include mixins.onTablet {
+    grid-row: 2/3;
+    max-width: 370px;
+    margin-top: 30px;
+  }
+
+  @include mixins.on1024 {
+    grid-column: 1 / 4;
+    margin-top: 40px;
+  }
+  @include mixins.onDesktop {
+    grid-row: 2/3;
+    margin: 150px 0;
+    max-width: 320px;
+  }
+}
+
+// partners count block START
+
+.count {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 40px;
+
+  justify-self: center;
+
+  position: relative;
+
+  height: 100px;
+  width: 100px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  grid-row: 3/4;
+
+  @include mixins.onTablet {
+    grid-row: 1/1;
+    height: 160px;
+    width: 160px;
+
+    font-size: 50px;
+    line-height: 67px;
+  }
+
+  @include mixins.on1024 {
+    grid-row: 3/4;
+    grid-column: 1/4;
+    justify-self: end;
+    margin: 60px 0;
+  }
+  @include mixins.onDesktop {
+    grid-row: 2/3;
+    grid-column: 4/5;
+    margin: unset;
+    padding-top: 30px;
+  }
+}
+
+.line {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 1px;
+  height: 100%;
+  background: var(--main-gradient);
+  transform: translateX(-50%) rotate(40deg);
+  -webkit5-transform: translateX(-50%) rotate(45deg);
+  -moz-transform: translateX(-50%) rotate(40deg);
+  -ms-transform: translateX(-50%) rotate(40deg);
+  -o-transform: translateX(-50%) rotate(40deg);
+  -webkit-transform: translateX(-50%) rotate(40deg);
+
+  @include mixins.onTablet {
+    height: 100%;
+  }
+
+  @include mixins.onDesktop {
+    height: 115%;
+  }
+}
+
+.number {
+  z-index: 1;
+  background-color: var(--theme-background_2);
+
+  font-family: 'BLMelody-Bold';
+  font-style: bold;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 40px;
+  padding-left: 20px;
+
+  @include mixins.onTablet {
+    font-size: 50px;
+    line-height: 67px;
+    padding-left: 30px;
+  }
+}
+
+// partners count block END
+
+.icons_container {
+  grid-row: 4/5;
+  margin-top: 30px;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  align-items: center;
+  gap: 10px;
+  @media screen and (min-width: 500px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  max-height: 240px;
+  overflow: hidden;
+  transition: max-height 0.3s ease-in-out;
+
+  @include mixins.onTablet {
+    grid-row: 3/4;
+    max-height: unset;
+    overflow: unset;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 35px;
+    margin-top: 50px;
+  }
+  @include mixins.on1024 {
+    grid-row: 1 / 5;
+    grid-column: 7 / 12;
+    margin-top: unset;
+    grid-gap: 15px;
+    @media screen and (min-width: 1024px) and (max-width: 1199px) {
+      gap: unset;
+    }
+  }
+  @include mixins.onDesktop {
+  }
+}
+
+.splite_line {
+  display: none;
+
+  @include mixins.onTablet {
+    display: block;
+    position: absolute;
+    height: 1px;
+    background: var(--main-gradient);
+    width: 100%;
+    top: 65px;
+  }
+  @include mixins.on1024 {
+    top: 148px;
+    @media screen and (min-width: 1199px) {
+      top: 152px;
+    }
+  }
+  @include mixins.onDesktop {
+    top: 135px;
+  }
+}
+
+.splite_line_2 {
+  @extend .splite_line;
+  top: 149px;
+  @include mixins.on1024 {
+    top: 292px;
+    @media screen and (min-width: 1199px) {
+      top: 300px;
+    }
+  }
+  @include mixins.onDesktop {
+    top: 287px;
+  }
+}
+
+.splite_line_3 {
+  @extend .splite_line;
+  top: 233px;
+  @include mixins.on1024 {
+    top: 440px;
+    @media screen and (min-width: 1199px) {
+      top: 452px;
+    }
+  }
+  @include mixins.onDesktop {
+    top: 437px;
+  }
+}
+
+
+.opened {
+  max-height: 1000px;
+}
+
+.showMoreBtn {
+  margin-top: 25px;
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 26px;
+  text-decoration: underline;
+  justify-self: center;
+
+  @include mixins.onTablet {
+    display: none;
+  }
+}
+// icons
+
+.gov_of_ab_db {
+  &:hover {
+    & path:nth-child(1) {
+      fill: #fff;
+    }
+    & path:nth-child(2),
+    & path:nth-child(3),
+    & path:nth-child(4) {
+      fill: #e62832;
+    }
+
+    & path:nth-child(5) {
+      fill: #110507;
+    }
+    & path:nth-child(6) {
+      fill: #241c1d;
+    }
+
+    & path:nth-child(n + 7):nth-child(-n + 58) {
+      fill: #050000;
+    }
+  }
+}
+
+.masdar {
+  &:hover {
+    & g > rect {
+      fill: #007eb1;
+    }
+  }
+}
+
+.twofour54 {
+  &:hover {
+    & g > rect {
+      fill: var(--main-text);
+    }
+  }
+}
+
+.kezad {
+  &:hover {
+    & g > rect {
+      fill: var(--main-text);
+    }
+  }
+}
+
+.rakez {
+  &:hover {
+    path:nth-child(1) {
+      fill: url(#hover_rakez_path1);
+    }
+    path:nth-child(2) {
+      fill: url(#hover_rakez_path2);
+    }
+    path:nth-child(3) {
+      fill: url(#hover_rakez_path3);
+    }
+    path:nth-child(4) {
+      fill: url(#hover_rakez_path4);
+    }
+    path:nth-child(5) {
+      fill: url(#hover_rakez_path5);
+    }
+    path:nth-child(6) {
+      fill: url(#hover_rakez_path6);
+    }
+
+    & path:nth-child(n + 7):nth-child(-n + 11) {
+      fill: var(--main-text);
+    }
+    & path:nth-child(n + 12):nth-child(-n + 35) {
+      fill: var(--rakez-hover-text);
+    }
+  }
+}
+
+.gov_of_dubai {
+  &:hover {
+    & g > rect {
+      fill: #e90028;
+    }
+  }
+}
+
+.investInDubai {
+  &:hover {
+    & path:nth-last-of-type(4),
+    & path:nth-last-of-type(2) {
+      fill: #70b48e;
+    }
+    & path:nth-last-of-type(3),
+    & path:nth-last-of-type(1) {
+      fill: #4564ec;
+    }
+  }
+}
+
+.airport_freezone {
+  &:hover {
+    & :nth-child(1),
+    & :nth-child(3) {
+      fill: #00425a;
+    }
+    & :nth-child(2),
+    & :nth-child(4) {
+      fill: #005c7c;
+    }
+  }
+}
+
+.commercity {
+  &:hover {
+    & g > rect {
+      fill: var(--main-text);
+    }
+  }
+}
+
+.dmcc {
+  &:hover {
+    & g > rect {
+      fill: var(--main-text);
+    }
+  }
+}
+
+.ifza {
+  &:hover {
+    & g > rect {
+      fill: var(--main-text);
+    }
+  }
+}
+
+.jafza {
+  &:hover {
+    path:nth-of-type(-n + 6) {
+      fill: #3296d2;
+    }
+    path:nth-of-type(n + 7):nth-of-type(-n + 12) {
+      fill: #2fbad6;
+    }
+    path:nth-of-type(n + 13) {
+      fill: var(--main-text);
+    }
+  }
+}
+
+.dubai_dev_authority {
+  &:hover {
+    path:nth-of-type(-n + 5) {
+      fill: var(--main-text);
+    }
+    path:nth-of-type(n + 6):nth-of-type(-n + 17),
+    path:nth-of-type(n + 28):nth-of-type(-n + 33) {
+      fill: #0040ba;
+    }
+    path:nth-of-type(n + 18):nth-of-type(-n + 27),
+    path:nth-of-type(n + 34) {
+      fill: var(--main-text);
+    }
+  }
+}
+
+.meydan {
+  &:hover {
+    & g > rect {
+      fill: var(--main-text);
+    }
+  }
+}
+
+.dubai_south {
+  &:hover {
+    path:nth-child(1) {
+      fill: #008b95;
+    }
+  }
+}
+
+.amcfz {
+  &:hover {
+    & g > rect {
+      fill: var(--main-text);
+    }
+  }
+}
+
+.sharjah {
+  &:hover {
+    path:nth-child(1) {
+      fill: white;
+    }
+    path:nth-child(2),
+    path:nth-child(9),
+    path:nth-child(17),
+    path:nth-child(18) {
+      fill: #00973d;
+    }
+    path:nth-child(3),
+    path:nth-child(4),
+    path:nth-child(5),
+    path:nth-child(6),
+    path:nth-child(24),
+    path:nth-child(25) {
+      fill: #891d26;
+    }
+
+    path:nth-child(7),
+    path:nth-of-type(n + 26):nth-of-type(-n + 32),
+    path:nth-of-type(n + 42):nth-of-type(-n + 53),
+    path:nth-of-type(n + 56):nth-of-type(-n + 62) {
+      fill: #1a1818;
+    }
+
+    path:nth-child(8),
+    path:nth-of-type(n + 11):nth-of-type(-n + 16),
+    path:nth-of-type(n + 20):nth-of-type(-n + 23),
+    path:nth-of-type(n + 33):nth-of-type(-n + 41) {
+      fill: black;
+    }
+
+    path:nth-child(10),
+    path:nth-child(19) {
+      fill: #e50019;
+    }
+
+    path:nth-child(54),
+    path:nth-child(55) {
+      fill: #f6f6f9;
+    }
+  }
+}
+
+.k {
+  &:hover {
+    path {
+      fill: var(--k-icon);
+    }
+  }
+}
+
+.sharjah_media_city {
+  &:hover {
+    & g > rect {
+      fill: var(--main-text);
+    }
+  }
+}
+
+.saif_zone {
+  &:hover {
+    path:nth-child(1) {
+      fill: #e72410;
+    }
+    path:nth-of-type(n + 4) {
+      fill: var(--main-text);
+    }
+  }
+}

@@ -13,6 +13,11 @@
 
   --logo: #202020;
   --burger: #4d4d4d;
+
+  // svg colors
+
+  --rakez-hover-text: #41C0BE;
+  --k-icon: #2D3954;
 }
 
 :root[data-theme='dark'] {
@@ -22,7 +27,11 @@
   --theme-background: #000;
   --theme-background_2: #373a4e;
   --decor-line: #5b657b;
-
+  
   --logo: #fff;
   --burger: #fdfcfc;
+
+  // svg colors
+  --rakez-hover-text: #fdfcfc;
+  --k-icon: #fdfcfc;
 }

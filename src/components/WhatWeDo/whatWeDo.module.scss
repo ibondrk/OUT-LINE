@@ -34,7 +34,7 @@
   text-transform: uppercase;
 
 
-  &__what {
+  &__main {
     font-family: 'BLMelody-Bold';
     font-weight: 700;
   }
@@ -45,7 +45,7 @@
 
   @include mixins.onDesktop {
     display: flex;
-    justify-content: start;
+    justify-content: flex-start;
   }
 }
 
@@ -342,7 +342,7 @@
 
     display: flex;
     justify-content: space-between;
-    align-items: start;
+    align-items: flex-start;
 
     &::before {
       position: absolute;

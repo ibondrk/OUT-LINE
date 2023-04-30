@@ -23,10 +23,10 @@ export const AboutUs: React.FC = () => {
           <img src={dot3} alt="dot" className={s.dot3} />
         </div>
         <div className={cn(s.text_wrapper, 'T--1-6')}>
-          <span className={s.sectionTitle__about}>
+          <span className={s.sectionTitle__main}>
             About <br />
           </span>
-          <span className={s.sectionTitle__us}>Us</span>
+          <span className={s.sectionTitle__secoundary}>Us</span>
         </div>
       </div>
 

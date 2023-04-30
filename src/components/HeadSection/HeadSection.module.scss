@@ -218,7 +218,7 @@
     }
 
     @include mixins.onTablet {
-      align-items: start;
+      align-items: flex-start;
       flex-direction: column;
       gap: 40px;
       grid-row: 4/5;
