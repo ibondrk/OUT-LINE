@@ -247,7 +247,7 @@
     max-height: unset;
     overflow: unset;
     grid-template-columns: repeat(5, 1fr);
-    grid-gap: 35px;
+    grid-gap: 22px;
     margin-top: 50px;
   }
   @include mixins.on1024 {
@@ -258,8 +258,6 @@
     @media screen and (min-width: 1024px) and (max-width: 1199px) {
       gap: unset;
     }
-  }
-  @include mixins.onDesktop {
   }
 }
 
@@ -272,7 +270,7 @@
     height: 1px;
     background: var(--main-gradient);
     width: 100%;
-    top: 65px;
+    top: 60px;
   }
   @include mixins.on1024 {
     top: 148px;
@@ -287,7 +285,7 @@
 
 .splite_line_2 {
   @extend .splite_line;
-  top: 149px;
+  top: 134px;
   @include mixins.on1024 {
     top: 292px;
     @media screen and (min-width: 1199px) {
@@ -301,7 +299,7 @@
 
 .splite_line_3 {
   @extend .splite_line;
-  top: 233px;
+  top: 202px;
   @include mixins.on1024 {
     top: 440px;
     @media screen and (min-width: 1199px) {

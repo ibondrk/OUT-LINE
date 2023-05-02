@@ -2754,7 +2754,7 @@ export const Partners: React.FC = () => {
                 y="5.06152"
                 width="83.6025"
                 height="33.9635"
-                fill="url(#pattern0)"
+                fill="url(#meydan_pattern)"
               />
             </mask>
             <g mask="url(#mask0_617_943)">
@@ -2768,7 +2768,7 @@ export const Partners: React.FC = () => {
             </g>
             <defs>
               <pattern
-                id="pattern0"
+                id="meydan_pattern"
                 patternContentUnits="objectBoundingBox"
                 width="1"
                 height="1"

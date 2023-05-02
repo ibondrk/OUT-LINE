@@ -1,0 +1,152 @@
+@use '../../../styles/mixins.scss' as mixins;
+
+.icons_column {
+  display: grid !important;
+  align-items: center;
+  justify-items: center;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 100%;
+    background: var(--main-gradient);
+
+    @include mixins.onTablet {
+      top: -30%;
+      height: 1000%;
+    }
+
+    @include mixins.on1024 {
+      top: -100%;
+      z-index: 0;
+    }
+  }
+}
+
+.column_1 {
+  gap: 30px;
+
+  @include mixins.onTablet {
+    margin-top: 50px;
+  }
+
+  @include mixins.on1024 {
+    margin: -80px 0 100px;
+    align-items: flex-start;
+
+    & > a:nth-last-child(1) {
+      position: absolute;
+      z-index: 1;
+      bottom: -90px;
+      background: var(--theme-background);
+      right: 75%;
+    }
+  }
+}
+
+.emirates_nbd {
+  &:hover {
+    path:nth-child(2),
+    path:nth-last-child(5) {
+      fill: #0e1b42;
+    }
+    path:last-child,
+    path:nth-last-child(3) {
+      fill: #ff9900;
+    }
+  }
+}
+
+.adib {
+  &:hover {
+    path:nth-of-type(-n + 22) {
+      fill: #1a427a;
+    }
+    path:nth-child(23) {
+      fill: #f4f4f4;
+    }
+    path:nth-child(24) {
+      fill: #06679a;
+    }
+    path:nth-child(25) {
+      fill: url(#adib1_linear_577_3789);
+    }
+    path:nth-child(26) {
+      fill: #21aae2;
+    }
+    path:nth-child(27) {
+      fill: url(#adib2_linear_577_3789);
+    }
+  }
+}
+
+.rakbank {
+  &:hover {
+    & g > rect {
+      fill: #e30613;
+    }
+  }
+}
+
+.adcb {
+  &:hover {
+    path:nth-of-type(-n + 26) {
+      fill: #233741;
+    }
+    path:nth-of-type(n + 27):nth-of-type(-n + 29) {
+      fill: #bb131a;
+    }
+    path:nth-child(n + 30) {
+      fill: #ed1b24;
+    }
+  }
+}
+
+.mashreq {
+  &:hover {
+    & > g > path:nth-child(1) {
+      fill: url(#mashreq0_radial_577_3679);
+    }
+    & > g > path:nth-child(2) {
+      fill: url(#mashreq1_radial_577_3679);
+    }
+    & > g > path:nth-child(3) {
+      fill: url(#mashreq2_radial_577_3679);
+    }
+    & > g > path:nth-child(4) {
+      fill: url(#mashreq3_radial_577_3679);
+    }
+    & > g > path:nth-child(5) {
+      fill: url(#mashreq4_radial_577_3679);
+    }
+    & > g > path:nth-child(6) {
+      fill: url(#mashreq5_radial_577_3679);
+    }
+    & > g > path:nth-child(7) {
+      fill: url(#mashreq6_radial_577_3679);
+    }
+  }
+}
+
+.comm_bank_of_dubai {
+  width: 135px;
+
+  &:hover {
+    path:nth-child(1) {
+      fill: #bcd400;
+    }
+    path:nth-child(2) {
+      fill: #00afec;
+    }
+    path:nth-child(3) {
+      fill: #008dc5;
+    }
+    path:nth-child(4) {
+      fill: #006b82;
+    }
+  }
+}

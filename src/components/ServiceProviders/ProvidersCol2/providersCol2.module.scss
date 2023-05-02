@@ -1,0 +1,143 @@
+@use '../../../styles/mixins.scss' as mixins;
+
+.icons_column {
+  display: grid !important;
+  align-items: center;
+  justify-items: center;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 1px;
+    height: 100%;
+    background: var(--main-gradient);
+
+    @include mixins.onTablet {
+      content: unset;
+    }
+
+    @include mixins.on1024 {
+      content: '';
+      height: 300%;
+      top: -100%;
+      bottom: 0;
+      z-index: 0;
+    }
+  }
+
+  @include mixins.onTablet {
+    margin-top: 20px;
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 1px;
+      height: 120%;
+      background: var(--main-gradient);
+
+      @include mixins.on1024 {
+        height: 300%;
+        top: -100%;
+        bottom: 0;
+        z-index: 0;
+      }
+    }
+  }
+
+}
+
+.column_2 {
+  gap: 15px;
+
+  @include mixins.on1024 {
+    margin: 0;
+    gap: 25px;
+
+    & > a:first-child {
+      position: absolute;
+      z-index: 1;
+      bottom: -160px;
+      background: var(--theme-background);
+      right: 85%;
+      padding: 30px 0;
+    }
+  }
+}
+
+// Icons
+.amer {
+  &:hover {
+    path:nth-child(1) {
+      fill: #c62e37;
+    }
+    path:nth-child(2),
+    path:nth-child(3) {
+      fill: #5da155;
+    }
+    path:nth-child(4) {
+      fill: #4a6b4a;
+    }
+    path:nth-child(n + 5) {
+      fill: var(--main-text);
+    }
+  }
+}
+
+.fedex {
+  &:hover {
+    & g > rect {
+      fill: #462895;
+    }
+  }
+}
+
+.zajel {
+  &:hover {
+    & g > rect {
+      fill: var(--main-text);
+    }
+  }
+}
+
+.dhl {
+  &:hover {
+    path {
+      fill: #d40511;
+    }
+  }
+}
+
+.quiup {
+  &:hover {
+    path:nth-child(1) {
+      fill: #ffd100;
+    }
+    path:nth-child(2) {
+      fill: #6b64f6;
+    }
+    path:nth-child(3) {
+      fill: #23005b;
+    }
+  }
+}
+
+.emirates {
+  &:hover {
+    & g > rect {
+      fill: #ff0000;
+    }
+  }
+}
+
+.vfs_global {
+  &:hover {
+    path {
+      fill: #003060;
+    }
+  }
+}
