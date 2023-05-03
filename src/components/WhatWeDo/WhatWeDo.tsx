@@ -13,7 +13,7 @@ export const WhatWeDo: React.FC = () => {
   const [showMoreCorpServ, setShowMoreCorpServ] = useState(false);
   const [showMoreDevManag, setShowMoreDevManag] = useState(false);
   return (
-    <section className={s.section} id="WhatWeDo">
+    <section className={s.section} id="whatWeDo">
       <div className={cn(s.sectionTitle, 'T--1-5', 'D--1-11')}>
         <div className={cn(s.dots, 'T--1-2')}>
           <img src={dot1} alt="dot" className={s.dot1} />

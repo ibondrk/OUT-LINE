@@ -27,8 +27,8 @@ function App() {
           dispatch(menuActions.toggleMenu(false));
         }}
       />
-      <Header key="header" />
-      <HamburgerMenu key="hamburger" />
+      <Header />
+      <HamburgerMenu />
       <HeadSection />
       <AboutUs />
       <WhatWeDo />

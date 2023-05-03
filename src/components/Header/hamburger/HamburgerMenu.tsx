@@ -42,7 +42,11 @@ export const HamburgerMenu: React.FC = () => {
           <div className={s.menu_header}>
             <div className={s.media_header}>
               <div className={s.icons_wrapper}>
-                <a href="#" target="_blank" rel="noreferrer">
+                <a
+                  href="https://instagram.com/out_line.ae?igshid=YmMyMTA2M2Y="
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   {/* Inst logo */}
                   <svg
                     id="instagram-logo"
@@ -80,7 +84,11 @@ export const HamburgerMenu: React.FC = () => {
                   </svg>
                 </a>
                 {/* LinkedIn logo */}
-                <a href="#" target="_blank" rel="noreferrer">
+                <a
+                  href="https://www.linkedin.com/company/out-line-group-fzco/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   <svg
                     width="32"
                     height="31"
@@ -127,7 +135,11 @@ export const HamburgerMenu: React.FC = () => {
             <p className={s.follow_us}>follow us:</p>
             {/* <SocialMedia /> */}
             <div className={s.icons_wrapper}>
-              <a href="#" target="_blank" rel="noreferrer">
+              <a
+                href="https://instagram.com/out_line.ae?igshid=YmMyMTA2M2Y="
+                target="_blank"
+                rel="noreferrer"
+              >
                 {/* Inst logo */}
                 <svg
                   id="instagram-logo"
@@ -165,7 +177,11 @@ export const HamburgerMenu: React.FC = () => {
                 </svg>
               </a>
               {/* LinkedIn logo */}
-              <a href="#" target="_blank" rel="noreferrer">
+              <a
+                href="https://www.linkedin.com/company/out-line-group-fzco/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <svg
                   width="32"
                   height="31"

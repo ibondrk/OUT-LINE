@@ -6,7 +6,7 @@ import sprite from '../../images/sprite.svg';
 
 export const Contacts: React.FC = () => {
   return (
-    <footer className={s.section} id="Contacts">
+    <footer className={s.section} id="contacts">
       <svg className={cn(s.logo, 'S--1-1')}>
         <use xlinkHref={`${sprite}#logo`} />
       </svg>
@@ -18,7 +18,11 @@ export const Contacts: React.FC = () => {
         <p className={cn(s.block_descr, s.follow_text)}>Follow us:</p>
         <div className={cn(s.icons_wrapper)}>
           {/* Inst logo */}
-          <a href="#" target="_blank" rel="noreferrer">
+          <a
+            href="https://instagram.com/out_line.ae?igshid=YmMyMTA2M2Y="
+            target="_blank"
+            rel="noreferrer"
+          >
             {/* Inst logo */}
             <svg
               id="instagram-logo"
@@ -56,7 +60,11 @@ export const Contacts: React.FC = () => {
             </svg>
           </a>
           {/* LinkedIn logo */}
-          <a href="#" target="_blank" rel="noreferrer">
+          <a
+            href="https://www.linkedin.com/company/out-line-group-fzco/"
+            target="_blank"
+            rel="noreferrer"
+          >
             <svg
               width="32"
               height="31"
