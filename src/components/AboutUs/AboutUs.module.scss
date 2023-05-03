@@ -143,6 +143,7 @@
     }
     @include mixins.onDesktop {
       max-width: unset;
+      margin-right: 50px;
     }
     @include mixins.on1920 {
       max-height: unset;
@@ -351,12 +352,19 @@
 // <-- enterprise Development block END -->
 
 .animation {
+  width: 100%;
+
   @include mixins.onTablet {
     grid-row: 1/3;
   }
 
   @include mixins.onDesktop {
     grid-row: 3/4;
-    margin: 0 30px 85px 0;
-  }
+    margin-bottom: 85px;
+    transform: translateX(-30px);
+    -webkit-transform: translateX(-30px);
+    -moz-transform: translateX(-30px);
+    -ms-transform: translateX(-30px);
+    -o-transform: translateX(-30px);
+}
 }
