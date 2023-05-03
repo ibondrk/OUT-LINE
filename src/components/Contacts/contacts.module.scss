@@ -1,0 +1,166 @@
+@use '../../styles/mixins.scss' as mixins;
+
+.section {
+  display: grid;
+  background-color: var(--theme-background_2);
+
+  padding: 50px 30px 60px;
+
+  overflow: hidden;
+
+  @include mixins.onTablet {
+    padding: 50px 40px;
+  }
+
+  @include mixins.on1024 {
+    overflow: unset;
+    padding: 40px 60px 60px;
+  }
+  @include mixins.onDesktop {
+    padding: 60px 80px 85px;
+    align-items: center;
+  }
+  @include mixins.on1920 {
+    padding: 95px 100px 165px;
+  }
+}
+
+.logo {
+  width: 44px;
+  height: 44px;
+  fill: var(--logo);
+  grid-row: 1/1;
+}
+
+.social_media_wrapper {
+  grid-row: 1/1;
+
+  @include mixins.onTablet {
+    grid-row: 3/3;
+    justify-self: center;
+  }
+  @include mixins.onDesktop {
+    grid-row: 1/1;
+  }
+}
+
+.icons_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+
+  @include mixins.onTablet {
+    gap: 23px;
+    justify-content: flex-start;
+    margin-top: 15px;
+  }
+}
+
+.follow_text {
+  display: none;
+  @include mixins.onTablet {
+    display: inline-block;
+  }
+}
+
+.section_title {
+  font-family: 'BLMelody-Bold';
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 133%;
+  font-style: normal;
+  text-transform: uppercase;
+  margin: 34px 0 40px;
+
+  &::after {
+    content: ':';
+  }
+
+  @include mixins.onTablet {
+    &::after {
+      content: unset;
+    }
+  }
+
+
+  @include mixins.onDesktop {
+    margin: 40px 0;
+  }
+}
+
+.location_wrapper {
+  display: flex;
+  align-items: flex-start;
+
+  @include mixins.onTablet {
+    justify-self: flex-end;
+  }
+
+  @include mixins.on1024 {
+    gap: 23px;
+  }
+
+  @include mixins.onDesktop {
+    grid-row: 1/1;
+  }
+}
+
+.block_descr {
+  font-family: 'BLMelody-Bold';
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+
+  @include mixins.onDesktop {
+    margin-bottom: 32px;
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
+
+.adress {
+  font-size: 16px;
+  line-height: 160%;
+  color: var(--main-text);
+}
+
+.qr {
+  width: 80px;
+  height: 80px;
+  fill: var(--main-text);
+
+  margin-left: 46px;
+
+  @include mixins.on1024 {
+    margin-top: unset;
+    width: 93px;
+    height: 96px;
+  }
+}
+
+.questions {
+  margin-top: 34px;
+
+  @include mixins.onTablet {
+    margin-top: unset;
+    grid-row: 3/3;
+  }
+
+  @include mixins.onDesktop {
+    grid-row: 1/1;
+  }
+}
+
+.question_link {
+  display: inline-block;
+  color: var(--link-color);
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 16px;
+
+  &.we_are {
+    margin-top: 15px;
+  }
+}

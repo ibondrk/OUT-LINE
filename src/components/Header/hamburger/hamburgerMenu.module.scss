@@ -50,10 +50,6 @@
   overflow-y: auto;
 }
 
-.blur {
-  filter: blur(5px);
-}
-
 .hide {
   visibility: hidden;
 }
@@ -79,6 +75,16 @@
 
   @include mixins.on1024 {
     display: block;
+  }
+}
+
+.icons_wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+
+  @include mixins.onTablet {
+    gap: 23px;
   }
 }
 

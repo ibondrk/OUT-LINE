@@ -9,6 +9,7 @@ import { AboutUs } from './components/AboutUs';
 import { WhatWeDo } from './components/WhatWeDo';
 import { Partners } from './components/Partners';
 import { ServiceProviders } from './components/ServiceProviders';
+import { Contacts } from './components/Contacts';
 
 import { useAppSelector, useAppDispatch } from './app/hooks';
 import * as menuActions from './app/featcher/menu';
@@ -33,6 +34,7 @@ function App() {
       <WhatWeDo />
       <Partners />
       <ServiceProviders />
+      <Contacts />
     </div>
   );
 }
