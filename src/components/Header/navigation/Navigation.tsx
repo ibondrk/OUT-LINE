@@ -64,10 +64,10 @@ export const Navigation: React.FC = () => {
           <a
             href="#AboutUs"
             className={s.nav_link}
-            onClick={handleNavClick}
-            // onClick={() => {
-            //   dispatch(menuActions.toggleMenu(false));
-            // }}
+            // onClick={handleNavClick}
+            onClick={() => {
+              dispatch(menuActions.toggleMenu(false));
+            }}
           >
             ABOUT US
           </a>
