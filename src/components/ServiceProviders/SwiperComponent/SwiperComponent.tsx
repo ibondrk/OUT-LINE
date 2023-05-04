@@ -37,6 +37,7 @@ export const SwiperComponent: React.FC<SwiperComponentProps> = ({
     },
     onSlideChange: (swiper: any) => {
       setCurrentSlide(swiper.realIndex + 1);
+      console.log(typeof swiper);
     },
     ...swiperProps,
   };

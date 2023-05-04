@@ -83,7 +83,6 @@
     }
   }
 
-
   @include mixins.onDesktop {
     margin: 40px 0;
   }
@@ -130,6 +129,7 @@
   width: 80px;
   height: 80px;
   fill: var(--main-text);
+  align-self: flex-end;
 
   margin-left: 46px;
 
@@ -164,3 +164,9 @@
     margin-top: 15px;
   }
 }
+
+.linkedin:hover > svg > path:first-child {
+  fill: #0a66c2;
+}
+
+// .inst:hover > svg > path:first-child {}
