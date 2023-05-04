@@ -171,6 +171,7 @@
   font-size: 17px;
   line-height: 26px;
   text-decoration: underline;
+  cursor: pointer;
 
   @include mixins.onTablet {
     display: none;

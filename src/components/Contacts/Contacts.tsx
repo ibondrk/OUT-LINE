@@ -22,6 +22,7 @@ export const Contacts: React.FC = () => {
             href="https://instagram.com/out_line.ae?igshid=YmMyMTA2M2Y="
             target="_blank"
             rel="noreferrer"
+            className={s.inst}
           >
             {/* Inst logo */}
             <svg
@@ -64,12 +65,12 @@ export const Contacts: React.FC = () => {
             href="https://www.linkedin.com/company/out-line-group-fzco/"
             target="_blank"
             rel="noreferrer"
+            className={s.linkedin}
           >
             <svg
               width="32"
               height="31"
               viewBox="0 0 32 31"
-              fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
               <path

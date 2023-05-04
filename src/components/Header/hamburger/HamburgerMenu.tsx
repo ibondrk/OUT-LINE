@@ -88,6 +88,7 @@ export const HamburgerMenu: React.FC = () => {
                   href="https://www.linkedin.com/company/out-line-group-fzco/"
                   target="_blank"
                   rel="noreferrer"
+                  className={s.linkedin}
                 >
                   <svg
                     width="32"
@@ -181,6 +182,7 @@ export const HamburgerMenu: React.FC = () => {
                 href="https://www.linkedin.com/company/out-line-group-fzco/"
                 target="_blank"
                 rel="noreferrer"
+                className={s.linkedin}
               >
                 <svg
                   width="32"

@@ -323,6 +323,7 @@
   line-height: 26px;
   text-decoration: underline;
   justify-self: center;
+  cursor: pointer;
 
   @include mixins.onTablet {
     display: none;

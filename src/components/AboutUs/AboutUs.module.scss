@@ -162,6 +162,7 @@
   font-size: 16px;
   line-height: 24px;
   text-decoration: underline;
+  cursor: pointer;
 
   @include mixins.onDesktop {
     font-size: 17px;
