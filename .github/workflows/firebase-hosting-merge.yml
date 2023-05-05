@@ -15,9 +15,8 @@ jobs:
         with:
           node-version: '14.18.0'
           cache: 'npm'
-          cache-dependency-path: package-lock.json
       - name: Build JS
-        run: npm i && react-scripts build
+        run: npm i && npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
