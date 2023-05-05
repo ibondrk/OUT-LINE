@@ -15,8 +15,10 @@ jobs:
         with:
           node-version: '14.18.0'
           cache: 'npm'
+      - name: Install JS
+        run: npm i ; npm list
       - name: Build JS
-        run: npm i && npm run build
+        run: npm run build
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
