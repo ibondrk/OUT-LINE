@@ -16,7 +16,7 @@ jobs:
           node-version: '14.18.0'
           cache: 'npm'
       - name: Install JS
-        run: npm i 
+        run: npm ci 
       - name: Build JS
         run: npm run build
       - name: Test
