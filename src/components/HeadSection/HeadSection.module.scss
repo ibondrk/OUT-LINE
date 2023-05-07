@@ -28,7 +28,7 @@
 
 .themeWrapper {
   display: none;
-  transform: rotate(90deg);
+  transform: rotate(270deg);
   width: 40px;
   height: 40px;
 
@@ -52,10 +52,6 @@
   @include mixins.onTablet {
     transform: translate(0, -20%);
     grid-row: 1/4;
-  }
-
-  @include mixins.onDesktop {
-    // justify-content: unset;
   }
 }
 
@@ -90,7 +86,23 @@
 .text_container {
   position: absolute;
   z-index: 2;
-  transform: translate(-117px, 0);
+  transform: translate(-116px, 0);
+
+  @media screen and (min-width: 500px) {
+    transform: translate(-156px, 0);
+  }
+
+  @media screen and (min-width: 600px) {
+    transform: translate(-206px, 0);
+  }
+
+  @media screen and (min-width: 700px) {
+    transform: translate(-284px, 0);
+  }
+
+  @include mixins.onTablet {
+    transform: translate(-116px, 0);
+  }
 
   @include mixins.on1024 {
     transform: translate(-208px, 0);
@@ -99,43 +111,88 @@
   @include mixins.onDesktop {
     transform: translate(-197px, 0);
   }
+
+  @include mixins.on1920 {
+    transform: translate(-259px, 0);
+  }
 }
 
 .slash {
   display: block;
   width: 0;
-  height: 42px;
-  background-color: #4b4343;
-  border: 2px solid #4b4343;
+  height: 45px;
+  background-color: var(--main-text);
+  border: 2px solid var(--main-text);
   border-radius: 2px;
   margin-left: 17px;
   margin-bottom: 5px;
+  margin: 15px 0 25px 17px;
   transform: rotate(36deg);
+
+  @include mixins.onTablet {
+
+  }
 
   @include mixins.onDesktop {
     margin-bottom: 27px;
-    height: 50px;
+    height: 65px;
   }
 }
 
 .headName {
-  background-image: linear-gradient(
-    to right,
-    #bbd1ff 49%,
-    var(--theme-background) 48%
-  );
+  &__out,
+  &__line {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-background-clip: text;
+    -moz-text-fill-color: transparent;
+  }
 
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-background-clip: text;
-  -moz-text-fill-color: transparent;
+  &__out {
+    background-image: linear-gradient(
+      to right,
+      #bbd1ff 48%,
+      var(--theme-background) 48%
+    );
+  }
 
+  &__line {
+    background-image: linear-gradient(
+      to right,
+      #bbd1ff 48.8%,
+      var(--theme-background) 48%
+    );
+
+    @include mixins.on1920 {
+      background-image: linear-gradient(
+        to right,
+        #bbd1ff 48.8%,
+        var(--theme-background) 48%
+      );
+      transform: translate(-2px, 0);
+    }
+  }
 }
 
 .mainPicture {
   width: 210px;
   height: 349px;
+
+  @media screen and (min-width: 500px) {
+    width: 250px;
+    height: 400px;
+  }
+
+  @media screen and (min-width: 600px) {
+    width: 300px;
+    height: 478px;
+  }
+
+  @media screen and (min-width: 700px) {
+    width: 379px;
+    height: 490px;
+  }
 
   @include mixins.onTablet {
     width: 251px;
@@ -149,12 +206,12 @@
 
   @include mixins.onDesktop {
     width: 385px;
-    height: 832px;
+    height: 865px;
   }
 
   @include mixins.on1920 {
-    width: 465px;
-    height: 1003px;
+    width: 475px;
+    height: 1024px;
   }
 }
 
@@ -164,25 +221,14 @@
   display: flex;
 
   justify-content: end;
-  padding-right: 20%;
-  transform: translate(0, -50%);
-
-  // background-image: linear-gradient(
-  //   to right,
-  //   #bbd1ff 49%,
-  //   var(--theme-background) 48%
-  // );
-
-  // background-clip: text;
-  // -webkit-background-clip: text;
-  // -webkit-text-fill-color: transparent;
-  // -moz-background-clip: text;
-  // -moz-text-fill-color: transparent;
-
+  // padding-right: 20%;
+  transform: translate(-20%, -50%);
+  
   @include mixins.onTablet {
     grid-row: 1/2;
     transform: unset;
     justify-content: unset;
+    width: 0;
   }
 }
 
@@ -203,6 +249,7 @@
       bottom: 0;
       content: '';
       background: var(--main-gradient);
+      opacity: 0.5;
       height: 1px;
       width: 100vw;
 
@@ -280,6 +327,6 @@
   }
 
   @include mixins.onDesktop {
-    margin: 200px 0 0;
+    margin: 225px 0 0;
   }
 }

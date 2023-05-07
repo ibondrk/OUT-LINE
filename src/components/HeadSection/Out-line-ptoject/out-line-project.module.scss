@@ -1,29 +1,30 @@
-@use 'sass:math';
-
-$circle-size: 50px;
-$letter-size: 16px;
-
-@keyframes rotate {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(359deg);
-  }
-}
+@use '../../../styles/mixins.scss' as mixins;
 
 .letter {
   position: absolute;
-  font-size: $letter-size;
+  display: inline-block;
   transform-origin: 0 100%;
+
+  font-size: 16px;
+  
+  @include mixins.onTablet {
+    font-size: 20px;
+  }
 }
 
-.letter_container {
+.circle {
   position: relative;
-  height: calc($circle-size + 3rem);
-  transform: scale(1);
+}
+
+.circleText__char {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: 0 100%;
   display: inline-block;
-  animation: rotate 10s linear infinite;
-  font-size: $letter-size;
-  transform-origin: center center;
+  font-size: 16px;
+  
+  @include mixins.onTablet {
+    font-size: 20px;
+  }
 }

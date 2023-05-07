@@ -16,6 +16,11 @@
     margin-right: 33px;
   }
 
+  @include mixins.onDesktop {
+    margin-right: unset;
+    height: 30px;
+  }
+
   &:before,
   &:after {
     content: "";
@@ -28,6 +33,12 @@
     border-radius: 50%;
     width: 36px;
     height: 36px;
+
+    @include mixins.onDesktop {
+      right: 30px;
+      width: 30px;
+      height: 30px;
+    }
   }
 }
 
@@ -36,5 +47,9 @@
   &:after {
     background: url('./pictures/sun.svg') no-repeat center;
     transform: translateX(29px);
+
+    @include mixins.onDesktop {
+      transform: translateX(36px);
+    }
   }
 }
