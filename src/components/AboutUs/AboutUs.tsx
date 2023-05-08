@@ -137,7 +137,7 @@ export const AboutUs: React.FC = () => {
           s.enterpriseDev,
           s.corporateEstablishment,
           'T--1-4',
-          'D--13-15'
+          'D--17-19'
         )}
       >
         <div className={s.entDevHead}>
@@ -177,7 +177,7 @@ export const AboutUs: React.FC = () => {
           s.enterpriseDev,
           s.internationalExpansion,
           'T--5-8',
-          'D--16-19'
+          'D--20-21'
         )}
       >
         <div className={s.entDevHead}>
@@ -215,7 +215,7 @@ export const AboutUs: React.FC = () => {
           s.enterpriseDev,
           s.projectManagement,
           'T--9-12',
-          'D--20-23'
+          'D--22-23'
         )}
       >
         <div className={s.entDevHead}>

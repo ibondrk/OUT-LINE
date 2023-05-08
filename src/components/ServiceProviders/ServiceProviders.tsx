@@ -38,11 +38,11 @@ export const ServiceProviders: React.FC = () => {
           <img src={dot3} alt="dot" className={s.dot3} />
         </div>
         <div className={cn(s.text_wrapper, 'T--1-6')}>
-          <span className={s.sectionTitle__main}>
+          <p className={s.sectionTitle__main}>
             Our <br />
             Service <br />
-          </span>
-          <span className={s.sectionTitle__secoundary}>Providers</span>
+          </p>
+          <p className={s.sectionTitle__secoundary}>Providers</p>
         </div>
       </div>
       {/* Description */}
