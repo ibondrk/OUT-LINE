@@ -46,6 +46,7 @@
   @include mixins.onDesktop {
     display: flex;
     justify-content: flex-start;
+    font-size: 55px;
   }
 }
 

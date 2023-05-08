@@ -38,6 +38,7 @@
   @include mixins.onDesktop {
     display: flex;
     justify-content: flex-start;
+    font-size: 55px;
   }
 
   &__main {
@@ -123,6 +124,7 @@
   @include mixins.onDesktop {
     margin: 120px 0 40px;
     min-width: 300px;
+    max-width: 620px;
   }
 
   &__text_wrapper {
@@ -237,19 +239,20 @@
 
   padding: 35px 0;
 
-  &:not(:last-child)::after {
+  &::before {
     position: absolute;
     bottom: 0;
+    left: 0;
     content: '';
     background: var(--main-gradient);
     height: 1px;
     width: 100vw;
+    opacity: 0.5;
 
     transform: translate(-30px, 0);
 
     @include mixins.onTablet {
       transform: unset;
-      right: 0;
       width: 1px;
       height: 100%;
     }
@@ -267,6 +270,7 @@
     max-height: 70px;
     overflow: hidden;
     transition: max-height 0.3s ease-in-out;
+    max-height: 0px;
 
     &.opened {
       max-height: 1000px;
@@ -274,12 +278,14 @@
 
     @include mixins.onTablet {
       margin-top: 50px;
+      max-height: 120px;
     }
 
     @include mixins.onDesktop {
       margin-top: 150px;
       font-size: 17px;
       line-height: 26px;
+      max-height: 152px;
     }
 
     @include mixins.on1920 {
@@ -288,28 +294,20 @@
   }
 
   @include mixins.onTablet {
-    min-width: 200px;
+    min-width: 183px;
+    // max-width: 240px;
     padding: 0 20px;
   }
 
   @include mixins.onDesktop {
     grid-row: 1 / 4;
+    max-width: 228px;
+  }
+
+  @include mixins.on1920 {
+    max-width: 290px;
   }
 }
-
-.corporateEstablishment {
-  @include mixins.onDesktop {
-    &::before {
-      position: absolute;
-      content: '';
-      background: var(--main-gradient);
-      left: 0;
-      width: 1px;
-      height: 100%;
-    }
-  }
-}
-
 
 .internationalExpansion {
   @include mixins.onTablet {
@@ -320,10 +318,10 @@
 .projectManagement {
   @include mixins.onTablet {
     margin-top: 200px;
-    margin-bottom: 80px;
+    padding-bottom: 80px;
   }
   @include mixins.on1024 {
-    margin-bottom: 30px;
+    padding-bottom: 30px;
   }
   @include mixins.onDesktop {
     margin-bottom: unset;
