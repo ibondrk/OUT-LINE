@@ -1,78 +1,55 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+import { useMediaQuery } from 'react-responsive';
 import s from './out-line-project.module.scss';
 
-const radius = 25;
-
-const startAngle = (3 * Math.PI) / 2;
-
 export const Out_line_project: React.FC = () => {
-  const letters = [
-    'o',
-    'u',
-    't',
-    '-',
-    'l',
-    'i',
-    'n',
-    'e',
-    '-',
-    'p',
-    'r',
-    'o',
-    'j',
-    'e',
-    'c',
-    't',
-    '-',
-  ];
-
-  const angleBetweenLetters = (2 * Math.PI) / letters.length;
-  // const halfCircleAngle = Math.PI;
+  const text = 'out-line-project-';
+  const chars = text.split('');
+  const angleStep = 360 / chars.length; // angle between letters
+  const angleOffset = -90; // beginning angle of rotating for text
+  const containerRef = useRef<HTMLDivElement>(null);
+  const [rotation, setRotation] = useState(0);
+  const isSmallScreen = useMediaQuery({ maxWidth: 767 });
+  const radius = isSmallScreen ? 20 : 25; // circle radius
 
   useEffect(() => {
-    const letters = document.querySelectorAll(
-      '.letter'
-    ) as NodeListOf<HTMLElement>;
-
-    let rotation = 0;
-    const rotationStep = 360 / (10 * 60);
-
-    const intervalId = setInterval(() => {
-      rotation += rotationStep;
-      letters.forEach((letter) => {
-        letter.style.transform = `rotate(${rotation}deg)`;
-      });
-    }, 8);
-
-    return () => clearInterval(intervalId);
+    const interval = setInterval(() => {
+      setRotation((prevRotation) => prevRotation + 1);
+    }, 45);
+    return () => clearInterval(interval);
   }, []);
 
-  const letterElements = letters.map((letter, index) => {
-    const angle = startAngle + index * angleBetweenLetters;
-    // const isLeftHalf =
-    //   angle > startAngle - halfCircleAngle && angle < startAngle;
-
-    // const getLetterColor = (() => {
-    //   const letterColor = isLeftHalf
-    //     ? getComputedStyle(document.documentElement).getPropertyValue(
-    //         '--inverted-main-text'
-    //       )
-    //     : getComputedStyle(document.documentElement).getPropertyValue(
-    //         '--main-text'
-    //       );
-    //   return () => letterColor;
-    // })();
-    // console.log(getLetterColor());
-    const style = {
-      height: `${radius * 2}px`,
-      transform: `rotate(${(angle - startAngle) * (180 / Math.PI)}deg)`,
-      // color: getLetterColor(),
-    };
-    return (
-      <span key={index} className={s.letter} style={style}>
-        {letter}
-      </span>
-    );
-  });
-  return <div className={s.letter_container}>{letterElements}</div>;
+  return (
+    <div ref={containerRef}>
+      <div
+        className={s.circle}
+        style={{
+          position: 'relative',
+          height: radius * 2,
+          transform: `rotate(${rotation}deg)`,
+        }}
+      >
+        {chars.map((char, index) => (
+          <span
+            key={index}
+            className={s.letter}
+            style={{
+              transform: `rotate(${angleStep * index}deg) translateY(-${
+                radius * 2
+              }px)`,
+              color: isSmallScreen
+                ? (angleStep * index + rotation + angleOffset) % 360 > 180
+                  ? 'var(--spin-text-color)'
+                  : 'var(--inverted-spin-text-color)'
+                : (angleStep * index + rotation) % 360 > 180
+                ? 'var(--spin-text-color)'
+                : 'var(--inverted-spin-text-color)',
+            }}
+          >
+            {char}
+          </span>
+        ))}
+      </div>
+    </div>
+  );
 };

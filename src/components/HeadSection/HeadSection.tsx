@@ -16,9 +16,9 @@ export const HeadSection: React.FC = () => {
       <div className={cn(s.image_container, 'S--1-4', 'T--5-8', 'D--7-12')}>
         <div className={cn(s.text_container)}>
           <div className={cn(s.headName_wrapper)}>
-            <p className={s.headName}>OUT</p>
+            <p className={s.headName__out}>OUT</p>
             <span className={s.slash}></span>
-            <p className={cn(s.headName, s.line)}>LINE</p>
+            <p className={cn(s.headName__line)}>LINE</p>
           </div>
         </div>
         <img

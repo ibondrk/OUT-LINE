@@ -4,16 +4,19 @@
 
 :root[data-theme='light'] {
   --main-text: #4b4343;
-  --inverted-main-text: #fdfcfc;
   --link-color: #687ab4;
-
+  
   --theme-background: #fff;
   --theme-background_2: #f6f6f9;
   --decor-line: #dfe3ec;
-
+  
   --logo: #202020;
   --burger: #4d4d4d;
+  
+  --inverted-main-text: #fdfcfc;
 
+  --spin-text-color: #fff;
+  --inverted-spin-text-color: #000;
   // svg colors
 
   --rakez-hover-text: #41C0BE;
@@ -36,4 +39,7 @@
   --rakez-hover-text: #fdfcfc;
   --k-icon: #fdfcfc;
   --meta-text: #fdfcfc;
+
+  --spin-text-color: #000;
+  --inverted-spin-text-color: #fff;
 }
