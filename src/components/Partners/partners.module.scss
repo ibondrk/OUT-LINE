@@ -190,6 +190,7 @@
   width: 1px;
   height: 100%;
   background: var(--main-gradient);
+  opacity: 0.5;
   transform: translateX(-50%) rotate(40deg);
   -webkit5-transform: translateX(-50%) rotate(45deg);
   -moz-transform: translateX(-50%) rotate(40deg);
@@ -270,6 +271,7 @@
     position: absolute;
     height: 1px;
     background: var(--main-gradient);
+    opacity: 0.5;
     width: 100%;
     top: 60px;
   }

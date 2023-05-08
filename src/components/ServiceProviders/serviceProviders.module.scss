@@ -35,6 +35,11 @@
   &__main {
     font-family: 'BLMelody-Bold';
     font-weight: 700;
+    max-width: fit-content;
+
+    @include mixins.onDesktop {
+      background: var(--theme-background);
+    }
   }
 
   @include mixins.on1024 {
@@ -45,6 +50,10 @@
     display: flex;
     justify-content: flex-start;
     font-size: 55px;
+  }
+
+  &__secoundary {
+    background: var(--theme-background);
   }
 }
 
@@ -127,29 +136,30 @@
       width: 1px;
       height: 1000%;
       background: var(--main-gradient);
-      z-index: 0;
+      opacity: 0.5;
+      z-index: -1;
     }
 
     &::before {
       left: 10px;
     }
     &::after {
-      right: -20%;
+      right: 15%;
 
       @media screen and (min-width:1700px) {
-        right: -30%;
+        right: 0;
       }
       @media screen and (min-width:1800px) {
-        right: -40%;
+        right: -10%;
       }
       @media screen and (min-width:2000px) {
-        right: -50%;
+        right: -20%;
       }
       @media screen and (min-width:2200px) {
-        right: -70%;
+        right: -35%;
       }
       @media screen and (min-width:2400px) {
-        right: -100%;
+        right: -50%;
       }
     }
   }
@@ -171,7 +181,7 @@
   }
 
   @include mixins.onDesktop {
-    margin: 20px 0 0;
+    margin: 0;
   }
 
   &__text_wrapper {
@@ -195,6 +205,7 @@
       background: var(--theme-background);
       z-index: 1;
       position: relative;
+      padding-top: 20px;
     }
   }
 }

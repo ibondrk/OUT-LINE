@@ -14,6 +14,7 @@
     width: 1px;
     height: 100%;
     background: var(--main-gradient);
+    opacity: 0.5;
 
     @include mixins.onTablet {
       content: unset;
