@@ -178,4 +178,8 @@
   fill: #0a66c2;
 }
 
-// .inst:hover > svg > path:first-child {}
+.instagram_logo:hover {
+  path:first-child {
+    fill: url(#instHoverContactGrad);
+  }
+}

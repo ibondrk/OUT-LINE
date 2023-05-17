@@ -6,7 +6,6 @@ import dot1 from '../../images/dots/dot1.webp';
 import dot2 from '../../images/dots/dot2.webp';
 import dot3 from '../../images/dots/dot3.webp';
 import { motion, useInView } from 'framer-motion';
-// useScroll,
 
 export const AboutUs: React.FC = () => {
   const [showMoreDescr, setShowMoreDescr] = useState(false);
@@ -14,14 +13,8 @@ export const AboutUs: React.FC = () => {
   const [showMoreIntExpansion, setShowMoreIntExpansion] = useState(false);
   const [showMorePrMengm, setShowMorePrMengm] = useState(false);
 
-  // const { scrollYProgress } = useScroll();
   const svgRef = useRef(null);
   const isSvgInView = useInView(svgRef, { once: true });
-
-  // Delete this later:
-  // useEffect(() => {
-  //   console.log('Element is in view: ', isSvgInView);
-  // }, [isSvgInView]);
 
   const maskVariants = {
     initial: {

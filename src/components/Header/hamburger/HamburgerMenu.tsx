@@ -49,6 +49,7 @@ export const HamburgerMenu: React.FC = () => {
                 >
                   {/* Inst logo */}
                   <svg
+                    className={s.instagram_logo}
                     id="instagram-logo"
                     width="31"
                     height="31"
@@ -77,9 +78,17 @@ export const HamburgerMenu: React.FC = () => {
                         <stop stopColor="#6FA0D8" />
                         <stop offset="1" stopColor="#9184E8" />
                       </linearGradient>
-                      <clipPath id="clip0_inst_head_men_532_480">
-                        <rect width="41" height="41" fill="white" />
-                      </clipPath>
+
+                      <radialGradient
+                        id="instHoverGrad1"
+                        cx="217.76"
+                        cy="3290.99"
+                        r="4271.92"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop offset=".09" stopColor="#fa8f21"></stop>
+                        <stop offset=".78" stopColor="#d82d7e"></stop>
+                      </radialGradient>
                     </defs>
                   </svg>
                 </a>
@@ -143,6 +152,7 @@ export const HamburgerMenu: React.FC = () => {
               >
                 {/* Inst logo */}
                 <svg
+                  className={cn(s.instagram_logo, s.inside)}
                   id="instagram-logo"
                   width="31"
                   height="31"
@@ -174,6 +184,16 @@ export const HamburgerMenu: React.FC = () => {
                     <clipPath id="clip0_inst_inside_532_480">
                       <rect width="41" height="41" fill="white" />
                     </clipPath>
+                    <radialGradient
+                      id="instHoverinsideGrad"
+                      cx="217.76"
+                      cy="3290.99"
+                      r="4271.92"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop offset=".09" stopColor="#fa8f21"></stop>
+                      <stop offset=".78" stopColor="#d82d7e"></stop>
+                    </radialGradient>
                   </defs>
                 </svg>
               </a>

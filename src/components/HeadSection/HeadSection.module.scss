@@ -70,6 +70,7 @@
   @include mixins.onTablet {
     font-size: 100px;
     line-height: 108px;
+    transform: translate(0, -30px);
   }
 
   @include mixins.onDesktop {

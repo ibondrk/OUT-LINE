@@ -92,6 +92,18 @@
   fill: #0a66c2;
 }
 
+.instagram_logo:hover {
+  path:nth-child(1) {
+    fill: url(#instHoverGrad1);
+  }
+
+  &.inside {
+    path:first-child {
+      fill: url(#instHoverinsideGrad);
+    }
+  }
+}
+
 .qr {
   margin-top: 25px;
   width: 75px;

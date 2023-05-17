@@ -26,6 +26,7 @@ export const Contacts: React.FC = () => {
           >
             {/* Inst logo */}
             <svg
+              className={s.instagram_logo}
               id="instagram-logo"
               width="31"
               height="31"
@@ -57,6 +58,16 @@ export const Contacts: React.FC = () => {
                 <clipPath id="clip0_inst_footer_532_480">
                   <rect width="41" height="41" fill="white" />
                 </clipPath>
+                <radialGradient
+                  id="instHoverContactGrad"
+                  cx="217.76"
+                  cy="3290.99"
+                  r="4271.92"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop offset=".09" stopColor="#fa8f21"></stop>
+                  <stop offset=".78" stopColor="#d82d7e"></stop>
+                </radialGradient>
               </defs>
             </svg>
           </a>
