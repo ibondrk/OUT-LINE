@@ -74,6 +74,7 @@ export const Partners: React.FC = () => {
             xmlns="http://www.w3.org/2000/svg"
             width="121px"
             height="45px"
+            viewBox="0 0 121 45"
           >
             <path
               fill="#fff"
@@ -1770,7 +1771,7 @@ export const Partners: React.FC = () => {
             </defs>
           </svg>
         </a>
-        <span className={s.splite_line} />
+
         {/* Gov of Dubai */}
         <a href="https://u.ae/en#/" target="_blank" rel="noreferrer">
           <svg
@@ -2356,7 +2357,6 @@ export const Partners: React.FC = () => {
             </defs>
           </svg>
         </a>
-        <span className={s.splite_line_2} />
         {/* IFZA */}
         <a href="https://ifza.com/en/" target="_blank" rel="noreferrer">
           <svg
@@ -2946,7 +2946,6 @@ export const Partners: React.FC = () => {
             </defs>
           </svg>
         </a>
-        <span className={s.splite_line_3} />
         {/* Ajman Media City Free Zone */}
         <a href="https://www.amcfz.ae/en/" target="_blank" rel="noreferrer">
           <svg

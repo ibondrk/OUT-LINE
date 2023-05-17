@@ -240,7 +240,7 @@
     grid-template-columns: repeat(3, 1fr);
   }
 
-  max-height: 240px;
+  max-height: 239px;
   overflow: hidden;
   transition: max-height 0.3s ease-in-out;
 
@@ -251,6 +251,25 @@
     grid-template-columns: repeat(5, 1fr);
     grid-gap: 22px;
     margin-top: 50px;
+
+    & svg {
+      height: 80px;
+    }
+
+    & > a:nth-child(5n):not(:last-child)::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      left: 0;
+      height: 1px;
+      background: var(--main-gradient);
+      opacity: 0.5;
+      transform: translateY(85px);
+      -webkit-transform: translateY(85px);
+      -moz-transform: translateY(85px);
+      -ms-transform: translateY(85px);
+      -o-transform: translateY(85px);
+    }
   }
   @include mixins.on1024 {
     grid-row: 1 / 5;
@@ -260,60 +279,82 @@
     @media screen and (min-width: 1024px) and (max-width: 1199px) {
       gap: unset;
     }
-  }
-}
 
-.splite_line {
-  display: none;
+    & svg {
+      height: 180px;
+    }
 
-  @include mixins.onTablet {
-    display: block;
-    position: absolute;
-    height: 1px;
-    background: var(--main-gradient);
-    opacity: 0.5;
-    width: 100%;
-    top: 60px;
-  }
-  @include mixins.on1024 {
-    top: 148px;
-    @media screen and (min-width: 1199px) {
-      top: 152px;
+    @media screen and (min-width: 1200px) {
+      & svg {
+        width: 130px;
+      }
+    }
+
+    & > a:nth-child(5n):not(:last-child)::after {
+      transform: translateY(185px);
+      -webkit-transform: translateY(185px);
+      -moz-transform: translateY(185px);
+      -ms-transform: translateY(185px);
+      -o-transform: translateY(185px);
     }
   }
-  @include mixins.onDesktop {
-    top: 135px;
-  }
-}
-
-.splite_line_2 {
-  @extend .splite_line;
-  top: 134px;
-  @include mixins.on1024 {
-    top: 292px;
-    @media screen and (min-width: 1199px) {
-      top: 300px;
+  @media screen and (min-width: 1700px) {
+    & svg {
+      width: 150px;
     }
   }
-  @include mixins.onDesktop {
-    top: 287px;
-  }
 }
 
-.splite_line_3 {
-  @extend .splite_line;
-  top: 202px;
-  @include mixins.on1024 {
-    top: 440px;
-    @media screen and (min-width: 1199px) {
-      top: 452px;
-    }
-  }
-  @include mixins.onDesktop {
-    top: 437px;
-  }
-}
+// .splite_line {
+//   display: none;
 
+//   @include mixins.onTablet {
+//     display: block;
+//     position: absolute;
+//     height: 1px;
+//     background: var(--main-gradient);
+//     opacity: 0.5;
+//     width: 100%;
+//     top: 60px;
+//   }
+//   @include mixins.on1024 {
+//     top: 148px;
+//     @media screen and (min-width: 1199px) {
+//       top: 152px;
+//     }
+//   }
+//   @include mixins.onDesktop {
+//     top: 135px;
+//   }
+// }
+
+// .splite_line_2 {
+//   @extend .splite_line;
+//   top: 134px;
+//   @include mixins.on1024 {
+//     top: 292px;
+//     @media screen and (min-width: 1199px) {
+//       top: 300px;
+//     }
+//   }
+//   @include mixins.onDesktop {
+//     top: 287px;
+//   }
+// }
+
+// .splite_line_3 {
+//   @extend .splite_line;
+//   top: 202px;
+//   @include mixins.on1024 {
+//     top: 440px;
+//     @media screen and (min-width: 1199px) {
+//       top: 452px;
+//     }
+//   }
+//   @include mixins.onDesktop {
+//     top: 437px;
+//   }
+// }
 
 .opened {
   max-height: 1000px;
@@ -335,6 +376,7 @@
 // icons
 
 .gov_of_ab_db {
+  align-self: center;
   &:hover {
     & path:nth-child(1) {
       fill: #fff;

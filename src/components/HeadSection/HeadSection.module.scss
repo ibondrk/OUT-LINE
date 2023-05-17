@@ -143,11 +143,23 @@
 .headName {
   &__out,
   &__line {
-    background-clip: text;
+    // Need fixes for Safari browser
+    // background-clip: text;
+    // -webkit-background-clip: text;
+    // -webkit-text-fill-color: transparent;
+    // -moz-background-clip: text;
+    // -moz-text-fill-color: transparent;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-background-clip: text;
     -moz-text-fill-color: transparent;
+    -ms-background-clip: text;
+    -ms-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+    -webkit-box-decoration-break: clone; 
+    
+    -webkit-text-stroke: 0;
   }
 
   &__out {

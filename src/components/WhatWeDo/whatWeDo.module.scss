@@ -141,10 +141,15 @@
     font-weight: 300;
     font-size: 16px;
     line-height: 24px;
+    padding-right: 65px;
 
     max-height: 100px;
     overflow: hidden;
     transition: max-height 0.3s ease-in-out;
+
+    @include mixins.onTablet {
+      padding-right: unset;
+    }
 
     @include mixins.on1024 {
       text-align: justify;
