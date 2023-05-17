@@ -365,5 +365,20 @@
     -moz-transform: translateX(-30px);
     -ms-transform: translateX(-30px);
     -o-transform: translateX(-30px);
+  }
 }
+
+.circleToFill {
+  stroke: var(--logo);
+  stroke-width: 2;
+  stroke-dashoffset: 0;
+  stroke-dasharray: var(--pathLength);
+  animation: fillPath 4s ease-out forwards;
 }
+
+
+// @keyframes fillPath {
+//   to {
+//     stroke-dasharray: var(--pathLength);
+//   }
+// }
