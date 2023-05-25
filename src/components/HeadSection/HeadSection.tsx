@@ -9,7 +9,7 @@ import { Theme } from '../Header/Theme';
 
 export const HeadSection: React.FC = () => {
   return (
-    <section className={s.section}>
+    <section className={s.section} id="HeadSection">
       <div className={cn(s.themeWrapper, 'D--1-1')}>
         <Theme />
       </div>

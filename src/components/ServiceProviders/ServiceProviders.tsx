@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import s from './serviceProviders.module.scss';
 import cn from 'classnames';
 
@@ -14,6 +14,10 @@ import dot1 from '../../images/dots/dot1.webp';
 import dot2 from '../../images/dots/dot2.webp';
 import dot3 from '../../images/dots/dot3.webp';
 
+import Animation from '../../animations/animationLogic';
+
+import { motion, useInView } from 'framer-motion';
+
 export const ServiceProviders: React.FC = () => {
   const [showMoreDescr, setShowMoreDescr] = useState(false);
 
@@ -28,21 +32,77 @@ export const ServiceProviders: React.FC = () => {
 
   const isMobile = windowWidth < 768;
 
+  const {
+    wordMajorAnimateFrom,
+    wordMinorAnimateFrom,
+    dotsAnimateFrom,
+    animateTo,
+    transitionSectionNamePart1,
+    transitionSectionNamePart2,
+    transitionDot1,
+    transitionDot2,
+    transitionDot3,
+  } = Animation();
+
+  const secMajorRef = useRef(null);
+  const secMajorRefInView = useInView(secMajorRef);
+
+  const secMinorRef = useRef(null);
+  const secMinorRefInView = useInView(secMinorRef);
+
+  const dotsRef = useRef(null);
+  const dotsRefInView = useInView(dotsRef);
+
   return (
     <section className={s.section} id="ServiceProviders">
       {/* Title */}
       <div className={cn(s.sectionTitle, 'T--1-5', 'D--1-11')}>
-        <div className={cn(s.dots, 'T--1-2')}>
-          <img src={dot1} alt="dot" className={s.dot1} />
-          <img src={dot2} alt="dot" className={s.dot2} />
-          <img src={dot3} alt="dot" className={s.dot3} />
+        <div className={cn(s.dots, 'T--1-2')} ref={dotsRef}>
+          <motion.div
+            style={{ display: 'inline-block' }}
+            initial={dotsAnimateFrom}
+            animate={dotsRefInView ? animateTo : dotsAnimateFrom}
+            transition={transitionDot1}
+          >
+            <img src={dot1} alt="dot" className={s.dot1} />
+          </motion.div>
+          <motion.div
+            style={{ display: 'inline-block' }}
+            initial={dotsAnimateFrom}
+            animate={dotsRefInView ? animateTo : dotsAnimateFrom}
+            transition={transitionDot2}
+          >
+            <img src={dot2} alt="dot" className={s.dot2} />
+          </motion.div>
+          <motion.div
+            style={{ display: 'inline-block' }}
+            initial={dotsAnimateFrom}
+            animate={dotsRefInView ? animateTo : dotsAnimateFrom}
+            transition={transitionDot3}
+          >
+            <img src={dot3} alt="dot" className={s.dot3} />
+          </motion.div>
         </div>
         <div className={cn(s.text_wrapper, 'T--1-6')}>
-          <p className={s.sectionTitle__main}>
+          <motion.p
+            className={s.sectionTitle__main}
+            ref={secMajorRef}
+            initial={wordMajorAnimateFrom}
+            animate={secMajorRefInView ? animateTo : wordMajorAnimateFrom}
+            transition={transitionSectionNamePart1}
+          >
             Our <br />
-            Service <br />
-          </p>
-          <p className={s.sectionTitle__secoundary}>Providers</p>
+            Service
+          </motion.p>
+          <motion.p
+            className={s.sectionTitle__secoundary}
+            ref={secMinorRef}
+            initial={wordMinorAnimateFrom}
+            animate={secMinorRefInView ? animateTo : wordMinorAnimateFrom}
+            transition={transitionSectionNamePart2}
+          >
+            Providers
+          </motion.p>
         </div>
       </div>
       {/* Description */}

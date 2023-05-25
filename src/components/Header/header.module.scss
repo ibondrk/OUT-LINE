@@ -26,6 +26,7 @@
 .btns_wrapper {
   display: flex;
   position: relative;
+  align-items: center;
 
   @include mixins.onDesktop {
     display: none;

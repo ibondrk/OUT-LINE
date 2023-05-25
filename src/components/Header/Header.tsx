@@ -9,7 +9,7 @@ import sprite from '../../images/sprite.svg';
 
 export const Header: React.FC = () => {
   return (
-    <header className={s.wrapper}>
+    <header className={s.wrapper} id="header">
       <svg className={s.logo}>
         <use xlinkHref={`${sprite}#logo`} />
       </svg>

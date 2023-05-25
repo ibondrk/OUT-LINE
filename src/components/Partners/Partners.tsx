@@ -13,11 +13,13 @@ import dot1 from '../../images/dots/dot1.webp';
 import dot2 from '../../images/dots/dot2.webp';
 import dot3 from '../../images/dots/dot3.webp';
 
+import Animation from '../../animations/animationLogic';
+
 export const Partners: React.FC = () => {
   const [showMorePartners, setShowMorePartners] = useState(false);
 
   const countRef = useRef(null);
-  const isCountInView = useInView(countRef, { once: true });
+  const isCountInView = useInView(countRef, {});
 
   const count = useMotionValue(0);
   const rounded = useTransform(count, (latest) => Math.round(latest));
@@ -29,22 +31,77 @@ export const Partners: React.FC = () => {
     }
   }, [isCountInView]);
 
+  const {
+    wordMajorAnimateFrom,
+    wordMinorAnimateFrom,
+    dotsAnimateFrom,
+    animateTo,
+    transitionSectionNamePart1,
+    transitionSectionNamePart2,
+    transitionDot1,
+    transitionDot2,
+    transitionDot3,
+  } = Animation();
+
+  const secMajorRef = useRef(null);
+  const secMajorRefInView = useInView(secMajorRef);
+
+  const secMinorRef = useRef(null);
+  const secMinorRefInView = useInView(secMinorRef);
+
+  const dotsRef = useRef(null);
+  const dotsRefInView = useInView(dotsRef);
+
   return (
     <section className={s.section} id="Partners">
       <div className={cn(s.sectionTitle, 'T--1-5', 'D--1-11')}>
-        <div className={cn(s.dots, 'T--1-2')}>
-          <img src={dot1} alt="dot" className={s.dot1} />
-          <img src={dot2} alt="dot" className={s.dot2} />
-          <img src={dot3} alt="dot" className={s.dot3} />
+        <div className={cn(s.dots, 'T--1-2')} ref={dotsRef}>
+          <motion.div
+            style={{ display: 'inline-block' }}
+            initial={dotsAnimateFrom}
+            animate={dotsRefInView ? animateTo : dotsAnimateFrom}
+            transition={transitionDot1}
+          >
+            <img src={dot1} alt="dot" className={s.dot1} />
+          </motion.div>
+          <motion.div
+            style={{ display: 'inline-block' }}
+            initial={dotsAnimateFrom}
+            animate={dotsRefInView ? animateTo : dotsAnimateFrom}
+            transition={transitionDot2}
+          >
+            <img src={dot2} alt="dot" className={s.dot2} />
+          </motion.div>
+          <motion.div
+            style={{ display: 'inline-block' }}
+            initial={dotsAnimateFrom}
+            animate={dotsRefInView ? animateTo : dotsAnimateFrom}
+            transition={transitionDot3}
+          >
+            <img src={dot3} alt="dot" className={s.dot3} />
+          </motion.div>
         </div>
         <div className={cn(s.text_wrapper, 'T--1-6')}>
-          <span className={s.sectionTitle__main}>
+          <motion.p
+            className={s.sectionTitle__main}
+            ref={secMajorRef}
+            initial={wordMajorAnimateFrom}
+            animate={secMajorRefInView ? animateTo : wordMajorAnimateFrom}
+            transition={transitionSectionNamePart1}
+          >
             Our
             <br />
             Partners
-            <br />
-          </span>
-          <span className={s.sectionTitle__secoundary}>in UAE</span>
+          </motion.p>
+          <motion.p
+            className={s.sectionTitle__secoundary}
+            ref={secMinorRef}
+            initial={wordMinorAnimateFrom}
+            animate={secMinorRefInView ? animateTo : wordMinorAnimateFrom}
+            transition={transitionSectionNamePart2}
+          >
+            in UAE
+          </motion.p>
         </div>
       </div>
       <p className={cn(s.description, 'T--1-7', 'D--1-4')}>

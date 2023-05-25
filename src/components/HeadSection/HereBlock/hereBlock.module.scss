@@ -23,6 +23,14 @@
 .here_wrapper {
   display: flex;
   align-items: center;
+
+  // Safari fix align
+  display: -webkit-box;
+  -webkit-box-align: center;
+  display: -ms-flexbox;
+  -ms-flex-align: center;
+  display: flex;
+  align-items: center;
 }
 
 .here {

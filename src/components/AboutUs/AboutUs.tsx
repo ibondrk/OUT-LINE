@@ -5,6 +5,9 @@ import cn from 'classnames';
 import dot1 from '../../images/dots/dot1.webp';
 import dot2 from '../../images/dots/dot2.webp';
 import dot3 from '../../images/dots/dot3.webp';
+
+import Animation from '../../animations/animationLogic';
+
 import { motion, useInView } from 'framer-motion';
 
 export const AboutUs: React.FC = () => {
@@ -14,7 +17,7 @@ export const AboutUs: React.FC = () => {
   const [showMorePrMengm, setShowMorePrMengm] = useState(false);
 
   const svgRef = useRef(null);
-  const isSvgInView = useInView(svgRef, { once: true });
+  const isSvgInView = useInView(svgRef);
 
   const maskVariants = {
     initial: {
@@ -29,7 +32,7 @@ export const AboutUs: React.FC = () => {
     },
   };
 
-  const animateFrom = { opacity: 0, x: -40 };
+  const svgAnimateFrom = { opacity: 0, x: -40 };
   const linesAnimateTo = {
     opacity: isSvgInView ? 1 : 0,
     x: isSvgInView ? 0 : -40,
@@ -39,21 +42,77 @@ export const AboutUs: React.FC = () => {
     },
   };
 
-  const wordAnimateFrom = { opacity: 0, x: -70 };
+  const svgWordsAnimateFrom = { opacity: 0, x: -70 };
+
+  const {
+    wordMajorAnimateFrom,
+    wordMinorAnimateFrom,
+    dotsAnimateFrom,
+    animateTo,
+    transitionSectionNamePart1,
+    transitionSectionNamePart2,
+    transitionDot1,
+    transitionDot2,
+    transitionDot3,
+  } = Animation();
+
+  const secMajorRef = useRef(null);
+  const secMajorRefInView = useInView(secMajorRef);
+
+  const secMinorRef = useRef(null);
+  const secMinorRefInView = useInView(secMinorRef);
+
+  const dotsRef = useRef(null);
+  const dotsRefInView = useInView(dotsRef);
 
   return (
     <section className={s.section} id="aboutUs">
       <div className={cn(s.sectionTitle, 'T--1-5', 'D--1-11')}>
-        <div className={cn(s.dots, 'T--1-2')}>
-          <img src={dot1} alt="dot" className={s.dot1} />
-          <img src={dot2} alt="dot" className={s.dot2} />
-          <img src={dot3} alt="dot" className={s.dot3} />
+        <div className={cn(s.dots, 'T--1-2')} ref={dotsRef}>
+          <motion.div
+            style={{ display: 'inline-block' }}
+            initial={dotsAnimateFrom}
+            animate={dotsRefInView ? animateTo : dotsAnimateFrom}
+            transition={transitionDot1}
+          >
+            <img src={dot1} alt="dot" className={s.dot1} />
+          </motion.div>
+          <motion.div
+            style={{ display: 'inline-block' }}
+            initial={dotsAnimateFrom}
+            animate={dotsRefInView ? animateTo : dotsAnimateFrom}
+            transition={transitionDot2}
+          >
+            <img src={dot2} alt="dot" className={s.dot2} />
+          </motion.div>
+          <motion.div
+            style={{ display: 'inline-block' }}
+            initial={dotsAnimateFrom}
+            animate={dotsRefInView ? animateTo : dotsAnimateFrom}
+            transition={transitionDot3}
+          >
+            <img src={dot3} alt="dot" className={s.dot3} />
+          </motion.div>
         </div>
         <div className={cn(s.text_wrapper, 'T--1-6')}>
-          <span className={s.sectionTitle__main}>
-            About <br />
-          </span>
-          <span className={s.sectionTitle__secoundary}>Us</span>
+          <motion.p
+            className={s.sectionTitle__main}
+            ref={secMajorRef}
+            initial={wordMajorAnimateFrom}
+            animate={secMajorRefInView ? animateTo : wordMajorAnimateFrom}
+            transition={transitionSectionNamePart1}
+          >
+            About
+          </motion.p>
+          <motion.p
+            className={s.sectionTitle__secoundary}
+            ref={secMinorRef}
+            initial={wordMinorAnimateFrom}
+            animate={secMinorRefInView ? animateTo : wordMinorAnimateFrom}
+            transition={transitionSectionNamePart2}
+          >
+            Us
+          </motion.p>
         </div>
       </div>
 
@@ -100,7 +159,7 @@ export const AboutUs: React.FC = () => {
           id="outline-logo-u-execution"
           d="M40.122,70h9.078v-2.21h-6.375v-2.771h5.423v-2.142h-5.423v-2.567h6.188v-2.21h-8.891v11.9Zm9.986,0h3.366l2.805-3.774L59.084,70h3.383L57.86,64.05l4.607-5.95h-3.383l-2.805,3.774L53.474,58.1h-3.366l4.607,5.95L50.108,70Zm13.555,0h9.078v-2.21h-6.375v-2.771h5.423v-2.142h-5.423v-2.567h6.188v-2.21h-8.891v11.9Zm16.384.272c3.128,0,5.406-1.87,5.661-4.862h-2.873c-.272,1.428-1.139,2.414-2.788,2.414-2.142,0-3.196-1.462-3.196-3.774s1.054-3.774,3.196-3.774c1.649,0,2.516.986,2.788,2.414h2.873c-.255-2.992-2.533-4.862-5.661-4.862-3.57,0-6.035,2.533-6.035,6.222s2.465,6.222,6.035,6.222Zm12.4369,0c2.805,0,5.083-1.292,5.083-4.624v-7.548h-2.703v7.242c0,1.598-.697,2.652-2.38,2.652s-2.363-1.054-2.363-2.652v-7.242h-2.72v7.548c0,3.332,2.295,4.624,5.083,4.624ZM102.833,70h2.72v-9.69h3.91v-2.21h-10.54v2.21h3.91v9.69Zm8.095,0h2.72v-11.9h-2.72v11.9Zm10.676.272c3.621,0,6.154-2.533,6.154-6.222s-2.533-6.222-6.154-6.222-6.154,2.533-6.154,6.222s2.533,6.222,6.154,6.222Zm-3.281-6.222c0-2.312,1.122-3.774,3.281-3.774s3.264,1.462,3.264,3.774-1.105,3.774-3.264,3.774-3.281-1.462-3.281-3.774ZM129.555,70h2.669l-.068-7.769L137.29,70h2.754v-11.9h-2.669l.068,7.922-5.134-7.922h-2.754v11.9Z"
           fill="var(--main-text)"
-          initial={wordAnimateFrom}
+          initial={svgWordsAnimateFrom}
           animate={Object.assign({}, linesAnimateTo, {
             transition: {
               ...linesAnimateTo.transition,
@@ -112,7 +171,7 @@ export const AboutUs: React.FC = () => {
           id="outline-logo-u-formulationrequirments"
           d="M0.122,125h2.703v-4.726h5.423v-2.193h-5.423v-2.771h6.188v-2.21h-8.891v11.9Zm15.9552.272c3.621,0,6.154-2.533,6.154-6.222s-2.533-6.222-6.154-6.222-6.15404,2.533-6.15404,6.222s2.53304,6.222,6.15404,6.222Zm-3.281-6.222c0-2.312,1.122-3.774,3.281-3.774s3.264,1.462,3.264,3.774-1.105,3.774-3.264,3.774-3.281-1.462-3.281-3.774ZM24.0282,125h2.7031v-4.063h2.261c1.173,0,1.632.357,1.734,1.547.136,1.53.306,2.193.442,2.516h2.788c-.187-.476-.289-1.275-.459-2.907-.153-1.53-.867-2.431-2.533-2.584v-.102c1.428,0,2.856-1.088,2.856-2.822c0-2.074-1.513-3.485-4.165-3.485h-5.6271v11.9Zm2.7031-6.12v-3.638h2.244c1.088,0,2.108.493,2.108,1.717c0,1.343-1.02,1.921-2.108,1.921h-2.244ZM35.9316,125h2.601l-.068-8.466h.085L41.2186,125h2.873l2.669-8.466h.085L46.7776,125h2.601v-11.9h-3.876l-2.805,9.35h-.102l-2.805-9.35h-3.859v11.9Zm20.6694.272c2.805,0,5.083-1.292,5.083-4.624v-7.548h-2.703v7.242c0,1.598-.697,2.652-2.38,2.652s-2.363-1.054-2.363-2.652v-7.242h-2.72v7.548c0,3.332,2.295,4.624,5.083,4.624ZM63.8222,125h8.602v-2.21h-5.899v-9.69h-2.703v11.9Zm9.1069,0h2.89l1.003-2.703h4.811L82.6361,125h2.907l-4.675-11.9h-3.264L72.9291,125Zm4.607-4.777l1.649-4.624h.102l1.649,4.624h-3.4ZM88.8809,125h2.72v-9.69h3.91v-2.21h-10.54v2.21h3.91v9.69Zm8.0946,0h2.72v-11.9h-2.72v11.9Zm10.6755.272c3.621,0,6.154-2.533,6.154-6.222s-2.533-6.222-6.154-6.222-6.154,2.533-6.154,6.222s2.533,6.222,6.154,6.222Zm-3.281-6.222c0-2.312,1.122-3.774,3.281-3.774s3.264,1.462,3.264,3.774-1.105,3.774-3.264,3.774-3.281-1.462-3.281-3.774ZM115.602,125h2.669l-.068-7.769L123.337,125h2.754v-11.9h-2.669l.068,7.922-5.134-7.922h-2.754v11.9Zm19.367.238c1.53,0,2.686-.51,3.621-1.445.918,1.02,1.411,1.207,2.567,1.207h.306v-.952h-.238c-.731,0-1.122-.153-1.938-1.037.68-1.02,1.122-2.363,1.224-4.131h-1.071c-.085,1.36-.391,2.533-.901,3.4l-3.179-3.281c1.598-.833,2.958-1.734,2.958-3.502c0-1.377-1.139-2.635-3.077-2.635-1.819,0-3.179,1.207-3.179,2.856c0,1.207.85,2.159,1.785,3.145-1.377.765-2.584,1.649-2.584,3.298c0,1.972,1.445,3.077,3.706,3.077Zm-2.567-3.162c0-1.241.952-1.955,2.023-2.601l3.485,3.621c-.714.748-1.547,1.207-2.805,1.207-1.615,0-2.703-.935-2.703-2.227Zm.748-6.392c0-1.088.833-1.938,2.074-1.938c1.258,0,2.04.714,2.04,1.921c0,1.275-1.122,2.006-2.482,2.703-.969-1.02-1.632-1.785-1.632-2.686ZM0.122,151h2.703v-4.063h2.261c1.173,0,1.632.357,1.734,1.547.136,1.53.306,2.193.442,2.516h2.788c-.187-.476-.289-1.275-.459-2.907-.153-1.53-.867-2.431-2.533-2.584v-.102c1.428,0,2.856-1.088,2.856-2.822c0-2.074-1.513-3.485-4.165-3.485h-5.627v11.9Zm2.703-6.12v-3.638h2.244c1.088,0,2.108.493,2.108,1.717c0,1.343-1.02,1.921-2.108,1.921h-2.244ZM12.0253,151h9.078v-2.21h-6.375v-2.771h5.423v-2.142h-5.423v-2.567h6.188v-2.21h-8.891v11.9Zm19.308-.561l.901.952h2.924l-2.125-2.346c.867-.901,1.496-2.329,1.496-3.995c0-3.689-2.448-6.222-6.069-6.222s-6.069,2.533-6.069,6.222s2.448,6.222,6.069,6.222c1.139,0,2.363-.391,2.873-.833Zm-6.069-5.389c0-2.312,1.037-3.774,3.196-3.774s3.179,1.462,3.179,3.774c0,.85-.119,1.615-.391,2.193l-1.122-1.139h-2.856l2.38,2.567c-.34.102-.765.153-1.19.153-2.159,0-3.196-1.462-3.196-3.774Zm16.6776,6.222c2.805,0,5.083-1.292,5.083-4.624v-7.548h-2.703v7.242c0,1.598-.697,2.652-2.38,2.652s-2.363-1.054-2.363-2.652v-7.242h-2.72v7.548c0,3.332,2.295,4.624,5.083,4.624ZM49.163,151h2.72v-11.9h-2.72v11.9Zm4.9639,0h9.078v-2.21h-6.375v-2.771h5.423v-2.142h-5.423v-2.567h6.188v-2.21h-8.891v11.9Zm11.04,0h2.703v-4.063h2.261c1.173,0,1.632.357,1.734,1.547.136,1.53.306,2.193.442,2.516h2.788c-.187-.476-.289-1.275-.459-2.907-.153-1.53-.867-2.431-2.533-2.584v-.102c1.428,0,2.856-1.088,2.856-2.822c0-2.074-1.513-3.485-4.165-3.485h-5.627v11.9Zm2.703-6.12v-3.638h2.244c1.088,0,2.108.493,2.108,1.717c0,1.343-1.02,1.921-2.108,1.921h-2.244ZM77.0702,151h2.601l-.068-8.466h.085L82.3572,151h2.873l2.669-8.466h.085L87.9162,151h2.601v-11.9h-3.876l-2.805,9.35h-.102l-2.805-9.35h-3.859v11.9Zm15.6885,0h9.0783v-2.21h-6.3753v-2.771h5.4233v-2.142h-5.4233v-2.567h6.1883v-2.21h-8.8913v11.9Zm11.0403,0h2.669l-.068-7.769L111.534,151h2.754v-11.9h-2.669l.068,7.922-5.134-7.922h-2.754v11.9Zm15.861,0h2.72v-9.69h3.91v-2.21h-10.54v2.21h3.91v9.69Zm12.162.272c3.009,0,4.879-1.326,4.879-3.604c0-4.709-6.307-3.06-6.307-5.389c0-.85.782-1.343,1.836-1.343c1.173,0,1.785.85,1.819,1.87h2.856c0-2.584-1.683-3.978-4.573-3.978-2.924,0-4.794,1.309-4.794,3.57c0,4.692,6.205,3.077,6.205,5.389c0,.901-.765,1.36-1.853,1.36-1.207,0-1.836-.867-1.87-1.887h-2.941c0,2.601,1.768,4.012,4.743,4.012Z"
           fill="var(--main-text)"
-          initial={wordAnimateFrom}
+          initial={svgWordsAnimateFrom}
           animate={Object.assign({}, linesAnimateTo, {
             transition: {
               ...linesAnimateTo.transition,
@@ -124,7 +183,7 @@ export const AboutUs: React.FC = () => {
           id="outline-logo-u-frution"
           d="M58.122,206h2.703v-4.726h5.423v-2.193h-5.423v-2.771h6.188v-2.21h-8.891v11.9Zm10.4922,0h2.703v-4.063h2.261c1.173,0,1.632.357,1.734,1.547.136,1.53.306,2.193.442,2.516h2.788c-.187-.476-.289-1.275-.459-2.907-.153-1.53-.867-2.431-2.533-2.584v-.102c1.428,0,2.856-1.088,2.856-2.822c0-2.074-1.513-3.485-4.165-3.485h-5.627v11.9Zm2.703-6.12v-3.638h2.244c1.088,0,2.108.493,2.108,1.717c0,1.343-1.02,1.921-2.108,1.921h-2.244Zm13.9489,6.392c2.805,0,5.083-1.292,5.083-4.624v-7.548h-2.703v7.242c0,1.598-.697,2.652-2.38,2.652s-2.363-1.054-2.363-2.652v-7.242h-2.72v7.548c0,3.332,2.295,4.624,5.083,4.624ZM92.4872,206h2.72v-11.9h-2.72v11.9Zm8.0918,0h2.72v-9.69h3.91v-2.21h-10.5399v2.21h3.9099v9.69Zm8.095,0h2.72v-11.9h-2.72v11.9Zm10.676.272c3.621,0,6.154-2.533,6.154-6.222s-2.533-6.222-6.154-6.222-6.154,2.533-6.154,6.222s2.533,6.222,6.154,6.222Zm-3.281-6.222c0-2.312,1.122-3.774,3.281-3.774s3.264,1.462,3.264,3.774-1.105,3.774-3.264,3.774-3.281-1.462-3.281-3.774ZM127.301,206h2.669l-.068-7.769L135.036,206h2.754v-11.9h-2.669l.068,7.922-5.134-7.922h-2.754v11.9Z"
           fill="var(--main-text)"
-          initial={wordAnimateFrom}
+          initial={svgWordsAnimateFrom}
           animate={Object.assign({}, linesAnimateTo, {
             transition: {
               ...linesAnimateTo.transition,
@@ -136,7 +195,7 @@ export const AboutUs: React.FC = () => {
           id="outline-logo-u-planning"
           d="M58.122,266h2.703v-3.74h2.567c2.737,0,4.471-1.564,4.471-4.08c0-2.499-1.734-4.08-4.471-4.08h-5.27v11.9Zm2.703-5.882v-3.876h2.244c1.156,0,2.006.629,2.006,1.938c0,1.326-.85,1.938-2.006,1.938h-2.244ZM69.4941,266h8.602v-2.21h-5.899v-9.69h-2.703v11.9Zm9.1069,0h2.89l1.003-2.703h4.811L88.308,266h2.907L86.54,254.1h-3.264L78.601,266Zm4.607-4.777l1.649-4.624h.102l1.649,4.624h-3.4ZM92.4706,266h2.669l-.068-7.769L100.206,266h2.754v-11.9h-2.669l.068,7.922-5.1344-7.922h-2.754v11.9Zm12.7334,0h2.669l-.068-7.769L112.939,266h2.754v-11.9h-2.669l.068,7.922-5.134-7.922h-2.754v11.9Zm12.733,0h2.72v-11.9h-2.72v11.9Zm4.964,0h2.669l-.068-7.769L130.636,266h2.754v-11.9h-2.669l.068,7.922-5.134-7.922h-2.754v11.9Zm18.293.272c3.91,0,6.069-2.533,5.712-6.562h-6.205v2.108h3.332c-.034,1.122-1.105,2.006-2.703,2.006-2.142,0-3.298-1.462-3.298-3.774s1.054-3.774,3.196-3.774c1.649,0,2.533.884,2.788,2.006h2.873c-.238-2.686-2.533-4.454-5.661-4.454-3.57,0-6.035,2.533-6.035,6.222s2.244,6.222,6.001,6.222Z"
           fill="var(--main-text)"
-          initial={wordAnimateFrom}
+          initial={svgWordsAnimateFrom}
           animate={Object.assign({}, linesAnimateTo, {
             transition: {
               ...linesAnimateTo.transition,
@@ -176,7 +235,7 @@ export const AboutUs: React.FC = () => {
           fill="none"
           stroke="#ced2e5"
           strokeLinecap="round"
-          initial={animateFrom}
+          initial={svgAnimateFrom}
           animate={Object.assign({}, linesAnimateTo, {
             transition: {
               ...linesAnimateTo.transition,
@@ -189,7 +248,7 @@ export const AboutUs: React.FC = () => {
           fill="none"
           stroke="#ced2e5"
           strokeLinecap="round"
-          initial={animateFrom}
+          initial={svgAnimateFrom}
           animate={Object.assign({}, linesAnimateTo, {
             transition: {
               ...linesAnimateTo.transition,
@@ -202,7 +261,7 @@ export const AboutUs: React.FC = () => {
           fill="none"
           stroke="#ced2e5"
           strokeLinecap="round"
-          initial={animateFrom}
+          initial={svgAnimateFrom}
           animate={Object.assign({}, linesAnimateTo, {
             transition: {
               ...linesAnimateTo.transition,
@@ -215,7 +274,7 @@ export const AboutUs: React.FC = () => {
           fill="none"
           stroke="#ced2e5"
           strokeLinecap="round"
-          initial={animateFrom}
+          initial={svgAnimateFrom}
           animate={Object.assign({}, linesAnimateTo, {
             transition: {
               ...linesAnimateTo.transition,

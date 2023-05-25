@@ -9,7 +9,6 @@
     overflow: unset;
   }
 
-
   padding: 0 0 35px 30px;
 
   @media (min-width: 768px) {
@@ -34,11 +33,12 @@
 
   @include mixins.onDesktop {
     display: grid;
-    align-self: flex-end;
+    position: absolute;
+    top: 35%;
   }
 
   @include mixins.on1920 {
-   align-self: center;
+    //  align-self: center;
   }
 }
 
@@ -87,7 +87,7 @@
 .text_container {
   position: absolute;
   z-index: 2;
-  transform: translate(-116px, 0);
+  transform: translate(-116.5px, 0);
 
   @media screen and (min-width: 500px) {
     transform: translate(-156px, 0);
@@ -131,7 +131,6 @@
   transform: rotate(36deg);
 
   @include mixins.onTablet {
-
   }
 
   @include mixins.onDesktop {
@@ -143,37 +142,27 @@
 .headName {
   &__out,
   &__line {
-    // Need fixes for Safari browser
-    // background-clip: text;
-    // -webkit-background-clip: text;
-    // -webkit-text-fill-color: transparent;
-    // -moz-background-clip: text;
-    // -moz-text-fill-color: transparent;
-    -webkit-background-clip: text;
+    color: transparent;
     -webkit-text-fill-color: transparent;
-    -moz-background-clip: text;
-    -moz-text-fill-color: transparent;
-    -ms-background-clip: text;
-    -ms-text-fill-color: transparent;
     background-clip: text;
-    text-fill-color: transparent;
-    -webkit-box-decoration-break: clone; 
-    
-    -webkit-text-stroke: 0;
+    -webkit-background-clip: text;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
   }
 
   &__out {
     background-image: linear-gradient(
       to right,
-      #bbd1ff 48%,
+      #bbd1ff 48.7%,
       var(--theme-background) 48%
     );
   }
 
   &__line {
+    transform: translate(-2px);
     background-image: linear-gradient(
       to right,
-      #bbd1ff 48.8%,
+      #bbd1ff 49.8%,
       var(--theme-background) 48%
     );
 
@@ -235,7 +224,7 @@
 
   justify-content: end;
   transform: translate(-20%, -50%);
-  
+
   @include mixins.onTablet {
     grid-row: 1/2;
     transform: unset;
@@ -294,12 +283,15 @@
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     font-size: 30px;
-    line-height: 35px;
+    // line-height: 35px;
 
     background: var(--main-gradient);
+    color: transparent;
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-clip: text;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
   }
 
   &__name {
