@@ -71,6 +71,16 @@
   }
 }
 
+.providersLogoLink {
+  & > svg {
+    transition: transform 0.4s;
+    &:hover {
+      transform: scale(1.3);
+    }
+  }
+}
+
+
 // Icons
 .amer {
   &:hover {

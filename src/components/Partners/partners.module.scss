@@ -305,56 +305,14 @@
   }
 }
 
-// .splite_line {
-//   display: none;
-
-//   @include mixins.onTablet {
-//     display: block;
-//     position: absolute;
-//     height: 1px;
-//     background: var(--main-gradient);
-//     opacity: 0.5;
-//     width: 100%;
-//     top: 60px;
-//   }
-//   @include mixins.on1024 {
-//     top: 148px;
-//     @media screen and (min-width: 1199px) {
-//       top: 152px;
-//     }
-//   }
-//   @include mixins.onDesktop {
-//     top: 135px;
-//   }
-// }
-
-// .splite_line_2 {
-//   @extend .splite_line;
-//   top: 134px;
-//   @include mixins.on1024 {
-//     top: 292px;
-//     @media screen and (min-width: 1199px) {
-//       top: 300px;
-//     }
-//   }
-//   @include mixins.onDesktop {
-//     top: 287px;
-//   }
-// }
-
-// .splite_line_3 {
-//   @extend .splite_line;
-//   top: 202px;
-//   @include mixins.on1024 {
-//     top: 440px;
-//     @media screen and (min-width: 1199px) {
-//       top: 452px;
-//     }
-//   }
-//   @include mixins.onDesktop {
-//     top: 437px;
-//   }
-// }
+.partnersLogoLink {
+  & > svg {
+    transition: transform 0.4s;
+    &:hover {
+      transform: scale(1.3);
+    }
+  }
+}
 
 .opened {
   max-height: 1000px;

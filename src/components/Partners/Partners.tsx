@@ -125,7 +125,12 @@ export const Partners: React.FC = () => {
         })}
       >
         {/* Government of abu dhabi */}
-        <a href="https://www.abudhabi.gov.ae/" target="_blank" rel="noreferrer">
+        <a
+          className={s.partnersLogoLink}
+          href="https://www.abudhabi.gov.ae/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <svg
             className={s.gov_of_ab_db}
             xmlns="http://www.w3.org/2000/svg"
@@ -994,7 +999,12 @@ export const Partners: React.FC = () => {
           </svg>
         </a>
         {/* Masdar */}
-        <a href="https://masdarcity.ae/" target="_blank" rel="noreferrer">
+        <a
+          className={s.partnersLogoLink}
+          href="https://masdarcity.ae/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <svg
             width="121px"
             height="45px"
@@ -1063,6 +1073,7 @@ export const Partners: React.FC = () => {
         </a>
         {/* twofour54 */}
         <a
+          className={s.partnersLogoLink}
           href="https://www.twofour54.com/en/"
           target="_blank"
           rel="noreferrer"
@@ -1135,6 +1146,7 @@ export const Partners: React.FC = () => {
         </a>
         {/* Kezad */}
         <a
+          className={s.partnersLogoLink}
           href="https://www.kezadgroup.com/free-zone/"
           target="_blank"
           rel="noreferrer"
@@ -1206,7 +1218,12 @@ export const Partners: React.FC = () => {
           </svg>
         </a>
         {/* Rakez */}
-        <a href="https://rakez.com/en/Home/" target="_blank" rel="noreferrer">
+        <a
+          className={s.partnersLogoLink}
+          href="https://rakez.com/en/Home/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <svg
             width="120"
             height="46"
@@ -1830,7 +1847,12 @@ export const Partners: React.FC = () => {
         </a>
 
         {/* Gov of Dubai */}
-        <a href="https://u.ae/en#/" target="_blank" rel="noreferrer">
+        <a
+          className={s.partnersLogoLink}
+          href="https://u.ae/en#/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <svg
             width="120"
             height="46"
@@ -1898,7 +1920,12 @@ export const Partners: React.FC = () => {
           </svg>
         </a>
         {/* Invest in Dubai */}
-        <a href="https://invest.dubai.ae/" target="_blank" rel="noreferrer">
+        <a
+          className={s.partnersLogoLink}
+          href="https://invest.dubai.ae/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <svg
             width="120"
             height="45"
@@ -2132,7 +2159,12 @@ export const Partners: React.FC = () => {
           </svg>
         </a>
         {/* Dubai airport freezone */}
-        <a href="https://www.dafz.ae/en/" target="_blank" rel="noreferrer">
+        <a
+          className={s.partnersLogoLink}
+          href="https://www.dafz.ae/en/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <svg
             width="120"
             height="45"
@@ -2191,6 +2223,7 @@ export const Partners: React.FC = () => {
         </a>
         {/* Commercity */}
         <a
+          className={s.partnersLogoLink}
           href="https://www.dubaicommercity.ae/"
           target="_blank"
           rel="noreferrer"
@@ -2347,7 +2380,12 @@ export const Partners: React.FC = () => {
           </svg>
         </a>
         {/* DMCC */}
-        <a href="https://www.dmcc.ae/" target="_blank" rel="noreferrer">
+        <a
+          className={s.partnersLogoLink}
+          href="https://www.dmcc.ae/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <svg
             width="111"
             height="42"
@@ -2415,7 +2453,12 @@ export const Partners: React.FC = () => {
           </svg>
         </a>
         {/* IFZA */}
-        <a href="https://ifza.com/en/" target="_blank" rel="noreferrer">
+        <a
+          className={s.partnersLogoLink}
+          href="https://ifza.com/en/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <svg
             width="111"
             height="42"
@@ -2494,7 +2537,12 @@ export const Partners: React.FC = () => {
           </svg>
         </a>
         {/* Jafza */}
-        <a href="https://www.jafza.ae/" target="_blank" rel="noreferrer">
+        <a
+          className={s.partnersLogoLink}
+          href="https://www.jafza.ae/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <svg
             width="111"
             height="42"
@@ -2647,7 +2695,12 @@ export const Partners: React.FC = () => {
           </svg>
         </a>
         {/* Dubai development Authority */}
-        <a href="https://dda.gov.ae/en" target="_blank" rel="noreferrer">
+        <a
+          className={s.partnersLogoLink}
+          href="https://dda.gov.ae/en"
+          target="_blank"
+          rel="noreferrer"
+        >
           <svg
             width="112"
             height="42"
@@ -2824,7 +2877,12 @@ export const Partners: React.FC = () => {
           </svg>
         </a>
         {/* Meydan FZ */}
-        <a href="https://www.meydanfz.ae/" target="_blank" rel="noreferrer">
+        <a
+          href="https://www.meydanfz.ae/"
+          className={s.partnersLogoLink}
+          target="_blank"
+          rel="noreferrer"
+        >
           <svg
             width="111"
             height="42"
@@ -2892,7 +2950,12 @@ export const Partners: React.FC = () => {
           </svg>
         </a>
         {/* Dubai South */}
-        <a href="https://www.dubaisouth.ae/" target="_blank" rel="noreferrer">
+        <a
+          className={s.partnersLogoLink}
+          href="https://www.dubaisouth.ae/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <svg
             width="111"
             height="42"
@@ -3004,7 +3067,12 @@ export const Partners: React.FC = () => {
           </svg>
         </a>
         {/* Ajman Media City Free Zone */}
-        <a href="https://www.amcfz.ae/en/" target="_blank" rel="noreferrer">
+        <a
+          className={s.partnersLogoLink}
+          href="https://www.amcfz.ae/en/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <svg
             width="111"
             height="42"
@@ -3071,7 +3139,12 @@ export const Partners: React.FC = () => {
           </svg>
         </a>
         {/* Sharah */}
-        <a href="https://www.sedd.ae/web/sedd" target="_blank" rel="noreferrer">
+        <a
+          className={s.partnersLogoLink}
+          href="https://www.sedd.ae/web/sedd"
+          target="_blank"
+          rel="noreferrer"
+        >
           <svg
             width="111"
             height="42"
@@ -4009,7 +4082,12 @@ export const Partners: React.FC = () => {
           </svg>
         </a>
         {/* K */}
-        <a href="https://spcfz.ae/" target="_blank" rel="noreferrer">
+        <a
+          className={s.partnersLogoLink}
+          href="https://spcfz.ae/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <svg
             width="112"
             height="42"
@@ -4092,7 +4170,12 @@ export const Partners: React.FC = () => {
           </svg>
         </a>
         {/* sharjah_media_city */}
-        <a href="https://www.shams.ae/" target="_blank" rel="noreferrer">
+        <a
+          className={s.partnersLogoLink}
+          href="https://www.shams.ae/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <svg
             width="111"
             height="42"
@@ -5432,7 +5515,12 @@ export const Partners: React.FC = () => {
           </svg>
         </a>
         {/* Saif Zone */}
-        <a href="https://www.saif-zone.com/" target="_blank" rel="noreferrer">
+        <a
+          className={s.partnersLogoLink}
+          href="https://www.saif-zone.com/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <svg
             width="111"
             height="42"

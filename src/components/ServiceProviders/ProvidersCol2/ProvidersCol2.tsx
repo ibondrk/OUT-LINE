@@ -6,7 +6,12 @@ export const ProvidersCol2: React.FC = () => {
   return (
     <div className={cn(s.icons_column, s.column_2)}>
       {/* amer */}
-      <a href="">
+      <a
+        className={s.providersLogoLink}
+        href=""
+        target="_blank"
+        rel="noreferrer"
+      >
         <svg
           width="81"
           height="130"
@@ -184,7 +189,12 @@ export const ProvidersCol2: React.FC = () => {
         </svg>
       </a>
       {/* FedEx */}
-      <a href="">
+      <a
+        className={s.providersLogoLink}
+        href=""
+        target="_blank"
+        rel="noreferrer"
+      >
         <svg
           width="90"
           height="29"
@@ -246,7 +256,12 @@ export const ProvidersCol2: React.FC = () => {
         </svg>
       </a>
       {/* Zajel */}
-      <a href="">
+      <a
+        className={s.providersLogoLink}
+        href=""
+        target="_blank"
+        rel="noreferrer"
+      >
         <svg
           width="135"
           height="36"
@@ -302,7 +317,12 @@ export const ProvidersCol2: React.FC = () => {
         </svg>
       </a>
       {/* DHL */}
-      <a href="">
+      <a
+        className={s.providersLogoLink}
+        href=""
+        target="_blank"
+        rel="noreferrer"
+      >
         <svg
           width="135"
           height="20"
@@ -515,7 +535,12 @@ export const ProvidersCol2: React.FC = () => {
         </svg>
       </a>
       {/* Quiup */}
-      <a href="">
+      <a
+        className={s.providersLogoLink}
+        href=""
+        target="_blank"
+        rel="noreferrer"
+      >
         <svg
           width="135"
           height="34"
@@ -573,7 +598,12 @@ export const ProvidersCol2: React.FC = () => {
         </svg>
       </a>
       {/* Emirates */}
-      <a href="">
+      <a
+        className={s.providersLogoLink}
+        href=""
+        target="_blank"
+        rel="noreferrer"
+      >
         <svg
           width="66"
           height="46"
@@ -635,7 +665,12 @@ export const ProvidersCol2: React.FC = () => {
         </svg>
       </a>
       {/* VSF Global */}
-      <a href="">
+      <a
+        className={s.providersLogoLink}
+        href=""
+        target="_blank"
+        rel="noreferrer"
+      >
         <svg
           width="129"
           height="42"

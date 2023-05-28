@@ -1,0 +1,72 @@
+@use '../../../styles/mixins.scss' as mixins;
+
+.textSVG {
+  position: absolute;
+  z-index: 2;
+  transform: translate(-84px, -120px);
+
+  max-width: 176px;
+max-height: 215px;
+
+  @media screen and (min-width: 700px) {
+    transform: translate(-96px, -120px);
+    max-width: 200px;
+    max-height: 250px;
+  }
+
+  @include mixins.onTablet {
+    transform: translate(-140px, -190px);
+    max-width: 289px;
+    max-height: 315px;
+  }
+
+  @include mixins.on1024 {
+    transform: translate(-122px, -170px);
+    max-width: 252px;
+    max-height: 315px;
+  }
+
+  @include mixins.onDesktop {
+    transform: translate(-172px, -170px);
+    max-width: 352px;
+    max-height: 440px;
+  }
+
+  @include mixins.on1920 {
+    transform: translate(-196px, -170px);
+    max-width: unset;
+    max-height: unset;
+  }
+}
+
+.slash {
+  display: block;
+  width: 0;
+  height: 45px;
+  background-color: var(--main-text);
+  border: 2px solid var(--main-text);
+  border-radius: 2px;
+  transform: translate(-63px, -35px) rotate(36deg);
+
+  @media screen and (min-width: 700px) {
+    transform: translate(-75px, -23px) rotate(36deg);
+  }
+
+  @include mixins.onTablet {
+    transform: translate(-108px, -55px) rotate(36deg);
+  }
+
+  @include mixins.on1024 {
+    transform: translate(-108px, -40px) rotate(36deg);
+  }
+
+  @include mixins.onDesktop {
+    height: 65px;
+    transform: translate(-145px, 10px) rotate(36deg);
+  }
+
+  @include mixins.on1920 {
+    transform: translate(-165px, 18px) rotate(36deg);
+  }
+}
+

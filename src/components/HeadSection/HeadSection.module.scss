@@ -36,10 +36,6 @@
     position: absolute;
     top: 35%;
   }
-
-  @include mixins.on1920 {
-    //  align-self: center;
-  }
 }
 
 // <--- Main Photo and OUT LINE text --->
@@ -58,123 +54,6 @@
 .image_wrapper {
   position: relative;
   display: inline-block;
-}
-
-.headName_wrapper {
-  font-family: 'BLMelody-Bold';
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  font-size: 70px;
-  line-height: 75px;
-
-  @include mixins.onTablet {
-    font-size: 100px;
-    line-height: 108px;
-    transform: translate(0, -30px);
-  }
-
-  @include mixins.onDesktop {
-    font-size: 140px;
-    line-height: 151px;
-  }
-
-  @include mixins.on1920 {
-    font-size: 160px;
-    line-height: 172px;
-  }
-}
-
-.text_container {
-  position: absolute;
-  z-index: 2;
-  transform: translate(-116.5px, 0);
-
-  @media screen and (min-width: 500px) {
-    transform: translate(-156px, 0);
-  }
-
-  @media screen and (min-width: 600px) {
-    transform: translate(-206px, 0);
-  }
-
-  @media screen and (min-width: 700px) {
-    transform: translate(-284px, 0);
-  }
-
-  @include mixins.onTablet {
-    transform: translate(-116px, 0);
-  }
-
-  @include mixins.on1024 {
-    transform: translate(-208px, 0);
-  }
-
-  @include mixins.onDesktop {
-    transform: translate(-197px, 0);
-  }
-
-  @include mixins.on1920 {
-    transform: translate(-259px, 0);
-  }
-}
-
-.slash {
-  display: block;
-  width: 0;
-  height: 45px;
-  background-color: var(--main-text);
-  border: 2px solid var(--main-text);
-  border-radius: 2px;
-  margin-left: 17px;
-  margin-bottom: 5px;
-  margin: 15px 0 25px 17px;
-  transform: rotate(36deg);
-
-  @include mixins.onTablet {
-  }
-
-  @include mixins.onDesktop {
-    margin-bottom: 27px;
-    height: 65px;
-  }
-}
-
-.headName {
-  &__out,
-  &__line {
-    color: transparent;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    -webkit-background-clip: text;
-    box-decoration-break: clone;
-    -webkit-box-decoration-break: clone;
-  }
-
-  &__out {
-    background-image: linear-gradient(
-      to right,
-      #bbd1ff 48.7%,
-      var(--theme-background) 48%
-    );
-  }
-
-  &__line {
-    transform: translate(-2px);
-    background-image: linear-gradient(
-      to right,
-      #bbd1ff 49.8%,
-      var(--theme-background) 48%
-    );
-
-    @include mixins.on1920 {
-      background-image: linear-gradient(
-        to right,
-        #bbd1ff 48.8%,
-        var(--theme-background) 48%
-      );
-      transform: translate(-2px, 0);
-    }
-  }
 }
 
 .mainPicture {
@@ -222,7 +101,7 @@
 .spinTextWrapper {
   display: flex;
 
-  justify-content: end;
+  justify-content: flex-end;
   transform: translate(-20%, -50%);
 
   @include mixins.onTablet {

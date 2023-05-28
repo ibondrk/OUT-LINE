@@ -6,7 +6,12 @@ export const ProvidersCol1: React.FC = () => {
   return (
     <div className={cn(s.icons_column, s.column_1)}>
       {/* Emirates NBD */}
-      <a href="">
+      <a
+        className={s.providersLogoLink}
+        href=""
+        target="_blank"
+        rel="noreferrer"
+      >
         <svg
           width="135"
           height="34"
@@ -115,7 +120,12 @@ export const ProvidersCol1: React.FC = () => {
         </svg>
       </a>
       {/* ADIB */}
-      <a href="">
+      <a
+        className={s.providersLogoLink}
+        href=""
+        target="_blank"
+        rel="noreferrer"
+      >
         <svg
           width="135"
           height="50"
@@ -528,7 +538,12 @@ export const ProvidersCol1: React.FC = () => {
         </svg>
       </a>
       {/* Rakbank */}
-      <a href="">
+      <a
+        className={s.providersLogoLink}
+        href=""
+        target="_blank"
+        rel="noreferrer"
+      >
         <svg
           width="135"
           height="50"
@@ -596,7 +611,12 @@ export const ProvidersCol1: React.FC = () => {
         </svg>
       </a>
       {/* ADCB */}
-      <a href="">
+      <a
+        className={s.providersLogoLink}
+        href=""
+        target="_blank"
+        rel="noreferrer"
+      >
         <svg
           width="135"
           height="50"
@@ -1122,7 +1142,12 @@ export const ProvidersCol1: React.FC = () => {
         </svg>
       </a>
       {/* mashreq */}
-      <a href="">
+      <a
+        className={s.providersLogoLink}
+        href=""
+        target="_blank"
+        rel="noreferrer"
+      >
         <svg
           width="135"
           height="50"
@@ -1358,7 +1383,12 @@ export const ProvidersCol1: React.FC = () => {
         </svg>
       </a>
       {/* Commercial Bank of Dubai */}
-      <a href="">
+      <a
+        className={s.providersLogoLink}
+        href=""
+        target="_blank"
+        rel="noreferrer"
+      >
         <svg
           width="239"
           height="51"

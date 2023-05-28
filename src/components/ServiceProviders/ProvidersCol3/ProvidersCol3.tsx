@@ -6,7 +6,12 @@ export const ProvidersCol3: React.FC = () => {
   return (
     <div className={cn(s.icons_column, s.column_3)}>
       {/* WA */}
-      <a href="">
+      <a
+        className={s.providersLogoLink}
+        href=""
+        target="_blank"
+        rel="noreferrer"
+      >
         <svg
           width="41"
           height="41"
@@ -65,7 +70,12 @@ export const ProvidersCol3: React.FC = () => {
         </svg>
       </a>
       {/* TG */}
-      <a href="">
+      <a
+        className={s.providersLogoLink}
+        href=""
+        target="_blank"
+        rel="noreferrer"
+      >
         <svg
           width="41"
           height="41"
@@ -102,7 +112,12 @@ export const ProvidersCol3: React.FC = () => {
         </svg>
       </a>
       {/* e& */}
-      <a href="">
+      <a
+        className={s.providersLogoLink}
+        href=""
+        target="_blank"
+        rel="noreferrer"
+      >
         <svg
           width="53"
           height="36"
@@ -163,7 +178,12 @@ export const ProvidersCol3: React.FC = () => {
         </svg>
       </a>
       {/* Virgin mobile */}
-      <a href="">
+      <a
+        className={s.providersLogoLink}
+        href=""
+        target="_blank"
+        rel="noreferrer"
+      >
         <svg
           width="40"
           height="46"
@@ -216,7 +236,12 @@ export const ProvidersCol3: React.FC = () => {
         </svg>
       </a>
       {/* Microsoft */}
-      <a href="">
+      <a
+        className={s.providersLogoLink}
+        href=""
+        target="_blank"
+        rel="noreferrer"
+      >
         <svg
           id="icon-microsoft"
           className={s.microsoft}
@@ -245,7 +270,12 @@ export const ProvidersCol3: React.FC = () => {
         </svg>
       </a>
       {/* Slack */}
-      <a href="">
+      <a
+        className={s.providersLogoLink}
+        href=""
+        target="_blank"
+        rel="noreferrer"
+      >
         <svg
           className={s.slack}
           width={'130px'}
@@ -281,7 +311,12 @@ export const ProvidersCol3: React.FC = () => {
         </svg>
       </a>
       {/* Meta */}
-      <a href="">
+      <a
+        className={s.providersLogoLink}
+        href=""
+        target="_blank"
+        rel="noreferrer"
+      >
         <svg
           width="129"
           height="27"

@@ -6,6 +6,7 @@ import { Out_line_project } from './Out-line-ptoject';
 import { HereBlock } from './HereBlock';
 import { IsBlock } from './IsBlock';
 import { Theme } from '../Header/Theme';
+import { OutLineText } from './OutLineText';
 
 export const HeadSection: React.FC = () => {
   return (
@@ -15,11 +16,7 @@ export const HeadSection: React.FC = () => {
       </div>
       <div className={cn(s.image_container, 'S--1-4', 'T--5-8', 'D--7-12')}>
         <div className={cn(s.text_container)}>
-          <div className={cn(s.headName_wrapper)}>
-            <p className={s.headName__out}>OUT</p>
-            <span className={s.slash}></span>
-            <p className={cn(s.headName__line)}>LINE</p>
-          </div>
+          <OutLineText />
         </div>
         <img
           className={cn(s.mainPicture)}
