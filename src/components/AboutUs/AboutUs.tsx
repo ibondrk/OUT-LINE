@@ -19,36 +19,36 @@ export const AboutUs: React.FC = () => {
   const svgRef = useRef(null);
   const isSvgInView = useInView(svgRef);
 
-  // const maskVariants = {
-  //   initial: {
-  //     y: '0%',
-  //   },
-  //   animate: {
-  //     y: isSvgInView ? '100%' : '0%',
-  //     transition: {
-  //       duration: 5,
-  //       fill: 'freeze',
-  //     },
-  //   },
-  // };
-  const svgVariants: Variants = {
-    initial: {},
-    animate: {
-      transition: { staggerChildren: 3 },
-    },
-  };
-
   const maskVariants: Variants = {
-    initial: {},
+    initial: {
+      y: '0%',
+    },
     animate: {
-      y: isSvgInView ? ['0%', '18%', '37%', '57%', '74%', '100%'] : '0%',
+      y: isSvgInView ? '100%' : '0%',
       transition: {
-        duration: 12,
-        times: [0, 0.2, 0.4, 0.6, 0.75, 1],
-        ease: 'easeOut',
+        duration: 5,
+        fill: 'freeze',
       },
     },
   };
+  // const svgVariants: Variants = {
+  //   initial: {},
+  //   animate: {
+  //     transition: { staggerChildren: 3 },
+  //   },
+  // };
+
+  // const maskVariants: Variants = {
+  //   initial: {},
+  //   animate: {
+  //     y: isSvgInView ? ['0%', '18%', '37%', '57%', '74%', '100%'] : '0%',
+  //     transition: {
+  //       duration: 12,
+  //       times: [0, 0.2, 0.4, 0.6, 0.75, 1],
+  //       ease: 'easeOut',
+  //     },
+  //   },
+  // };
 
   const svgAnimateFrom = { opacity: 0, x: -40 };
   const linesAnimateTo = {
@@ -173,7 +173,7 @@ export const AboutUs: React.FC = () => {
         shapeRendering="geometricPrecision"
         textRendering="geometricPrecision"
         ref={svgRef}
-        variants={svgVariants}
+        // variants={svgVariants}
         initial="initial"
         animate="animate"
       >
