@@ -376,6 +376,5 @@
   stroke: var(--logo);
   stroke-width: 2;
   stroke-dashoffset: 0;
-  stroke-dasharray: var(--pathLength);
-  animation: fillPath 4s ease-out forwards;
+  stroke-dasharray: 895px;
 }

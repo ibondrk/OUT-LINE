@@ -8,7 +8,7 @@ import dot3 from '../../images/dots/dot3.webp';
 
 import Animation from '../../animations/animationLogic';
 
-import { motion, useInView } from 'framer-motion';
+import { motion, useInView, Variants } from 'framer-motion';
 
 export const AboutUs: React.FC = () => {
   const [showMoreDescr, setShowMoreDescr] = useState(false);
@@ -19,15 +19,33 @@ export const AboutUs: React.FC = () => {
   const svgRef = useRef(null);
   const isSvgInView = useInView(svgRef);
 
-  const maskVariants = {
-    initial: {
-      y: '0%',
-    },
+  // const maskVariants = {
+  //   initial: {
+  //     y: '0%',
+  //   },
+  //   animate: {
+  //     y: isSvgInView ? '100%' : '0%',
+  //     transition: {
+  //       duration: 5,
+  //       fill: 'freeze',
+  //     },
+  //   },
+  // };
+  const svgVariants: Variants = {
+    initial: {},
     animate: {
-      y: isSvgInView ? '100%' : '0%',
+      transition: { staggerChildren: 3 },
+    },
+  };
+
+  const maskVariants: Variants = {
+    initial: {},
+    animate: {
+      y: isSvgInView ? ['0%', '18%', '37%', '57%', '74%', '100%'] : '0%',
       transition: {
-        duration: 5,
-        fill: 'freeze',
+        duration: 12,
+        times: [0, 0.2, 0.4, 0.6, 0.75, 1],
+        ease: 'easeOut',
       },
     },
   };
@@ -143,7 +161,8 @@ export const AboutUs: React.FC = () => {
           {!showMoreDescr ? 'Read more' : 'Hide'}
         </div>
       </div>
-      <svg
+
+      <motion.svg
         id="outline-logo"
         width="551"
         height="348"
@@ -154,6 +173,9 @@ export const AboutUs: React.FC = () => {
         shapeRendering="geometricPrecision"
         textRendering="geometricPrecision"
         ref={svgRef}
+        variants={svgVariants}
+        initial="initial"
+        animate="animate"
       >
         <motion.path
           id="outline-logo-u-execution"
@@ -294,12 +316,11 @@ export const AboutUs: React.FC = () => {
               stroke="var(--logo)"
               strokeWidth="2"
               variants={maskVariants}
-              initial="initial"
               animate="animate"
             />
           </mask>
         </defs>
-      </svg>
+      </motion.svg>
 
       <div
         className={cn(
