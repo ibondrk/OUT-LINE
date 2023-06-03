@@ -19,36 +19,24 @@ export const AboutUs: React.FC = () => {
   const svgRef = useRef(null);
   const isSvgInView = useInView(svgRef);
 
-  const maskVariants: Variants = {
-    initial: {
-      y: '0%',
-    },
+  const svgVariants: Variants = {
+    initial: {},
     animate: {
-      y: isSvgInView ? '100%' : '0%',
+      transition: { staggerChildren: 3 },
+    },
+  };
+
+  const maskVariants: Variants = {
+    initial: {},
+    animate: {
+      y: isSvgInView ? ['0%', '18%', '37%', '57%', '74%', '100%'] : '0%',
       transition: {
-        duration: 5,
-        fill: 'freeze',
+        duration: 10,
+        times: [0, 0.2, 0.4, 0.6, 0.75, 1],
+        ease: 'easeOut',
       },
     },
   };
-  // const svgVariants: Variants = {
-  //   initial: {},
-  //   animate: {
-  //     transition: { staggerChildren: 3 },
-  //   },
-  // };
-
-  // const maskVariants: Variants = {
-  //   initial: {},
-  //   animate: {
-  //     y: isSvgInView ? ['0%', '18%', '37%', '57%', '74%', '100%'] : '0%',
-  //     transition: {
-  //       duration: 12,
-  //       times: [0, 0.2, 0.4, 0.6, 0.75, 1],
-  //       ease: 'easeOut',
-  //     },
-  //   },
-  // };
 
   const svgAnimateFrom = { opacity: 0, x: -40 };
   const linesAnimateTo = {
@@ -173,7 +161,7 @@ export const AboutUs: React.FC = () => {
         shapeRendering="geometricPrecision"
         textRendering="geometricPrecision"
         ref={svgRef}
-        // variants={svgVariants}
+        variants={svgVariants}
         initial="initial"
         animate="animate"
       >
@@ -185,7 +173,7 @@ export const AboutUs: React.FC = () => {
           animate={Object.assign({}, linesAnimateTo, {
             transition: {
               ...linesAnimateTo.transition,
-              delay: 0.7,
+              delay: 1.7,
             },
           })}
         />
@@ -197,7 +185,7 @@ export const AboutUs: React.FC = () => {
           animate={Object.assign({}, linesAnimateTo, {
             transition: {
               ...linesAnimateTo.transition,
-              delay: 1.3,
+              delay: 3.6,
             },
           })}
         />
@@ -209,7 +197,7 @@ export const AboutUs: React.FC = () => {
           animate={Object.assign({}, linesAnimateTo, {
             transition: {
               ...linesAnimateTo.transition,
-              delay: 1.8,
+              delay: 5.7,
             },
           })}
         />
@@ -221,7 +209,7 @@ export const AboutUs: React.FC = () => {
           animate={Object.assign({}, linesAnimateTo, {
             transition: {
               ...linesAnimateTo.transition,
-              delay: 2.4,
+              delay: 7.1,
             },
           })}
         />
@@ -261,7 +249,7 @@ export const AboutUs: React.FC = () => {
           animate={Object.assign({}, linesAnimateTo, {
             transition: {
               ...linesAnimateTo.transition,
-              delay: 0.6,
+              delay: 1.6,
             },
           })}
         />
@@ -274,7 +262,7 @@ export const AboutUs: React.FC = () => {
           animate={Object.assign({}, linesAnimateTo, {
             transition: {
               ...linesAnimateTo.transition,
-              delay: 1.2,
+              delay: 3.5,
             },
           })}
         />
@@ -287,7 +275,7 @@ export const AboutUs: React.FC = () => {
           animate={Object.assign({}, linesAnimateTo, {
             transition: {
               ...linesAnimateTo.transition,
-              delay: 1.7,
+              delay: 5.6,
             },
           })}
         />
@@ -300,7 +288,7 @@ export const AboutUs: React.FC = () => {
           animate={Object.assign({}, linesAnimateTo, {
             transition: {
               ...linesAnimateTo.transition,
-              delay: 2.3,
+              delay: 7,
             },
           })}
         />

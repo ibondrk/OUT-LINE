@@ -38,8 +38,8 @@ export const OutLineText: React.FC = () => {
             y2="0%"
             gradientUnits="objectBoundingBox"
           >
-            <stop offset="33.55%" stopColor="#bbd1ff" />
-            <stop offset="33.55%" stopColor="var(--theme-background)" />
+            <stop offset="33.50%" stopColor="#bbd1ff" />
+            <stop offset="33.50%" stopColor="var(--theme-background)" />
           </linearGradient>
         </defs>
       </svg>
