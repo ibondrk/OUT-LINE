@@ -147,17 +147,21 @@
     overflow: hidden;
     transition: max-height 0.3s ease-in-out;
 
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+
+    @media screen and (min-width:580px) {
+      -webkit-line-clamp: unset;
+      max-height: unset;
+      overflow: unset;
+    }
     @include mixins.onTablet {
       padding-right: unset;
     }
 
     @include mixins.on1024 {
       text-align: justify;
-    }
-
-    @include mixins.onTablet {
-      max-height: unset;
-      overflow: unset;
     }
 
     @include mixins.onDesktop {
@@ -169,6 +173,7 @@
 
 .opened {
   max-height: 1000px;
+  -webkit-line-clamp: unset;
 }
 
 .showMoreBtn {
@@ -179,7 +184,7 @@
   text-decoration: underline;
   cursor: pointer;
 
-  @include mixins.onTablet {
+  @media screen and (min-width: 580px) {
     display: none;
   }
 }
