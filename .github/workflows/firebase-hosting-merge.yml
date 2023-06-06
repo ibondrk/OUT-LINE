@@ -17,8 +17,8 @@ jobs:
           cache: 'npm'
       - name: Install JS
         run: npm ci 
-      - name: Build JS
-        run: npm run build
+#       - name: Build JS
+#         run: npm run build
       - name: Test
         if: always()
         run: |
