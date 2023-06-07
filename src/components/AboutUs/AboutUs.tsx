@@ -32,7 +32,7 @@ export const AboutUs: React.FC = () => {
     x: isSvgInView ? 0 : -40,
     transition: isSvgInView
       ? {
-          duration: 0.3,
+          duration: 0.6,
           fill: 'freeze',
         }
       : {},
@@ -249,7 +249,7 @@ export const AboutUs: React.FC = () => {
           animate={Object.assign({}, linesAnimateTo, {
             transition: {
               ...linesAnimateTo.transition,
-              delay: 1.2,
+              delay: 0.5,
             },
           })}
         />
@@ -260,7 +260,7 @@ export const AboutUs: React.FC = () => {
           animate={Object.assign({}, linesAnimateTo, {
             transition: {
               ...linesAnimateTo.transition,
-              delay: 2.2,
+              delay: 1.5,
             },
           })}
         />
@@ -271,7 +271,7 @@ export const AboutUs: React.FC = () => {
           animate={Object.assign({}, linesAnimateTo, {
             transition: {
               ...linesAnimateTo.transition,
-              delay: 3.2,
+              delay: 2.5,
             },
           })}
         />
@@ -282,7 +282,7 @@ export const AboutUs: React.FC = () => {
           animate={Object.assign({}, linesAnimateTo, {
             transition: {
               ...linesAnimateTo.transition,
-              delay: 4.2,
+              delay: 3.5,
             },
           })}
         />
@@ -295,7 +295,7 @@ export const AboutUs: React.FC = () => {
           animate={Object.assign({}, linesAnimateTo, {
             transition: {
               ...linesAnimateTo.transition,
-              delay: 1.1,
+              delay: 0.5,
             },
           })}
         />
@@ -308,7 +308,7 @@ export const AboutUs: React.FC = () => {
           animate={Object.assign({}, linesAnimateTo, {
             transition: {
               ...linesAnimateTo.transition,
-              delay: 2.1,
+              delay: 1.5,
             },
           })}
         />
@@ -321,7 +321,7 @@ export const AboutUs: React.FC = () => {
           animate={Object.assign({}, linesAnimateTo, {
             transition: {
               ...linesAnimateTo.transition,
-              delay: 3.1,
+              delay: 2.5,
             },
           })}
         />
@@ -334,7 +334,7 @@ export const AboutUs: React.FC = () => {
           animate={Object.assign({}, linesAnimateTo, {
             transition: {
               ...linesAnimateTo.transition,
-              delay: 4.1,
+              delay: 3.5,
             },
           })}
         />
