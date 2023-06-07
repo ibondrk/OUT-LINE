@@ -8,7 +8,7 @@ export const ProvidersCol1: React.FC = () => {
       {/* Emirates NBD */}
       <a
         className={s.providersLogoLink}
-        href=""
+        href="https://www.emiratesnbd.com/en"
         target="_blank"
         rel="noreferrer"
       >
@@ -122,7 +122,7 @@ export const ProvidersCol1: React.FC = () => {
       {/* ADIB */}
       <a
         className={s.providersLogoLink}
-        href=""
+        href="https://www.adib.ae/en/pages/home.aspx"
         target="_blank"
         rel="noreferrer"
       >
@@ -540,7 +540,7 @@ export const ProvidersCol1: React.FC = () => {
       {/* Rakbank */}
       <a
         className={s.providersLogoLink}
-        href=""
+        href="https://rakbank.ae/wps/portal/retail-banking"
         target="_blank"
         rel="noreferrer"
       >
@@ -613,7 +613,7 @@ export const ProvidersCol1: React.FC = () => {
       {/* ADCB */}
       <a
         className={s.providersLogoLink}
-        href=""
+        href="https://www.adcb.com/en/personal/"
         target="_blank"
         rel="noreferrer"
       >
@@ -1144,7 +1144,7 @@ export const ProvidersCol1: React.FC = () => {
       {/* mashreq */}
       <a
         className={s.providersLogoLink}
-        href=""
+        href="https://www.mashreqbank.com/en/uae/personal/"
         target="_blank"
         rel="noreferrer"
       >
@@ -1385,7 +1385,7 @@ export const ProvidersCol1: React.FC = () => {
       {/* Commercial Bank of Dubai */}
       <a
         className={s.providersLogoLink}
-        href=""
+        href="https://www.cbd.ae/"
         target="_blank"
         rel="noreferrer"
       >

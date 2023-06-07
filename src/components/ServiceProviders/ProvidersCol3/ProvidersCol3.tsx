@@ -8,7 +8,7 @@ export const ProvidersCol3: React.FC = () => {
       {/* WA */}
       <a
         className={s.providersLogoLink}
-        href=""
+        href="https://www.whatsapp.com/"
         target="_blank"
         rel="noreferrer"
       >
@@ -72,7 +72,7 @@ export const ProvidersCol3: React.FC = () => {
       {/* TG */}
       <a
         className={s.providersLogoLink}
-        href=""
+        href="https://telegram.org/"
         target="_blank"
         rel="noreferrer"
       >
@@ -114,7 +114,7 @@ export const ProvidersCol3: React.FC = () => {
       {/* e& */}
       <a
         className={s.providersLogoLink}
-        href=""
+        href="https://www.etisalat.ae/"
         target="_blank"
         rel="noreferrer"
       >
@@ -180,7 +180,7 @@ export const ProvidersCol3: React.FC = () => {
       {/* Virgin mobile */}
       <a
         className={s.providersLogoLink}
-        href=""
+        href="https://www.virginmobile.ae/double-data/?gad=1&gclid=CjwKCAjw04yjBhApEiwAJcvNobqQ8xzwrRmehWsdb9EiGhmWwJAlW33tdDW-dFmek1Ndf6ZEytkcJRoC_1EQAvD_BwE&gclsrc=aw.ds"
         target="_blank"
         rel="noreferrer"
       >
@@ -238,7 +238,7 @@ export const ProvidersCol3: React.FC = () => {
       {/* Microsoft */}
       <a
         className={s.providersLogoLink}
-        href=""
+        href="https://www.microsoft.com/en-us/?ql=2"
         target="_blank"
         rel="noreferrer"
       >
@@ -272,7 +272,7 @@ export const ProvidersCol3: React.FC = () => {
       {/* Slack */}
       <a
         className={s.providersLogoLink}
-        href=""
+        href="https://slack.com/"
         target="_blank"
         rel="noreferrer"
       >
@@ -313,7 +313,7 @@ export const ProvidersCol3: React.FC = () => {
       {/* Meta */}
       <a
         className={s.providersLogoLink}
-        href=""
+        href="https://www.meta.com/?fbclid=IwAR1uBbgyVo_XK066kXVM9DPaRgcL5nOpFEYgP_tGT3xVk3MdZvmYWx2wUzc"
         target="_blank"
         rel="noreferrer"
       >

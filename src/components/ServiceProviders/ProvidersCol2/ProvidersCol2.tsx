@@ -8,7 +8,7 @@ export const ProvidersCol2: React.FC = () => {
       {/* amer */}
       <a
         className={s.providersLogoLink}
-        href=""
+        href="https://amerdubai.ae/"
         target="_blank"
         rel="noreferrer"
       >
@@ -191,7 +191,7 @@ export const ProvidersCol2: React.FC = () => {
       {/* FedEx */}
       <a
         className={s.providersLogoLink}
-        href=""
+        href="https://www.fedex.com/en-ae/open-account.html"
         target="_blank"
         rel="noreferrer"
       >
@@ -258,7 +258,7 @@ export const ProvidersCol2: React.FC = () => {
       {/* Zajel */}
       <a
         className={s.providersLogoLink}
-        href=""
+        href="https://zajel.com/"
         target="_blank"
         rel="noreferrer"
       >
@@ -319,7 +319,7 @@ export const ProvidersCol2: React.FC = () => {
       {/* DHL */}
       <a
         className={s.providersLogoLink}
-        href=""
+        href="https://www.dhl.com/"
         target="_blank"
         rel="noreferrer"
       >
@@ -537,7 +537,7 @@ export const ProvidersCol2: React.FC = () => {
       {/* Quiup */}
       <a
         className={s.providersLogoLink}
-        href=""
+        href="https://www.quiqup.com/"
         target="_blank"
         rel="noreferrer"
       >
@@ -600,7 +600,7 @@ export const ProvidersCol2: React.FC = () => {
       {/* Emirates */}
       <a
         className={s.providersLogoLink}
-        href=""
+        href="https://www.emirates.com/ua/english/"
         target="_blank"
         rel="noreferrer"
       >
@@ -667,7 +667,7 @@ export const ProvidersCol2: React.FC = () => {
       {/* VSF Global */}
       <a
         className={s.providersLogoLink}
-        href=""
+        href="https://www.vfsglobal.com/en/individuals/index.html"
         target="_blank"
         rel="noreferrer"
       >
