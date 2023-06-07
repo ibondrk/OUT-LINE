@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 import React from 'react';
 import s from './outLineText.module.scss';
 
@@ -18,8 +19,8 @@ export const OutLineText: React.FC = () => {
         />
         <defs>
           <linearGradient id="b" x1="0%" x2="100%" y1="0%" y2="0%">
-            <stop offset="50.3%" stopColor="#bbd1ff" />
-            <stop offset="50.3%" stopColor="var(--theme-background)" />
+            <stop offset="50.3%" stop-color="#bbd1ff" />
+            <stop offset="50.3%" stop-color="var(--theme-background)" />
           </linearGradient>
         </defs>
       </svg>
