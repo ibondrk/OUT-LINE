@@ -63,7 +63,7 @@ export const IsBlock: React.FC = () => {
       </div>
       <p className={s.description}>
         a corporate service provider and project management business that
-        focuses on small and medium-sized establishments
+        focuses on small and medium-sized establishments.
       </p>
     </div>
   );

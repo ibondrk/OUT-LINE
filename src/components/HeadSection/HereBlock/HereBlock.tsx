@@ -55,7 +55,7 @@ export const HereBlock: FC = () => {
       </div>
       <p className={s.description}>
         to support finding the right direction for the establishment and project
-        delivery
+        delivery.
       </p>
     </div>
   );

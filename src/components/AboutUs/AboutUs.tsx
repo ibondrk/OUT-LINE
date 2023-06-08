@@ -208,7 +208,7 @@ export const AboutUs: React.FC = () => {
           })}
         >
           <p>
-            As a purpose-based team, we work on the opportunities and challenges
+            As a purpose-based team, we work on opportunities and challenges
             that transform businesses, governments, and communities. We build
             confidence in what we can achieve together with our clients.
           </p>
@@ -217,8 +217,8 @@ export const AboutUs: React.FC = () => {
             We recognize the diversity of our client&apos;s needs, are ready to
             solve challenges and bring people, ideas, and analyses together. We
             think deeply and adaptively to find the best possible answers,
-            creating dynamic commercial projects and assisting businesses in
-            their growth.
+            dynamic commercial projects and assisting businesses in their
+            growth.
           </p>
         </div>
         <div
@@ -428,13 +428,13 @@ export const AboutUs: React.FC = () => {
             [s.opened]: showMoreCorpEstablish,
           })}
         >
-          Setting up a company in UAE / United Arab Emirates doesn’t have to be
-          complicated, we are ready to guide you through every step of the
+          Setting up a company in the United Arab Emirates doesn’t have to be
+          complicated. We are ready to guide you through every step of the
           process, from deciding the ideal business structure to obtaining the
           necessary registrations and approvals. We cover an exhaustive list of
           services to guarantee a seamless registration process from l advice on
-          deciding the most suitable business structure all way to submission of
-          necessary financial statements on yearly basis.
+          deciding the most suitable business structure all the way to
+          submission of necessary financial statements yearly.
         </p>
 
         <div
@@ -473,7 +473,7 @@ export const AboutUs: React.FC = () => {
           the way through. Expansion requires knowledge of local laws and new
           cultural and economic realities. We will ensure the whole process runs
           smoothly and effortlessly, meets all the local regulations, and also
-          deal with HR, financial and legal issues.
+          deals with HR, financial and legal issues.
         </p>
         <div
           className={s.description_block_btn}

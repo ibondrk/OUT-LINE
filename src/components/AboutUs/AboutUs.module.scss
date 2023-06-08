@@ -130,7 +130,8 @@
     font-weight: 300;
     font-size: 17px;
     line-height: 26px;
-    text-wrap: balance;
+    text-align: justify;
+    text-justify: auto;
 
     max-height: 100px;
     overflow: hidden;
@@ -283,6 +284,9 @@
     font-size: 16px;
     line-height: 24px;
     font-style: normal;
+
+    text-align: justify;
+    text-justify: inter-character;
 
     max-height: 70px;
     overflow: hidden;

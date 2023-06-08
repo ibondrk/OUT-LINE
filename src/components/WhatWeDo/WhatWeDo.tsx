@@ -98,8 +98,8 @@ export const WhatWeDo: React.FC = () => {
           We know we can make the greatest impact through collaboration with our
           clients, and long-term strategic relationships to deliver a quality
           outcome. We put newly established businesses, expanded companies, and
-          projects on the right track for growth and success in UAE. We find a
-          solution that answers business issues and fulfills objectives.
+          projects on the right track for growth and success in the UAE. We find
+          a solution that answers business issues and fulfills objectives.
         </p>
         <div
           className={s.showMoreBtn}
@@ -141,8 +141,8 @@ export const WhatWeDo: React.FC = () => {
       <p className={cn(s.descr_diverse, 'T--1-3')}>
         Our diverse team helps tackle today’s most urgent challenges by
         strengthening ethical and responsible business practices and working day
-        by day to help build a sustainable and inclusive future and make a
-        difference in society.
+        by day to build a sustainable and inclusive future and make a difference
+        in society.
       </p>
 
       <div
