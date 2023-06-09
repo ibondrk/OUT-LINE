@@ -92,6 +92,10 @@
   fill: #0a66c2;
 }
 
+.facebook:hover svg > path:first-child {
+  fill: #0a66c2;
+}
+
 .instagram_logo:hover {
   path:nth-child(1) {
     fill: url(#instHoverGrad1);

@@ -10,15 +10,10 @@
   }
 
   &_item {
-    border-top: 1px solid #7c8dc6;
     padding: 15px 20px;
 
-    &:last-child {
-      border-bottom: 1px solid #7c8dc6;
-    }
-
     @include mixins.onTablet {
-      padding: 30px 40px;
+      padding: 15px 40px;
     }
 
     @include mixins.onDesktop {

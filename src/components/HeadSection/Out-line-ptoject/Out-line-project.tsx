@@ -11,7 +11,7 @@ export const Out_line_project: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const [rotation, setRotation] = useState(0);
   const isSmallScreen = useMediaQuery({ maxWidth: 767 });
-  const radius = isSmallScreen ? 25 : 35; // circle radius
+  const radius = isSmallScreen ? 25 : 30; // circle radius
   useEffect(() => {
     const interval = setInterval(() => {
       setRotation((prevRotation) => prevRotation + 1);
@@ -38,7 +38,12 @@ export const Out_line_project: React.FC = () => {
           // condition just for this text. Here only for letter 'i' at the 15 place
           style={{
             transform: `rotate(${
-              index === 15 ? 212.692 : angleStep * index
+              // angleStep * index
+              index === 15
+                ? 212.692
+                : index === 21
+                ? 293.769
+                : angleStep * index
             }deg) translateY(-${radius * 1.75}px)`,
             color: isSmallScreen
               ? (angleStep * index + rotation + angleOffset) % 360 > 180

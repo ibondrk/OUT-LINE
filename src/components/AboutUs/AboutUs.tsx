@@ -59,10 +59,12 @@ export const AboutUs: React.FC = () => {
     initial: {
       opacity: 0,
       y: -40,
+      transform: 'rotate(13deg) scale(0)',
     },
     animate: {
       opacity: isSvgInView ? 1 : 0,
       y: isSvgInView ? 0 : -40,
+      transform: 'rotate(0deg) scale(1)',
       transition: isSvgInView
         ? {
             duration: 0.6,
@@ -76,10 +78,12 @@ export const AboutUs: React.FC = () => {
     initial: {
       opacity: 0,
       y: -40,
+      transform: 'rotate(11deg) scale(0)',
     },
     animate: {
       opacity: isSvgInView ? 1 : 0,
       y: isSvgInView ? 0 : -40,
+      transform: 'rotate(0deg) scale(1)',
       transition: isSvgInView
         ? {
             duration: 0.6,
@@ -94,11 +98,13 @@ export const AboutUs: React.FC = () => {
       opacity: 0,
       y: -40,
       x: -25,
+      transform: 'rotate(13deg) scale(0)',
     },
     animate: {
       opacity: isSvgInView ? 1 : 0,
       y: isSvgInView ? 0 : -40,
       x: isSvgInView ? 0 : -25,
+      transform: 'rotate(0deg) scale(1)',
       transition: isSvgInView
         ? {
             duration: 0.6,
@@ -111,13 +117,15 @@ export const AboutUs: React.FC = () => {
   const lastCircleElem: Variants = {
     initial: {
       opacity: 0,
-      x: -20,
+      // x: -20,
       y: -35,
+      transform: 'rotate(13deg) scale(0)',
     },
     animate: {
       opacity: isSvgInView ? 1 : 0,
-      x: isSvgInView ? 0 : -20,
+      // x: isSvgInView ? 0 : -20,
       y: isSvgInView ? 0 : -35,
+      transform: 'rotate(0deg) scale(1)',
       transition: isSvgInView
         ? {
             duration: 0.6,
@@ -158,7 +166,7 @@ export const AboutUs: React.FC = () => {
             style={{ display: 'inline-block' }}
             initial={dotsAnimateFrom}
             animate={dotsRefInView ? animateTo : dotsAnimateFrom}
-            transition={transitionDot1}
+            transition={dotsRefInView ? transitionDot1 : {}}
           >
             <img src={dot1} alt="dot" className={s.dot1} />
           </motion.div>
@@ -166,7 +174,7 @@ export const AboutUs: React.FC = () => {
             style={{ display: 'inline-block' }}
             initial={dotsAnimateFrom}
             animate={dotsRefInView ? animateTo : dotsAnimateFrom}
-            transition={transitionDot2}
+            transition={dotsRefInView ? transitionDot2 : {}}
           >
             <img src={dot2} alt="dot" className={s.dot2} />
           </motion.div>
@@ -174,7 +182,7 @@ export const AboutUs: React.FC = () => {
             style={{ display: 'inline-block' }}
             initial={dotsAnimateFrom}
             animate={dotsRefInView ? animateTo : dotsAnimateFrom}
-            transition={transitionDot3}
+            transition={dotsRefInView ? transitionDot3 : {}}
           >
             <img src={dot3} alt="dot" className={s.dot3} />
           </motion.div>
@@ -185,7 +193,7 @@ export const AboutUs: React.FC = () => {
             ref={secMajorRef}
             initial={wordMajorAnimateFrom}
             animate={secMajorRefInView ? animateTo : wordMajorAnimateFrom}
-            transition={transitionSectionNamePart1}
+            transition={secMajorRefInView ? transitionSectionNamePart1 : {}}
           >
             About
           </motion.p>
@@ -194,7 +202,7 @@ export const AboutUs: React.FC = () => {
             ref={secMinorRef}
             initial={wordMinorAnimateFrom}
             animate={secMinorRefInView ? animateTo : wordMinorAnimateFrom}
-            transition={transitionSectionNamePart2}
+            transition={secMinorRefInView ? transitionSectionNamePart2 : {}}
           >
             Us
           </motion.p>

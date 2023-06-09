@@ -115,6 +115,36 @@ export const Contacts: React.FC = () => {
               </defs>
             </svg>
           </a>
+          {/* <a
+            href="https://www.facebook.com/search/top?q=out%20line%20group%20fzco"
+            target="_blank"
+            rel="noreferrer"
+            className={s.facebook}
+          >
+            <svg width="31px" height="31px" viewBox="0 0 266.895 266.895">
+              <path
+                d="M2.02212 2.15224C-0.406964 4.67485 0.0901871 7.35456 0.0901871 15.4954C0.0901871 22.2559 -1.08958 29.033 5.08488 30.6285C7.01295 31.1243 24.0964 31.1243 26.0219 30.6259C28.5926 29.9628 30.6843 27.878 30.9702 24.2428C31.0101 23.7354 31.0101 7.26442 30.9689 6.74676C30.665 2.87464 28.281 0.643049 25.1396 0.191065C24.4197 0.0867609 24.2754 0.055856 20.5816 0.0494175C7.47919 0.055856 4.60705 -0.527474 2.02212 2.15224Z"
+                fill="url(#facebook_footer_linear_715_3000)"
+              ></path>
+              <path
+                d="M184.152 266.895V163.539h34.692l5.194-40.28h-39.887V97.542c0-11.662 3.238-19.609 19.962-19.609l21.329-.01V41.897c-3.689-.49-16.351-1.587-31.08-1.587-30.753 0-51.807 18.771-51.807 53.244v29.705h-34.781v40.28h34.781v103.355h41.597z"
+                fill="#ffffff"
+              ></path>
+              <defs>
+                <linearGradient
+                  id="facebook_footer_linear_715_3000"
+                  x1="-2.2665"
+                  y1="28.295"
+                  x2="39.5636"
+                  y2="2.77332"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stopColor="#6FA0D8" />
+                  <stop offset="1" stopColor="#9184E8" />
+                </linearGradient>
+              </defs>
+            </svg>
+          </a> */}
         </div>
       </div>
 

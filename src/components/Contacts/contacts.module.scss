@@ -178,6 +178,10 @@
   fill: #0a66c2;
 }
 
+.facebook:hover svg > path:first-child {
+  fill: #0a66c2;
+}
+
 .instagram_logo:hover {
   path:first-child {
     fill: url(#instHoverContactGrad);

@@ -134,8 +134,9 @@
     max-height: 100px;
     overflow: hidden;
     transition: max-height 0.3s ease-in-out;
+    text-align: justify;
 
-    @media screen and (max-width:504px) {
+    @media screen and (max-width: 504px) {
       display: -webkit-box;
       -webkit-line-clamp: 4;
       -webkit-box-orient: vertical;
@@ -284,7 +285,7 @@
     font-style: normal;
 
     text-align: justify;
-    text-justify: inter-character;
+    // text-justify: inter-character;
 
     max-height: 70px;
     overflow: hidden;

@@ -137,6 +137,37 @@ export const HamburgerMenu: React.FC = () => {
                     </defs>
                   </svg>
                 </a>
+                {/* Facebook Logo */}
+                {/* <a
+                  href="https://www.facebook.com/search/top?q=out%20line%20group%20fzco"
+                  target="_blank"
+                  rel="noreferrer"
+                  className={s.facebook}
+                >
+                  <svg width="31px" height="31px" viewBox="0 0 266.895 266.895">
+                    <path
+                      d="M252.164 266.895c8.134 0 14.729-6.596 14.729-14.73V14.73c0-8.137-6.596-14.73-14.729-14.73H14.73C6.593 0 0 6.594 0 14.73v237.434c0 8.135 6.593 14.73 14.73 14.73h237.434z"
+                      fill="url(#facebook_head_menu_linear_715)"
+                    ></path>
+                    <path
+                      d="M184.152 266.895V163.539h34.692l5.194-40.28h-39.887V97.542c0-11.662 3.238-19.609 19.962-19.609l21.329-.01V41.897c-3.689-.49-16.351-1.587-31.08-1.587-30.753 0-51.807 18.771-51.807 53.244v29.705h-34.781v40.28h34.781v103.355h41.597z"
+                      fill="#ffffff"
+                    ></path>
+                    <defs>
+                      <linearGradient
+                        id="facebook_head_menu_linear_715"
+                        x1="-2.2665"
+                        y1="28.295"
+                        x2="39.5636"
+                        y2="2.77332"
+                        gradientUnits="userSpaceOnUse"
+                      >
+                        <stop stopColor="#6FA0D8" />
+                        <stop offset="1" stopColor="#9184E8" />
+                      </linearGradient>
+                    </defs>
+                  </svg>
+                </a> */}
               </div>
             </div>
           </div>
@@ -242,6 +273,37 @@ export const HamburgerMenu: React.FC = () => {
                   </defs>
                 </svg>
               </a>
+              {/* Facebook logo */}
+              {/* <a
+                href="https://www.facebook.com/search/top?q=out%20line%20group%20fzco"
+                target="_blank"
+                rel="noreferrer"
+                className={s.facebook}
+              >
+                <svg width="31px" height="31px" viewBox="0 0 266.895 266.895">
+                  <path
+                    d="M252.164 266.895c8.134 0 14.729-6.596 14.729-14.73V14.73c0-8.137-6.596-14.73-14.729-14.73H14.73C6.593 0 0 6.594 0 14.73v237.434c0 8.135 6.593 14.73 14.73 14.73h237.434z"
+                    fill="url(#facebook_head_menu_phone_linear_715)"
+                  ></path>
+                  <path
+                    d="M184.152 266.895V163.539h34.692l5.194-40.28h-39.887V97.542c0-11.662 3.238-19.609 19.962-19.609l21.329-.01V41.897c-3.689-.49-16.351-1.587-31.08-1.587-30.753 0-51.807 18.771-51.807 53.244v29.705h-34.781v40.28h34.781v103.355h41.597z"
+                    fill="#ffffff"
+                  ></path>
+                  <defs>
+                    <linearGradient
+                      id="facebook_head_menu_phone_linear_715"
+                      x1="-2.2665"
+                      y1="28.295"
+                      x2="39.5636"
+                      y2="2.77332"
+                      gradientUnits="userSpaceOnUse"
+                    >
+                      <stop stopColor="#6FA0D8" />
+                      <stop offset="1" stopColor="#9184E8" />
+                    </linearGradient>
+                  </defs>
+                </svg>
+              </a> */}
             </div>
           </div>
         </div>
