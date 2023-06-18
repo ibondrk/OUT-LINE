@@ -235,8 +235,8 @@
 }
 
 .arrow {
-  width: 15px;
-  height: 15px;
+  width: 12px;
+  height: 12px;
   border-top: 2px solid var(--main-text);
   border-right: 2px solid var(--main-text);
   transition: border-color 0.3s ease-in-out;
@@ -285,7 +285,6 @@
     font-style: normal;
 
     text-align: justify;
-    // text-justify: inter-character;
 
     max-height: 70px;
     overflow: hidden;
@@ -320,7 +319,6 @@
 
   @include mixins.onTablet {
     min-width: 183px;
-    // max-width: 240px;
     padding: 0 20px;
   }
 

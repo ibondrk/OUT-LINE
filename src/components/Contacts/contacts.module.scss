@@ -4,24 +4,23 @@
   display: grid;
   background-color: var(--theme-background_2);
 
-  padding: 50px 30px 60px;
+  padding: 50px 30px 37px;
 
   overflow: hidden;
 
   @include mixins.onTablet {
-    padding: 50px 40px;
+    padding: 50px 40px 38px;
   }
 
   @include mixins.on1024 {
-    overflow: unset;
-    padding: 40px 60px 60px;
+    padding: 40px 60px 45px;
   }
   @include mixins.onDesktop {
-    padding: 60px 80px 85px;
+    padding: 60px 80px 45px;
     align-items: flex-start;
   }
   @include mixins.on1920 {
-    padding: 95px 100px 165px;
+    padding: 95px 100px 45px;
   }
 }
 
@@ -30,6 +29,7 @@
   height: 44px;
   fill: var(--logo);
   grid-row: 1/1;
+  margin-bottom: 40px;
 
   @include mixins.onDesktop {
     margin-top: 12px;
@@ -37,12 +37,32 @@
   }
 }
 
-.social_media_wrapper {
-  grid-row: 1/1;
+.nav_wrapper {
+  grid-row: 2/2;
+  margin-bottom: 35px;
 
   @include mixins.onTablet {
-    grid-row: 3/3;
-    justify-self: center;
+    margin-bottom: unset;
+  }
+
+  @include mixins.onDesktop {
+    grid-row: 1/1;
+  }
+}
+
+.social_media_wrapper {
+  grid-row: 1/1;
+  margin-top: 6px;
+
+  @include mixins.onTablet {
+    justify-self: flex-end;
+  }
+
+  @include mixins.on1024 {
+    grid-row: 2/2;
+    align-self: start;
+    justify-self: flex-start;
+    margin-top: unset;
   }
   @include mixins.onDesktop {
     grid-row: 1/1;
@@ -55,8 +75,7 @@
   align-items: center;
   gap: 25px;
 
-  @include mixins.onTablet {
-    gap: 23px;
+  @include mixins.on1024 {
     justify-content: flex-start;
   }
 
@@ -67,7 +86,7 @@
 
 .follow_text {
   display: none;
-  @include mixins.onTablet {
+  @include mixins.on1024 {
     display: inline-block;
   }
 }
@@ -80,6 +99,7 @@
   font-style: normal;
   text-transform: uppercase;
   margin: 35px 0 40px;
+  grid-row: 2/2;
 
   &::after {
     content: ':';
@@ -94,14 +114,17 @@
   @include mixins.onDesktop {
     margin: 0;
     font-size: 55px;
+    grid-row: 1/1;
   }
 }
 
 .location_wrapper {
   display: flex;
   align-items: flex-start;
+  grid-row: 5/5;
 
   @include mixins.onTablet {
+    grid-row: 2/2;
     justify-self: flex-end;
   }
 
@@ -138,7 +161,6 @@
   width: 80px;
   height: 80px;
   fill: var(--main-text);
-  align-self: flex-end;
 
   margin-left: 46px;
 
@@ -150,11 +172,12 @@
 }
 
 .questions {
-  margin-top: 34px;
+  grid-row: 4/4;
+  margin-bottom: 35px;
 
   @include mixins.onTablet {
     margin-top: unset;
-    grid-row: 3/3;
+    grid-row: 2/2;
   }
 
   @include mixins.onDesktop {
@@ -178,12 +201,43 @@
   fill: #0a66c2;
 }
 
-.facebook:hover svg > path:first-child {
+.facebook:hover svg > path {
   fill: #0a66c2;
 }
 
 .instagram_logo:hover {
   path:first-child {
     fill: url(#instHoverContactGrad);
+  }
+}
+
+.copyright {
+  grid-row: 6/6;
+  position: relative;
+  padding-top: 22px;
+  margin-top: 40px;
+
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 133.5%;
+  color: #BBBBBD;
+
+  &::before {
+    position: absolute;
+    content: '';
+    width: 200%;
+    height: 1px;
+    background-color: var(--decor-line);
+    transform: translateX(-10%);
+    top: 0;
+  }
+
+  @include mixins.onTablet {
+    margin-top: 50px;
+    font-size: 17px;
+  }
+
+  @include mixins.onDesktop {
+    margin-top: 60px;
   }
 }

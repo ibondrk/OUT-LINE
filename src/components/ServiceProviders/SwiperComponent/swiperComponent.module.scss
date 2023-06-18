@@ -75,6 +75,6 @@
 .disabled {
   &::after,
   &::before {
-    background-color: #dfe3ec;
+    background-color: var(--decor-line);
   }
 }

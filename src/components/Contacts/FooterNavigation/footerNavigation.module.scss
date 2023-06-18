@@ -1,0 +1,9 @@
+@use '../../../styles/mixins.scss' as mixins;
+
+.nav__item {
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 16px;
+  padding: 10px 0;
+  cursor: pointer;
+}

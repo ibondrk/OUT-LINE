@@ -2,10 +2,12 @@ import { createSlice } from '@reduxjs/toolkit';
 
 type menuState = {
   isWidthPC: boolean;
+  isNoteBook: boolean;
 };
 
 const initialState: menuState = {
   isWidthPC: false,
+  isNoteBook: false,
 };
 
 const screenWidthSlice = createSlice({
@@ -15,6 +17,7 @@ const screenWidthSlice = createSlice({
     setScreenWidth: (state) => {
       const width = window.innerWidth;
       state.isWidthPC = width >= 1550;
+      state.isNoteBook = width >= 1024;
     },
   },
 });

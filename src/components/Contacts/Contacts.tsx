@@ -2,18 +2,31 @@ import React from 'react';
 import s from './contacts.module.scss';
 import cn from 'classnames';
 
+import { FooterNavigation } from './FooterNavigation';
+
+import { useAppSelector } from '../../app/hooks';
+
 import sprite from '../../images/sprite.svg';
 
 export const Contacts: React.FC = () => {
+  const { isNoteBook } = useAppSelector((state) => state.screenWidth);
   return (
     <footer className={s.section} id="contacts">
       <svg className={cn(s.logo, 'S--1-1')}>
         <use xlinkHref={`${sprite}#logo`} />
       </svg>
 
+      <div className={cn(s.nav_wrapper, 'S--1-4', 'T--1-3', 'D--11-13')}>
+        <FooterNavigation />
+      </div>
       {/* Social media */}
       <div
-        className={cn(s.social_media_wrapper, 'S--3-4', 'T--5-8', 'D--18-21')}
+        className={cn(
+          s.social_media_wrapper,
+          'S--3-4',
+          isNoteBook ? 'T--8-10' : 'T--8-12',
+          'D--18-21'
+        )}
       >
         <p className={cn(s.block_descr, s.follow_text)}>Follow us:</p>
         <div className={cn(s.icons_wrapper)}>
@@ -115,28 +128,32 @@ export const Contacts: React.FC = () => {
               </defs>
             </svg>
           </a>
-          {/* <a
+          {/* Facebook logo */}
+          <a
             href="https://www.facebook.com/search/top?q=out%20line%20group%20fzco"
             target="_blank"
             rel="noreferrer"
             className={s.facebook}
           >
-            <svg width="31px" height="31px" viewBox="0 0 266.895 266.895">
+            <svg
+              width="30"
+              height="30"
+              viewBox="0 0 30 30"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect width="30" height="30" rx="5" fill="white" />
               <path
-                d="M2.02212 2.15224C-0.406964 4.67485 0.0901871 7.35456 0.0901871 15.4954C0.0901871 22.2559 -1.08958 29.033 5.08488 30.6285C7.01295 31.1243 24.0964 31.1243 26.0219 30.6259C28.5926 29.9628 30.6843 27.878 30.9702 24.2428C31.0101 23.7354 31.0101 7.26442 30.9689 6.74676C30.665 2.87464 28.281 0.643049 25.1396 0.191065C24.4197 0.0867609 24.2754 0.055856 20.5816 0.0494175C7.47919 0.055856 4.60705 -0.527474 2.02212 2.15224Z"
-                fill="url(#facebook_footer_linear_715_3000)"
-              ></path>
-              <path
-                d="M184.152 266.895V163.539h34.692l5.194-40.28h-39.887V97.542c0-11.662 3.238-19.609 19.962-19.609l21.329-.01V41.897c-3.689-.49-16.351-1.587-31.08-1.587-30.753 0-51.807 18.771-51.807 53.244v29.705h-34.781v40.28h34.781v103.355h41.597z"
-                fill="#ffffff"
-              ></path>
+                d="M25.9573 0H4.04259C1.80997 0 0 1.80989 0 4.04256V25.9573C0 28.19 1.8099 29.9999 4.04259 29.9999H14.8508L14.8693 19.2795H12.0841C11.7222 19.2795 11.4284 18.9869 11.427 18.6249L11.4136 15.1693C11.4122 14.8054 11.7069 14.5096 12.0708 14.5096H14.8509V11.1706C14.8509 7.29576 17.2175 5.18587 20.6741 5.18587H23.5106C23.8735 5.18587 24.1678 5.48008 24.1678 5.84305V8.75684C24.1678 9.11967 23.8737 9.4138 23.5109 9.41402L21.7702 9.41483C19.8904 9.41483 19.5264 10.3081 19.5264 11.619V14.5097H23.6571C24.0506 14.5097 24.356 14.8534 24.3096 15.2442L23.9 18.6998C23.8609 19.0305 23.5804 19.2797 23.2475 19.2797H19.5448L19.5264 30H25.9575C28.1901 30 30 28.1901 30 25.9575V4.04256C29.9999 1.80989 28.19 0 25.9573 0Z"
+                fill="url(#paint0_foot_fb_linear_1195_21)"
+              />
               <defs>
                 <linearGradient
-                  id="facebook_footer_linear_715_3000"
-                  x1="-2.2665"
-                  y1="28.295"
-                  x2="39.5636"
-                  y2="2.77332"
+                  id="paint0_foot_fb_linear_1195_21"
+                  x1="-2.33232"
+                  y1="27.3823"
+                  x2="38.1484"
+                  y2="2.68386"
                   gradientUnits="userSpaceOnUse"
                 >
                   <stop stopColor="#6FA0D8" />
@@ -144,16 +161,12 @@ export const Contacts: React.FC = () => {
                 </linearGradient>
               </defs>
             </svg>
-          </a> */}
+          </a>
         </div>
       </div>
 
-      <p className={cn(s.section_title, 'S--1-4', 'T--1-12', 'D--5-9')}>
-        Contacts
-      </p>
-
       {/* Location */}
-      <div className={cn(s.location_wrapper, 'S--1-4', 'T--9-12', 'D--20-24')}>
+      <div className={cn(s.location_wrapper, 'S--1-4', 'T--10-12', 'D--20-24')}>
         <div>
           <p className={s.block_descr}>Look for us:</p>
           <a
@@ -170,7 +183,14 @@ export const Contacts: React.FC = () => {
         </svg>
       </div>
       {/* Questions: */}
-      <div className={cn(s.questions, 'S--1-4', 'T--1-4', 'D--14-18')}>
+      <div
+        className={cn(
+          s.questions,
+          'S--1-4',
+          isNoteBook ? 'T--4-8' : 'T--4-11',
+          'D--14-18'
+        )}
+      >
         <p className={s.block_descr}>Any questions:</p>
 
         <a className={s.question_link} href="mailto:mail@out-line.ae">
@@ -186,6 +206,9 @@ export const Contacts: React.FC = () => {
           out-line.ae
         </a>
       </div>
+      <p className={cn(s.copyright, 'S--1-4', 'T--1-12', 'D--1-24')}>
+        Copyright OUT-LINE GROUP FZCO 2023 All rights reserved
+      </p>
     </footer>
   );
 };

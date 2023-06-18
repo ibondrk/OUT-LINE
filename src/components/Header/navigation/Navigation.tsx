@@ -1,5 +1,6 @@
 import React from 'react';
 import s from './navigation.module.scss';
+// import cn from 'classnames';
 
 import * as menuActions from '../../../app/featcher/menu';
 
@@ -41,26 +42,25 @@ export const Navigation: React.FC = () => {
           </div>
         </li>
         {/* <li className={cn(s.nav_item, s.mobile)}>
-          <a
-            href=""
+          <div
             className={s.nav_link}
             onClick={() => {
               dispatch(menuActions.toggleMenu(false));
+              scrollToSection('');
             }}
           >
             OUR PARTNERS IN AUE
-          </a>
+          </div>
         </li>
         <li className={cn(s.nav_item, s.mobile)}>
-          <a
-            href=""
+          <div
             className={s.nav_link}
             onClick={() => {
               dispatch(menuActions.toggleMenu(false));
             }}
           >
             PROVIDERS
-          </a>
+          </div>
         </li> */}
         <li className={s.nav_item}>
           <div

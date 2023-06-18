@@ -34,7 +34,6 @@
   &_link {
     font-size: 16px;
     line-height: 24px;
-    text-decoration: none;
     color: var((--main-text));
     cursor: pointer;
 
@@ -56,7 +55,5 @@
 }
 
 .mobile {
-  @include mixins.onDesktop {
-    display: none;
-  }
+  display: none;
 }
