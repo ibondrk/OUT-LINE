@@ -15,7 +15,7 @@ export const FooterNavigation: React.FC = () => {
   useEffect(() => {
     const { hash } = location;
     if (hash) {
-      scrollToSection(hash.substring(1)); // Відкидаємо початковий символ '#'
+      scrollToSection(hash.substring(1)); // aborting first character '#'
     }
   }, [location]);
 
@@ -33,12 +33,12 @@ export const FooterNavigation: React.FC = () => {
           </NavLink>
         </li>
         <li className={s.nav__item}>
-          <NavLink to="/#Partners" className={s.nav_link}>
+          <NavLink to="/#partners" className={s.nav_link}>
             OUR PARTNERS IN AUE
           </NavLink>
         </li>
         <li className={s.nav__item}>
-          <NavLink to="/#ServiceProviders" className={s.nav_link}>
+          <NavLink to="/#serviceProviders" className={s.nav_link}>
             OUR SERVICE PROVIDERS
           </NavLink>
         </li>

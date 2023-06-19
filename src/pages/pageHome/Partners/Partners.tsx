@@ -53,7 +53,7 @@ export const Partners: React.FC = () => {
   const dotsRefInView = useInView(dotsRef);
 
   return (
-    <section className={s.section} id="Partners">
+    <section className={s.section} id="partners">
       <div className={cn(s.sectionTitle, 'T--1-5', 'D--1-11')}>
         <div className={cn(s.dots, 'T--1-2')} ref={dotsRef}>
           <motion.div

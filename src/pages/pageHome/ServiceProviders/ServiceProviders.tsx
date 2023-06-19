@@ -54,7 +54,7 @@ export const ServiceProviders: React.FC = () => {
   const dotsRefInView = useInView(dotsRef);
 
   return (
-    <section className={s.section} id="ServiceProviders">
+    <section className={s.section} id="serviceProviders">
       {/* Title */}
       <div className={cn(s.sectionTitle, 'T--1-5', 'D--1-11')}>
         <div className={cn(s.dots, 'T--1-2')} ref={dotsRef}>

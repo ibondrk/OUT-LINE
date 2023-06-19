@@ -10,7 +10,7 @@ import { OutLineText } from './OutLineText';
 
 export const HeadSection: React.FC = () => {
   return (
-    <section className={s.section} id="HeadSection">
+    <section className={s.section} id="headSection">
       <div className={cn(s.themeWrapper, 'D--1-1')}>
         <Theme />
       </div>

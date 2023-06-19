@@ -3,20 +3,20 @@ import cn from 'classnames';
 import s from './pageNavigation.module.scss';
 
 export const PageNavigation: React.FC = () => {
-  const [activeLink, setActiveLink] = useState('HeadSection');
+  const [activeLink, setActiveLink] = useState('headSection');
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY || window.pageYOffset;
       const headerOffset =
-        document.getElementById('HeadSection')?.offsetTop || 0;
+        document.getElementById('headSection')?.offsetTop || 0;
       const aboutUsOffset = document.getElementById('aboutUs')?.offsetTop || 0;
       const whatWeDoOffset =
         document.getElementById('whatWeDo')?.offsetTop || 0;
       const partnersOffset =
-        document.getElementById('Partners')?.offsetTop || 0;
+        document.getElementById('partners')?.offsetTop || 0;
       const serviceProvidersOffset =
-        document.getElementById('ServiceProviders')?.offsetTop || 0;
+        document.getElementById('serviceProviders')?.offsetTop || 0;
 
       const scrollOffsets = [
         headerOffset,
@@ -31,11 +31,11 @@ export const PageNavigation: React.FC = () => {
       );
 
       const sectionIds = [
-        'HeadSection',
+        'headSection',
         'aboutUs',
         'whatWeDo',
-        'Partners',
-        'ServiceProviders',
+        'partners',
+        'serviceProviders',
       ];
 
       if (sectionIndex !== -1) {
@@ -60,7 +60,7 @@ export const PageNavigation: React.FC = () => {
     <article className={cn(s.pageNavigation)}>
       <div
         className={cn(s.pageNavigationLink, {
-          [s.active]: activeLink === 'HeadSection',
+          [s.active]: activeLink === 'headSection',
         })}
         onClick={() => scrollToSection('header')}
       ></div>
@@ -78,15 +78,15 @@ export const PageNavigation: React.FC = () => {
       ></div>
       <div
         className={cn(s.pageNavigationLink, {
-          [s.active]: activeLink === 'Partners',
+          [s.active]: activeLink === 'partners',
         })}
-        onClick={() => scrollToSection('Partners')}
+        onClick={() => scrollToSection('partners')}
       ></div>
       <div
         className={cn(s.pageNavigationLink, {
-          [s.active]: activeLink === 'ServiceProviders',
+          [s.active]: activeLink === 'serviceProviders',
         })}
-        onClick={() => scrollToSection('ServiceProviders')}
+        onClick={() => scrollToSection('serviceProviders')}
       ></div>
     </article>
   );
