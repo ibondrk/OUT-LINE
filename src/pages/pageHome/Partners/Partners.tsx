@@ -9,11 +9,11 @@ import {
   useInView,
 } from 'framer-motion';
 
-import dot1 from '../../images/dots/dot1.webp';
-import dot2 from '../../images/dots/dot2.webp';
-import dot3 from '../../images/dots/dot3.webp';
+import dot1 from '../../../images/dots/dot1.webp';
+import dot2 from '../../../images/dots/dot2.webp';
+import dot3 from '../../../images/dots/dot3.webp';
 
-import Animation from '../../animations/animationLogic';
+import Animation from '../../../animations/animationLogic';
 
 export const Partners: React.FC = () => {
   const [showMorePartners, setShowMorePartners] = useState(false);

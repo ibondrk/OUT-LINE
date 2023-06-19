@@ -1,0 +1,215 @@
+@use '../../../styles/mixins.scss' as mixins;
+
+.section {
+  margin-top: 23px;
+  display: grid;
+  overflow: hidden;
+
+  @include mixins.onTablet {
+    overflow: unset;
+  }
+
+  padding: 0 0 35px 30px;
+
+  @media (min-width: 768px) {
+    padding: 0 50px;
+  }
+  @media (min-width: 1024px) {
+    padding: 0 60px;
+  }
+  @media (min-width: 1550px) {
+    padding: 0 80px;
+  }
+  @media (min-width: 1920px) {
+    padding: 0 100px;
+  }
+}
+
+.themeWrapper {
+  display: none;
+  transform: rotate(270deg);
+  width: 40px;
+  height: 40px;
+
+  @include mixins.onDesktop {
+    display: grid;
+    position: absolute;
+    top: 35%;
+  }
+}
+
+// <--- Main Photo and OUT LINE text --->
+
+.image_container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  @include mixins.onTablet {
+    transform: translate(0, -20%);
+    grid-row: 1/4;
+  }
+}
+
+.image_wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.mainPicture {
+  width: 210px;
+  height: 349px;
+
+  @media screen and (min-width: 500px) {
+    width: 250px;
+    height: 400px;
+  }
+
+  @media screen and (min-width: 600px) {
+    width: 300px;
+    height: 478px;
+  }
+
+  @media screen and (min-width: 700px) {
+    width: 379px;
+    height: 490px;
+  }
+
+  @include mixins.onTablet {
+    width: 251px;
+    height: 596px;
+  }
+
+  @include mixins.on1024 {
+    width: 342px;
+    height: 544px;
+  }
+
+  @include mixins.onDesktop {
+    width: 385px;
+    height: 865px;
+  }
+
+  @include mixins.on1920 {
+    width: 475px;
+    height: 1024px;
+  }
+}
+
+// <--- Main Photo and OUT LINE text END --->
+
+.spinTextWrapper {
+  display: flex;
+
+  justify-content: flex-end;
+  transform: translate(-20%, -50%);
+
+  @include mixins.onTablet {
+    grid-row: 1/2;
+    transform: unset;
+    justify-content: unset;
+    width: 0;
+  }
+}
+
+
+// Categories
+
+.categorie {
+  &__wrapper {
+    display: flex;
+    gap: 38px;
+    align-items: center;
+
+    padding: 25px 0;
+    position: relative;
+
+    &:not(:last-child)::after {
+      position: absolute;
+      bottom: 0;
+      content: '';
+      background: var(--main-gradient);
+      opacity: 0.5;
+      height: 1px;
+      width: 100vw;
+
+      transform: translate(-30px, 0);
+
+      @include mixins.onTablet {
+        transform: unset;
+        right: 0;
+        bottom: unset;
+        width: 1px;
+        height: 100%;
+      }
+    }
+
+    @include mixins.onTablet {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 40px;
+      grid-row: 4/5;
+
+      padding: 0 0 0 42px;
+    }
+
+    @include mixins.onDesktop {
+      grid-row: 2/3;
+    }
+  }
+
+  &__number {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 30px;
+
+    // here. Testing
+    background: linear-gradient(58.61deg, #6FA0D8 -1.52%, #9184E8 113.48%);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+
+  &__name {
+    font-family: 'BLMelody-Light';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 27px;
+    overflow-wrap: break-word;
+    max-width: 200px;
+
+    @include mixins.on1920 {
+      font-size: 20px;
+      line-height: 24px;
+    }
+
+    & span {
+      font-family: 'BLMelody-Bold';
+      font-weight: 700;
+    }
+  }
+}
+
+.wrapper_02 {
+  @include mixins.onTablet {
+    margin-top: 100px;
+  }
+}
+
+.wrapper_03 {
+  @include mixins.onTablet {
+    margin: 200px 0 40px;
+  }
+
+  @include mixins.on1024 {
+    margin-bottom: 50px;
+  }
+
+  @include mixins.onDesktop {
+    margin: 225px 0 0;
+  }
+}

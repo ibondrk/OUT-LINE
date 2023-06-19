@@ -2,11 +2,11 @@ import React, { useState, useRef } from 'react';
 import s from './whatWeDo.module.scss';
 import cn from 'classnames';
 
-import dot1 from '../../images/dots/dot1.webp';
-import dot2 from '../../images/dots/dot2.webp';
-import dot3 from '../../images/dots/dot3.webp';
+import dot1 from '../../../images/dots/dot1.webp';
+import dot2 from '../../../images/dots/dot2.webp';
+import dot3 from '../../../images/dots/dot3.webp';
 
-import Animation from '../../animations/animationLogic';
+import Animation from '../../../animations/animationLogic';
 
 import { motion, useInView } from 'framer-motion';
 
@@ -111,14 +111,14 @@ export const WhatWeDo: React.FC = () => {
 
       <img
         className={cn(s.cloud_img, 'T--11-12', 'D--4-10')}
-        src={require('../../images/cloud/320.webp')}
+        src={require('../../../images/cloud/320.webp')}
         alt="clouds"
         srcSet={`
-          ${require('../../images/cloud/1920.webp')} 1920w,
-          ${require('../../images/cloud/1550.webp')} 1550w,
-          ${require('../../images/cloud/1024.webp')} 1024w,
-          ${require('../../images/cloud/768.webp')} 768w,
-          ${require('../../images/cloud/320.webp')} 320w
+          ${require('../../../images/cloud/1920.webp')} 1920w,
+          ${require('../../../images/cloud/1550.webp')} 1550w,
+          ${require('../../../images/cloud/1024.webp')} 1024w,
+          ${require('../../../images/cloud/768.webp')} 768w,
+          ${require('../../../images/cloud/320.webp')} 320w
         `}
         sizes="
         (min-width: 1920px) 1920px,
@@ -130,11 +130,11 @@ export const WhatWeDo: React.FC = () => {
       />
       <source
         srcSet={`
-          ${require('../../images/cloud/1920.webp')} 1920w,
-          ${require('../../images/cloud/1550.webp')} 1550w,
-          ${require('../../images/cloud/1024.webp')} 1024w,
-          ${require('../../images/cloud/768.webp')} 768w,
-          ${require('../../images/cloud/320.webp')} 320w
+          ${require('../../../images/cloud/1920.webp')} 1920w,
+          ${require('../../../images/cloud/1550.webp')} 1550w,
+          ${require('../../../images/cloud/1024.webp')} 1024w,
+          ${require('../../../images/cloud/768.webp')} 768w,
+          ${require('../../../images/cloud/320.webp')} 320w
           `}
         type="image/webp"
       />

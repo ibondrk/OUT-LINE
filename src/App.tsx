@@ -2,14 +2,10 @@ import React, { useEffect } from 'react';
 import './styles/App.scss';
 import cn from 'classnames';
 
+import { Outlet } from 'react-router-dom';
 import { Header } from './components/Header';
 import { HamburgerMenu } from './components/Header/hamburger';
 import { PageNavigation } from './components/PageNavigation';
-import { HeadSection } from './components/HeadSection';
-import { AboutUs } from './components/AboutUs';
-import { WhatWeDo } from './components/WhatWeDo';
-import { Partners } from './components/Partners';
-import { ServiceProviders } from './components/ServiceProviders';
 import { Contacts } from './components/Contacts';
 
 import { useAppSelector, useAppDispatch } from './app/hooks';
@@ -48,11 +44,7 @@ function App() {
       <Header />
       <PageNavigation />
       <HamburgerMenu />
-      <HeadSection />
-      <AboutUs />
-      <WhatWeDo />
-      <Partners />
-      <ServiceProviders />
+      <Outlet />
       <Contacts />
     </div>
   );

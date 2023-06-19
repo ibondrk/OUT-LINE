@@ -2,11 +2,6 @@
 https://codepen.io/PraRoz/pen/OJzrmmm */
 @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
 
-body {
-    background-color: #111111;
-    // overflow: hidden;
-}
-
 .page {
   margin-top: 90px;
   padding: 40px;
@@ -21,14 +16,14 @@ body {
   margin: 5px;
 }
 .error:hover {
-  text-shadow: 0 0 200px #ffffff, 0 0 80px #008000, 0 0 6px #0000ff;
+  text-shadow: 0 0 200px #ffffff, 0 0 80px blue, 0 0 6px #0000ff;
 }
 .code:hover {
   text-shadow: 0 0 100px red, 0 0 40px FireBrick, 0 0 8px DarkRed;
 }
 .error {
   color: #fff;
-  text-shadow: 0 0 80px #ffffff, 0 0 30px #008000, 0 0 6px #0000ff;
+  text-shadow: 0 0 80px #ffffff, 0 0 30px blue, 0 0 6px #0000ff;
 }
 .error span {
   animation: upper 6s linear infinite;
@@ -50,7 +45,7 @@ body {
   70%,
   100% {
     opacity: 0.99;
-    text-shadow: 0 0 80px #ffffff, 0 0 30px #008000, 0 0 6px #0000ff;
+    text-shadow: 0 0 80px #ffffff, 0 0 30px blue, 0 0 6px #0000ff;
   }
   20%,
   21.999%,
