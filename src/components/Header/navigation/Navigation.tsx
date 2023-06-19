@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import s from './navigation.module.scss';
-// import cn from 'classnames';
+import { NavLink, useLocation } from 'react-router-dom';
 
 import * as menuActions from '../../../app/featcher/menu';
 
@@ -9,6 +9,8 @@ import { useAppDispatch } from '../../../app/hooks';
 export const Navigation: React.FC = () => {
   const dispatch = useAppDispatch();
 
+  const location = useLocation();
+
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
@@ -16,33 +18,40 @@ export const Navigation: React.FC = () => {
     }
   };
 
+  useEffect(() => {
+    const { hash } = location;
+    if (hash) {
+      scrollToSection(hash.substring(1)); // Відкидаємо початковий символ '#'
+    }
+  }, [location]);
+
   return (
     <nav className={s.nav_bar}>
       <ul className={s.nav_list}>
         <li className={s.nav_item}>
-          <div
+          <NavLink
+            to="/#aboutUs"
             className={s.nav_link}
             onClick={() => {
               dispatch(menuActions.toggleMenu(false));
-              scrollToSection('aboutUs');
             }}
           >
             ABOUT US
-          </div>
+          </NavLink>
         </li>
         <li className={s.nav_item}>
-          <div
+          <NavLink
+            to="/#whatWeDo"
             className={s.nav_link}
             onClick={() => {
               dispatch(menuActions.toggleMenu(false));
-              scrollToSection('whatWeDo');
             }}
           >
             WHAT WE DO
-          </div>
+          </NavLink>
         </li>
         {/* <li className={cn(s.nav_item, s.mobile)}>
-          <div
+          <NavLink
             className={s.nav_link}
             onClick={() => {
               dispatch(menuActions.toggleMenu(false));
@@ -50,28 +59,28 @@ export const Navigation: React.FC = () => {
             }}
           >
             OUR PARTNERS IN AUE
-          </div>
+          </NavLink>
         </li>
         <li className={cn(s.nav_item, s.mobile)}>
-          <div
+          <NavLink
             className={s.nav_link}
             onClick={() => {
               dispatch(menuActions.toggleMenu(false));
             }}
           >
             PROVIDERS
-          </div>
+          </NavLink>
         </li> */}
         <li className={s.nav_item}>
-          <div
+          <NavLink
+            to="/#contacts"
             className={s.nav_link}
             onClick={() => {
               dispatch(menuActions.toggleMenu(false));
-              scrollToSection('contacts');
             }}
           >
             CONTACTS
-          </div>
+          </NavLink>
         </li>
       </ul>
     </nav>

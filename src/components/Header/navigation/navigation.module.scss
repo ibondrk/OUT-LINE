@@ -17,11 +17,9 @@
     }
 
     @include mixins.onDesktop {
-      border: unset;
       padding: unset;
       margin-right: 61px;
       &:last-child {
-        border: unset;
         margin: unset;
       }
     }
@@ -36,6 +34,7 @@
     line-height: 24px;
     color: var((--main-text));
     cursor: pointer;
+    text-decoration: none;
 
     @include mixins.on1024 {
       font-size: 18px;

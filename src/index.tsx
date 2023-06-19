@@ -17,7 +17,7 @@ ReactDOM.render(
             <Route index element={<PageHome />} />
             <Route path="*" element={<Page404 />} />
           </Route>
-          {/* <Route path="/privacy" element={<h1>Privacy Page Coming Soon</h1>} /> */}
+          {/* <Route path="/conditions" element={<h1>Privacy Page Coming Soon</h1>} /> */}
         </Routes>
       </Router>
     </Provider>

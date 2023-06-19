@@ -44,5 +44,21 @@
 
   @include mixins.onDesktop {
     display: flex;
+    align-items: center;
+  }
+}
+
+.themeWrapper {
+  display: none;
+
+  @include mixins.onDesktop {
+    margin-right: 54px;
+  }
+  @include mixins.on1920 {
+    margin-right: 80px;
+  }
+
+  &.shown {
+    display: block;
   }
 }
