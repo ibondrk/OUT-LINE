@@ -11,9 +11,6 @@ import sprite from '../../images/sprite.svg';
 
 export const Header: React.FC = () => {
   const location = useLocation();
-
-  console.log('location data: ', location);
-
   return (
     <header className={s.wrapper} id="header">
       <NavLink to={'/'}>

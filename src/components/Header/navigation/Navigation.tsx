@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import s from './navigation.module.scss';
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 import * as menuActions from '../../../app/featcher/menu';
 
@@ -8,22 +8,6 @@ import { useAppDispatch } from '../../../app/hooks';
 
 export const Navigation: React.FC = () => {
   const dispatch = useAppDispatch();
-
-  const location = useLocation();
-
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
-  useEffect(() => {
-    const { hash } = location;
-    if (hash) {
-      scrollToSection(hash.substring(1)); // Відкидаємо початковий символ '#'
-    }
-  }, [location]);
 
   return (
     <nav className={s.nav_bar}>

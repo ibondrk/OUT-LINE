@@ -1,1 +1,1 @@
-export * from './pageConditions';
+export * from './PageConditions';

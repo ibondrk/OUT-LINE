@@ -1,0 +1,117 @@
+@use '../../styles/mixins.scss' as mixins;
+
+.terms_head {
+  background: url(../../images/terms_clouds.webp) no-repeat center center /
+    cover;
+  margin-top: 44px;
+
+  @include mixins.onTablet {
+    margin-top: 24px;
+  }
+  @include mixins.on1024 {
+    margin-top: 48px;
+  }
+  @include mixins.onDesktop {
+    margin-top: 36px;
+  }
+  @include mixins.on1920 {
+    margin-top: 27px;
+  }
+}
+
+.sectionTitle {
+  display: grid;
+
+  padding: 35px 30px;
+
+  font-size: 40px;
+  line-height: 133%;
+  font-style: normal;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #ffffff;
+
+  @include mixins.onTablet {
+    padding: 35px 50px;
+  }
+
+  @include mixins.on1024 {
+    padding: 47px 60px;
+  }
+
+  @include mixins.onDesktop {
+    padding: 52px 82px;
+    font-size: 55px;
+  }
+
+  @include mixins.on1920 {
+    padding: 73px 100px;
+  }
+
+  &__main {
+    font-family: 'BLMelody-Bold';
+    font-weight: 700;
+
+    & span {
+      font-family: 'BLMelody-Light', 'Roboto', 'Oxygen', 'Cantarell',
+        'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    }
+  }
+}
+
+.section {
+  display: grid;
+
+  padding: 30px 30px 60px;
+  @include mixins.onTablet {
+    padding: 35px 50px 80px;
+  }
+  @include mixins.on1024 {
+    padding: 48px 60px 100px;
+  }
+  @include mixins.onDesktop {
+    padding: 45px 100px 100px;
+  }
+  @include mixins.on1920 {
+    padding: 50px 80px 111px;
+  }
+}
+
+.homeLink {
+  color: var(--main-text);
+
+  font-weight: 300;
+  font-size: 15px;
+  line-height: 133.5%;
+}
+
+.block {
+  margin-top: 30px;
+
+  font-weight: 300;
+  font-size: 17px;
+  line-height: 131.7%;
+
+  @include mixins.onTablet {
+   margin-top: 35px;
+  }
+  @include mixins.on1024 {
+    margin-top: 45px;
+  }
+  @include mixins.on1920 {
+    margin-top: 50px;
+  }
+
+  &__title {
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+
+  &__info {
+    margin-top: 15px;
+
+    @include mixins.onDesktop {
+      margin-top: 25px;
+    }
+  }
+}

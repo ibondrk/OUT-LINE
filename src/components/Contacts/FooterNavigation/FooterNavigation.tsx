@@ -1,24 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import s from './footerNavigation.module.scss';
-import { NavLink, useLocation } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 export const FooterNavigation: React.FC = () => {
-  const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
-  const location = useLocation();
-
-  useEffect(() => {
-    const { hash } = location;
-    if (hash) {
-      scrollToSection(hash.substring(1)); // aborting first character '#'
-    }
-  }, [location]);
-
   return (
     <nav className={s.nav}>
       <ul className={s.nav__list}>

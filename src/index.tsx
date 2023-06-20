@@ -1,12 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import { Page404 } from './pages/page404';
-import { PageHome } from './pages/pageHome';
-import { Provider } from 'react-redux';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import reportWebVitals from './reportWebVitals';
+
 import store from './app/store';
+import { Provider } from 'react-redux';
+
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+import { PageHome } from './pages/pageHome';
+import { Page404 } from './pages/page404';
+import { PageConditions } from './pages/pageConditions';
 
 ReactDOM.render(
   <React.StrictMode>
@@ -15,9 +19,9 @@ ReactDOM.render(
         <Routes>
           <Route path="/" element={<App />}>
             <Route index element={<PageHome />} />
+            <Route path="conditions" element={<PageConditions />} />
             <Route path="*" element={<Page404 />} />
           </Route>
-          {/* <Route path="/conditions" element={<h1>Privacy Page Coming Soon</h1>} /> */}
         </Routes>
       </Router>
     </Provider>
