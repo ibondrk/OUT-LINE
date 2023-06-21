@@ -58,6 +58,9 @@ function App() {
     }
   };
 
+  const is404Page =
+    location.pathname !== '/' && location.pathname !== '/conditions';
+
   return (
     <div className={'App'} ref={appRef}>
       <div
@@ -69,7 +72,7 @@ function App() {
       <Header />
       <HamburgerMenu />
       <Outlet />
-      <Contacts />
+      {!is404Page && <Contacts />}
     </div>
   );
 }
