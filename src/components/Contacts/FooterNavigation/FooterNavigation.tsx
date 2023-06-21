@@ -18,7 +18,7 @@ export const FooterNavigation: React.FC = () => {
         </li>
         <li className={s.nav__item}>
           <NavLink to="/#partners" className={s.nav_link}>
-            OUR PARTNERS IN AUE
+            OUR PARTNERS
           </NavLink>
         </li>
         <li className={s.nav__item}>
