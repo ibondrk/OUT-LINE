@@ -27,13 +27,13 @@
   }
 
   @include mixins.onDesktop {
-    transform: translate(-172px, -170px);
+    transform: translate(-171px, -170px);
     max-width: 352px;
     max-height: 440px;
   }
 
   @include mixins.on1920 {
-    transform: translate(-196px, -170px);
+    transform: translate(-195px, -170px);
     max-width: unset;
     max-height: unset;
   }
