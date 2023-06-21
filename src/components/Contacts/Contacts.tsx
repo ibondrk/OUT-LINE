@@ -2,6 +2,7 @@ import React from 'react';
 import s from './contacts.module.scss';
 import cn from 'classnames';
 
+import { NavLink } from 'react-router-dom';
 import { FooterNavigation } from './FooterNavigation';
 
 import { useAppSelector } from '../../app/hooks';
@@ -12,9 +13,18 @@ export const Contacts: React.FC = () => {
   const { isNoteBook } = useAppSelector((state) => state.screenWidth);
   return (
     <footer className={s.section} id="contacts">
-      <svg className={cn(s.logo, 'S--1-1')}>
-        <use xlinkHref={`${sprite}#logo`} />
-      </svg>
+      <NavLink
+        to="/"
+        onClick={() => {
+          if (location.pathname === '/' || location.hash === '#') {
+            window.scrollTo(0, 0);
+          }
+        }}
+      >
+        <svg className={cn(s.logo, 'S--1-1')}>
+          <use xlinkHref={`${sprite}#logo`} />
+        </svg>
+      </NavLink>
 
       <div className={cn(s.nav_wrapper, 'S--1-4', 'T--1-3', 'D--11-13')}>
         <FooterNavigation />
