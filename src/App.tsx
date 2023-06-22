@@ -51,6 +51,14 @@ function App() {
     }
   }, [location]);
 
+  useEffect(() => {
+    const sectionId = sessionStorage.getItem('scrollToSection');
+    if (sectionId) {
+      sessionStorage.removeItem('scrollToSection');
+      scrollToSection(sectionId);
+    }
+  }, []);
+
   const scrollToSection = (sectionId: string) => {
     const sectionElement = document.getElementById(sectionId);
     if (sectionElement) {

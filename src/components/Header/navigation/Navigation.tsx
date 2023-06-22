@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './navigation.module.scss';
-import { NavLink } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 import * as menuActions from '../../../app/featcher/menu';
 
@@ -9,30 +9,54 @@ import { useAppDispatch } from '../../../app/hooks';
 export const Navigation: React.FC = () => {
   const dispatch = useAppDispatch();
 
+  const location = useLocation();
+
+  console.log('Location: ', location, 'path: ', location.pathname);
+  const handleFooterLinkClick = (
+    event: React.MouseEvent<HTMLAnchorElement>,
+    sectionId: string
+  ) => {
+    if (location.pathname !== '/') {
+      sessionStorage.setItem('scrollToSection', sectionId);
+      window.location.href = '/';
+    } else {
+      event.preventDefault();
+      scrollToSection(sectionId);
+    }
+  };
+
+  const scrollToSection = (id: string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   return (
     <nav className={s.nav_bar}>
       <ul className={s.nav_list}>
         <li className={s.nav_item}>
-          <NavLink
-            to="/#aboutUs"
+          <a
+            href="/"
             className={s.nav_link}
-            onClick={() => {
+            onClick={(event) => {
               dispatch(menuActions.toggleMenu(false));
+              handleFooterLinkClick(event, 'aboutUs');
             }}
           >
             ABOUT US
-          </NavLink>
+          </a>
         </li>
         <li className={s.nav_item}>
-          <NavLink
-            to="/#whatWeDo"
+          <a
+            href="/"
             className={s.nav_link}
-            onClick={() => {
+            onClick={(event) => {
               dispatch(menuActions.toggleMenu(false));
+              handleFooterLinkClick(event, 'whatWeDo');
             }}
           >
             WHAT WE DO
-          </NavLink>
+          </a>
         </li>
         {/* <li className={cn(s.nav_item, s.mobile)}>
           <NavLink
@@ -56,15 +80,16 @@ export const Navigation: React.FC = () => {
           </NavLink>
         </li> */}
         <li className={s.nav_item}>
-          <NavLink
-            to="/#contacts"
+          <a
+            href="/"
             className={s.nav_link}
-            onClick={() => {
+            onClick={(event) => {
               dispatch(menuActions.toggleMenu(false));
+              handleFooterLinkClick(event, 'contacts');
             }}
           >
             CONTACTS
-          </NavLink>
+          </a>
         </li>
       </ul>
     </nav>
