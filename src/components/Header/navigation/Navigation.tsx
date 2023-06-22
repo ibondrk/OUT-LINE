@@ -11,7 +11,6 @@ export const Navigation: React.FC = () => {
 
   const location = useLocation();
 
-  console.log('Location: ', location, 'path: ', location.pathname);
   const handleFooterLinkClick = (
     event: React.MouseEvent<HTMLAnchorElement>,
     sectionId: string
