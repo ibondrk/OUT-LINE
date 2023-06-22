@@ -10,14 +10,9 @@
   }
 
   &_item {
-    padding: 15px 20px;
-
-    @include mixins.onTablet {
-      padding: 15px 40px;
-    }
+    display: flex;
 
     @include mixins.onDesktop {
-      padding: unset;
       margin-right: 61px;
       &:last-child {
         margin: unset;
@@ -35,6 +30,11 @@
     color: var((--main-text));
     cursor: pointer;
     text-decoration: none;
+    padding: 15px 20px;
+
+    @include mixins.onTablet {
+      padding: 15px 40px;
+    }
 
     @include mixins.on1024 {
       font-size: 18px;
@@ -42,6 +42,7 @@
     }
 
     @include mixins.onDesktop {
+      padding: unset;
       font-size: 17px;
       line-height: 26px;
     }

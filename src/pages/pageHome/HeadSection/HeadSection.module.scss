@@ -49,6 +49,10 @@
     transform: translate(0, -20%);
     grid-row: 1/4;
   }
+
+  @include mixins.on1024 {
+    transform: translate(0, -21%);
+  }
 }
 
 .image_wrapper {

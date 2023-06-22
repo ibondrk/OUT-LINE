@@ -16,8 +16,11 @@ export const Contacts: React.FC = () => {
       <NavLink
         to="/"
         onClick={() => {
-          if (location.pathname === '/' || location.hash === '#') {
-            window.scrollTo(0, 0);
+          if (location.pathname === '/') {
+            const element = document.getElementById('header');
+            if (element) {
+              element.scrollIntoView({ behavior: 'smooth' });
+            }
           }
         }}
       >
