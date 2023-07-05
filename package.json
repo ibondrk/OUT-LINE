@@ -22,7 +22,6 @@
     "react-svg-sprite": "^1.0.8",
     "redux": "^4.2.1",
     "sass": "^1.61.0",
-    "sass-math": "^1.0.0",
     "store": "^2.0.12",
     "swiper": "^9.2.4",
     "typescript": "^4.9.5",
@@ -69,6 +68,7 @@
     "html-webpack-plugin": "^5.5.0",
     "prettier": "^2.8.7",
     "sass-loader": "^13.2.2",
-    "url-loader": "^4.1.1"
+    "url-loader": "^4.1.1",
+    "webpack-md5-hash": "^0.0.6"
   }
 }

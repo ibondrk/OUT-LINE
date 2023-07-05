@@ -2,11 +2,13 @@ import * as path from 'path';
 import * as HtmlWebpackPlugin from 'html-webpack-plugin';
 import * as CleanWebpackPlugin from 'clean-webpack-plugin';
 import * as SpriteLoaderPlugin from 'svg-sprite-loader/plugin';
+import WebpackMd5Hash from 'webpack-md5-hash';
+import webpack from 'webpack';
 
 module.exports = {
   entry: './src/index.tsx',
   output: {
-    filename: 'bundle.js',
+    filename: 'bundle.[chunkhash].js',
     path: path.resolve(__dirname, 'dist'),
   },
   resolve: {
@@ -67,5 +69,7 @@ module.exports = {
     new SpriteLoaderPlugin({
       extract: true,
     }),
+    new webpack.HashedModuleIdsPlugin(),
+    new WebpackMd5Hash(),
   ],
 };
