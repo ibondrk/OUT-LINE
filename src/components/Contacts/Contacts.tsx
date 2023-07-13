@@ -140,7 +140,7 @@ export const Contacts: React.FC = () => {
           </a>
           {/* Facebook logo */}
           <a
-            href="https://www.facebook.com/search/top?q=out%20line%20group%20fzco"
+            href="https://www.facebook.com/profile.php?id=100093526320572"
             target="_blank"
             rel="noreferrer"
             className={s.facebook}
