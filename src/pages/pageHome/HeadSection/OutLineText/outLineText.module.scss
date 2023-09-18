@@ -15,7 +15,7 @@
   }
 
   @include mixins.onTablet {
-    transform: translate(-140px, -190px);
+    transform: translate(-141px, -190px);
     max-width: 289px;
     max-height: 315px;
   }
@@ -27,13 +27,13 @@
   }
 
   @include mixins.onDesktop {
-    transform: translate(-171px, -170px);
+    transform: translate(-173px, -170px);
     max-width: 352px;
     max-height: 440px;
   }
 
   @include mixins.on1920 {
-    transform: translate(-195px, -170px);
+    transform: translate(-190px, -170px);
     max-width: unset;
     max-height: unset;
   }
